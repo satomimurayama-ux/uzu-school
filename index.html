@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UZUの学校 ｜ 第1回 2026年8月23日（日）開催</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+    :root {
+      --pink-deep: #c94d7a; --pink-mid: #e8769f; --pink-light: #f9d0e0;
+      --pink-pale: #fdf0f5; --gold: #c8973a; --cream: #fffaf5;
+      --dark: #3a2535; --gray: #6b5060;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
+
+    /* ── HERO ── */
+    .hero {
+      position:relative; height:100vh; min-height:600px;
+      display:flex; align-items:center; justify-content:flex-end;
+      overflow:hidden;
+      background:linear-gradient(135deg, #5a1545 0%, #2a0a20 45%, #1a0812 100%);
+    }
+    .hero-bg-img {
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:cover; object-position:left top; opacity:0.90;
+    }
+    .hero-overlay {
+      position:absolute; inset:0;
+      background:linear-gradient(
+        to left,
+        rgba(15,5,12,0.97) 0%,
+        rgba(26,10,18,0.95) 38%,
+        rgba(60,20,40,0.60) 56%,
+        rgba(80,30,55,0.15) 70%,
+        transparent 82%
+      );
+    }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
+    .hero-inner {
+      position:relative; z-index:1;
+      max-width:560px; padding:60px 64px 60px 40px;
+      width:100%; margin-left:auto;
+    }
+    .hero-badge {
+      display:inline-block; background:linear-gradient(135deg,var(--pink-deep),#e0569e);
+      color:#fff; font-size:0.78rem; font-weight:700; letter-spacing:0.15em;
+      padding:7px 18px; border-radius:100px; margin-bottom:22px;
+    }
+    .hero-logo {
+      font-family:'Noto Serif JP',serif; font-size:clamp(3.2rem,8vw,6.5rem);
+      font-weight:900; color:#fff; line-height:1; letter-spacing:0.05em;
+      margin-bottom:12px; text-shadow:0 2px 24px rgba(0,0,0,0.6);
+    }
+    .hero-logo span { color:#f9d0e0; }
+    .hero-subtitle {
+      font-family:'Noto Serif JP',serif; font-size:clamp(0.85rem,1.8vw,1.05rem);
+      color:rgba(255,255,255,0.82); margin-bottom:22px;
+      font-weight:400; letter-spacing:0.15em;
+    }
+    .hero-copy {
+      font-size:clamp(1.1rem,2.2vw,1.5rem); font-weight:700; color:#fff;
+      line-height:1.8; margin-bottom:30px; text-shadow:0 1px 10px rgba(0,0,0,0.4);
+    }
+    .hero-copy em { font-style:normal; color:#f9d0e0; }
+    .hero-date-box {
+      background:rgba(255,255,255,0.13); border:2px solid rgba(255,255,255,0.38);
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+      border-radius:16px; padding:18px 26px; display:inline-block; margin-bottom:36px;
+    }
+    .hero-date-box .label {
+      font-size:0.72rem; color:#f9d0e0; font-weight:700;
+      letter-spacing:0.2em; margin-bottom:4px;
+    }
+    .hero-date-box .date {
+      font-family:'Noto Serif JP',serif; font-size:1.7rem; font-weight:900; color:#fff;
+    }
+    .hero-date-box .date span { color:#f9d0e0; font-size:2rem; }
+    .hero-date-box .time-row {
+      margin-top:6px; font-size:1rem; font-weight:700; color:rgba(255,255,255,0.9);
+      letter-spacing:0.1em;
+    }
+    .hero-date-box .place-row {
+      margin-top:8px; font-size:0.82rem; color:rgba(255,255,255,0.78);
+      line-height:1.6; letter-spacing:0.04em;
+    }
+    .btn-primary {
+      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#9b2f70 100%);
+      color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:0.1em;
+      padding:16px 44px; border-radius:100px; text-decoration:none;
+      box-shadow:0 8px 30px rgba(201,77,122,0.55); transition:transform 0.2s,box-shadow 0.2s;
+      position:relative; overflow:hidden;
+    }
+    .btn-primary::before {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent); border-radius:inherit;
+    }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(201,77,122,0.65); }
+
+    /* ── SECTIONS ── */
+    section { padding:80px 40px; }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.3em; color:var(--pink-mid); text-transform:uppercase; margin-bottom:12px; }
+    .section-title { font-family:'Noto Serif JP',serif; font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; color:var(--dark); line-height:1.4; margin-bottom:20px; }
+    .section-title .accent { color:var(--pink-deep); }
+    .section-divider { width:60px; height:4px; background:linear-gradient(90deg,var(--pink-deep),var(--pink-light)); border-radius:2px; margin-bottom:40px; }
+
+    /* ── ABOUT ── */
+    .about { background:#fff; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .about-text p { font-size:1.05rem; line-height:2; color:var(--gray); margin-bottom:20px; }
+    .motto-card { background:var(--pink-pale); border-left:4px solid var(--pink-deep); border-radius:0 12px 12px 0; padding:20px 24px; margin-top:24px; }
+    .motto-card h4 { font-family:'Noto Serif JP',serif; font-size:1rem; color:var(--pink-deep); font-weight:700; margin-bottom:12px; }
+    .motto-card ul { list-style:none; }
+    .motto-card ul li { font-size:0.95rem; color:var(--dark); padding:4px 0; padding-left:1.4em; position:relative; }
+    .motto-card ul li::before { content:'♥'; position:absolute; left:0; color:var(--pink-mid); font-size:0.8em; }
+
+    .principal-card { background:linear-gradient(145deg,#fff0f7,#f8e8ff); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(201,77,122,0.12); }
+    .principal-avatar {
+      width:140px; height:140px; border-radius:50%; margin:0 auto 16px;
+      overflow:hidden; border:4px solid #f9d0e0;
+      box-shadow:0 6px 24px rgba(201,77,122,0.25);
+    }
+    .principal-avatar img {
+      width:100%; height:100%; object-fit:cover; object-position:35% 8%;
+    }
+    .principal-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--pink-mid); margin-bottom:6px; }
+    .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
+    .principal-card .bio { font-size:0.9rem; line-height:1.8; color:var(--gray); }
+
+    /* ── PROGRAM ── */
+    .program { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); }
+    .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+    .program-card { background:#fff; border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(201,77,122,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(201,77,122,0.18); }
+    .program-card .icon { font-size:2.8rem; margin-bottom:16px; display:block; }
+    .program-card h3 { font-family:'Noto Serif JP',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:12px; }
+    .program-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
+    .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--pink-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
+
+    /* ── SCHEDULE ── */
+    .schedule { background:#fff; }
+    .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; }
+    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#9b2f70); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
+    .schedule-table th:first-child { border-radius:12px 0 0 0; }
+    .schedule-table th:last-child { border-radius:0 12px 0 0; }
+    .schedule-table td { padding:16px 20px; border-bottom:1px solid var(--pink-light); font-size:0.95rem; vertical-align:top; }
+    .schedule-table tr:last-child td { border-bottom:none; }
+    .schedule-table tr:nth-child(even) td { background:var(--pink-pale); }
+    .schedule-table .time { color:var(--pink-deep); font-weight:700; white-space:nowrap; }
+
+    /* ── FUTURE ── */
+    .future { background:linear-gradient(180deg,#fff8fc 0%,#f0f0ff 100%); }
+    .future-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(100,80,180,0.15); }
+    .future-list { list-style:none; }
+    .future-list li { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--pink-light); }
+    .future-list li:last-child { border-bottom:none; }
+    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#9b2f70); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    .future-list .content h4 { font-weight:700; font-size:1rem; color:var(--dark); margin-bottom:4px; }
+    .future-list .content p { font-size:0.85rem; line-height:1.7; color:var(--gray); }
+
+    /* ── CTA ── */
+    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#7b1f5e 50%,#4a1a6b 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
+    .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
+    .cta > * { position:relative; z-index:1; }
+    .cta .label { color:rgba(255,255,255,0.7); margin-bottom:16px; }
+    .cta h2 { font-family:'Noto Serif JP',serif; font-size:clamp(1.8rem,4vw,3rem); color:#fff; font-weight:900; line-height:1.5; margin-bottom:16px; }
+    .cta .sub { color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
+    .btn-white { display:inline-block; background:#fff; color:var(--pink-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
+    .btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
+    .cta-note { margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.6); }
+    .cta-select-box {
+      background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.30);
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+      border-radius:14px; padding:18px 28px; max-width:580px;
+      margin:0 auto 36px; font-size:0.88rem; color:rgba(255,255,255,0.88);
+      line-height:1.9; text-align:left;
+    }
+    .cta-select-box strong { color:#f9d0e0; }
+
+    /* ── FOOTER ── */
+    footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
+    footer .logo { font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:900; color:var(--pink-light); margin-bottom:8px; }
+    .petal-row { display:flex; justify-content:center; gap:8px; margin:16px 0; }
+    .petal-row span { color:var(--pink-mid); font-size:1rem; opacity:0.6; }
+
+    @media (max-width:768px) {
+      section { padding:60px 24px; }
+      .hero { min-height:760px; justify-content:center; }
+      .hero-overlay {
+        background:linear-gradient(
+          to bottom,
+          rgba(15,5,12,0.62) 0%,
+          rgba(26,10,18,0.78) 42%,
+          rgba(15,5,12,0.96) 100%
+        );
+      }
+      .hero-inner { padding:60px 28px; margin-left:auto; }
+      .hero-date-box { width:100%; padding:16px 18px; }
+      .hero-date-box .date { font-size:1.35rem; }
+      .hero-date-box .date span { font-size:1.55rem; }
+      .about-grid, .future-grid { grid-template-columns:1fr; }
+      .program-cards { grid-template-columns:1fr; }
+      .schedule-table th { padding:12px 10px; }
+      .schedule-table td { padding:14px 10px; font-size:0.88rem; }
+      .schedule-table th:first-child { width:88px !important; }
+      .future-image { text-align:center; }
+      .future-image img { max-width:320px; }
+      .cta { padding:80px 24px; }
+      .btn-primary, .btn-white { width:100%; max-width:320px; text-align:center; padding-left:20px; padding-right:20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <img class="hero-bg-img" src="images/hero.png" alt="UZUの学校">
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">✦ FIRST SESSION ✦ 2026.8.23</div>
+    <div class="hero-logo">UZU<span>の</span><br>学校</div>
+    <div class="hero-subtitle">女性の社会進出と活躍を支援するコミュニティ</div>
+    <p class="hero-copy">世界で輝く女性たちが集う<br><em>新しい学びの場</em>が誕生します</p>
+    <div class="hero-date-box">
+      <div class="label">FIRST SESSION</div>
+      <div class="date">2026年<span>8月23日</span>（日）</div>
+      <div class="time-row">⏰ 開場 14:00 〜 終了 17:30</div>
+      <div class="place-row">📍 東京都三田エリア<br>（当選者の方には後日詳しい場所をご案内いたします）</div>
+    </div>
+    <br>
+    <a href="apply.html" class="btn-primary">▶ 参加申し込みはこちら</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">ABOUT UZU SCHOOL</p>
+        <h2 class="section-title">女性が<span class="accent">自分らしく</span>輝くためのコミュニティ</h2>
+        <div class="section-divider"></div>
+        <p>「UZUの学校」は、女性の社会進出と活躍を支援するために生まれたコミュニティです。世界各地で貴重な経験を積んできた安倍昭恵さんが校長を務め、様々な分野で活躍する女性リーダーたちを招いて、学び・対話・行動の場を創ります。</p>
+        <p>パネルディスカッションではゲスト女性リーダーから直接話を聞き<br>ワークショップではテーマに沿って参加者同士が深く対話します。<br>ここでの出会いと学びが、あなたの次のステップを後押しします。</p>
+        <div class="motto-card">
+          <h4>校長のモットー</h4>
+          <ul>
+            <li>清く正しく美しく</li>
+            <li>思いやりを大切に</li>
+            <li>チャレンジを楽しむ</li>
+            <li>笑顔であいさつ！</li>
+          </ul>
+        </div>
+      </div>
+      <div class="principal-card">
+        <div class="principal-avatar">
+          <img src="images/hero.png" alt="安倍昭恵 校長">
+        </div>
+        <div class="role">校 長</div>
+        <div class="name">安倍 昭恵</div>
+        <p class="bio">世界各国のリーダーたちと直接交流し、多くの貴重な経験を積んできた安倍昭恵さん。自然農法や地域おこしにも積極的に関わり、「女性が自分らしく輝ける社会」を実現するため、UZUの学校の校長として皆さんを応援します。</p>
+        <br>
+        <div class="petal-row"><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span></div>
+        <p style="font-size:1.1rem;font-weight:700;color:var(--pink-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program">
+  <div class="container">
+    <p class="section-label">PROGRAM</p>
+    <h2 class="section-title">当日のプログラム</h2>
+    <div class="section-divider"></div>
+    <div class="program-cards">
+      <div class="program-card">
+        <span class="tag">OPEN TALK</span>
+        <span class="icon">🎤</span>
+        <h3>校長 安倍昭恵さん<br>スペシャルトーク</h3>
+        <p>世界で体験してきた貴重なエピソードや、女性の活躍に対する想いを語っていただきます。</p>
+      </div>
+      <div class="program-card">
+        <span class="tag">PANEL DISCUSSION</span>
+        <span class="icon">💬</span>
+        <h3>ゲスト女性リーダーによる<br>パネルディスカッション</h3>
+        <p>各分野の最前線で活躍するゲスト女性リーダーを迎え、テーマに沿ってリアルな経験と知恵を語り合います。</p>
+      </div>
+      <div class="program-card">
+        <span class="tag">WORKSHOP</span>
+        <span class="icon">✍️</span>
+        <h3>参加者ワーク<br>ショップ</h3>
+        <p>テーマをもとに少人数グループで対話し、自分のビジョンや行動計画を深堀りします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule">
+  <div class="container">
+    <p class="section-label">TIMETABLE</p>
+    <h2 class="section-title">2026年8月23日（日）<span class="accent">タイムテーブル</span></h2>
+    <div class="section-divider"></div>
+    <table class="schedule-table">
+      <thead><tr><th style="width:140px">時 間</th><th>内 容</th></tr></thead>
+      <tbody>
+        <tr><td class="time">14:00</td><td>開場・受付</td></tr>
+        <tr><td class="time">14:30</td><td>開会のご挨拶 ／ UZUの学校とは？</td></tr>
+        <tr><td class="time">14:45</td><td>🎤 校長 安倍昭恵さんスペシャルトーク</td></tr>
+        <tr><td class="time">15:00</td><td>💬 ゲスト女性リーダーによるパネルディスカッション</td></tr>
+        <tr><td class="time">16:00</td><td>休憩・交流タイム</td></tr>
+        <tr><td class="time">16:15</td><td>✍️ 参加者ワークショップ（少人数グループ対話）</td></tr>
+        <tr><td class="time">17:00</td><td>発表・まとめ ／ クロージング</td></tr>
+        <tr><td class="time">17:30</td><td>終了</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;font-size:0.82rem;color:var(--gray);">※ タイムテーブルは変更になる場合があります。</p>
+  </div>
+</section>
+
+<!-- FUTURE -->
+<section class="future">
+  <div class="container">
+    <div class="future-grid">
+      <div class="future-image">
+        <img src="images/uzu_photo.jpg" alt="大地とともに輝く女性">
+      </div>
+      <div>
+        <p class="section-label">FUTURE PLANS</p>
+        <h2 class="section-title">これからの<span class="accent">UZU</span>の学校</h2>
+        <div class="section-divider"></div>
+        <ul class="future-list">
+          <li><div class="num">01</div><div class="content"><h4>継続的な講座開催</h4><p>パネルディスカッションとワークショップを継続的に行い、学びと対話の場を育てていきます。</p></div></li>
+          <li><div class="num">02</div><div class="content"><h4>ボランティア活動</h4><p>地域社会に貢献するボランティアを通じて、実践的な社会参加の経験を積みます。</p></div></li>
+          <li><div class="num">03</div><div class="content"><h4>稲刈り体験</h4><p>大地と向き合い、命の大切さを体で感じる稲刈り体験。都市で生きる女性たちへの特別な贈り物。</p></div></li>
+          <li><div class="num">04</div><div class="content"><h4>継続的な学びと交流</h4><p>定期的な学校開催と卒業生ネットワーク構築により、長期的な女性活躍を支援します。</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <p class="section-label label">JOIN US</p>
+  <h2>さあ、あなたも<br>UZUの学校で輝こう</h2>
+  <p class="sub">第1回 UZUの学校は2026年8月23日（日）に開催されます<br>申し込み締め切りは<strong style="color:#f9d0e0;">7月31日（金）</strong>です<br>お早めのお申し込みをお勧めいたします</p>
+  <div class="cta-select-box">
+    <strong>【お申し込みにあたってのお願い】</strong><br>
+    定員に限りがございますため、お申し込みいただいた皆さまの熱意や想いを丁寧に拝見した上で、参加者様を選考させていただいております。ご記入いただいた内容をもとに慎重にご案内申し上げますので、あらかじめご了承いただけますと幸いです。
+  </div>
+  <a href="apply.html" class="btn-white">✉ 今すぐ参加申し込み</a>
+  <p class="cta-note">参加費・会場などの詳細は申し込みフォームにてご案内いたします。</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">UZUの学校</div>
+  <p>女性の社会進出と活躍を支援するコミュニティ</p>
+  <br>
+  <p>&copy; 2026 UZUの学校. All rights reserved.</p>
+</footer>
+</body>
+</html>
