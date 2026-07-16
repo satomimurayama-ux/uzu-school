@@ -4,6 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UZUの学校 ｜ 第1回 2026年8月23日（日）開催</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
     :root {
@@ -318,6 +331,53 @@
       </tbody>
     </table>
     <p style="margin-top:16px;font-size:0.82rem;color:var(--gray);">※ タイムテーブルは変更になる場合があります。</p>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section class="relative overflow-hidden bg-[#0D0D1F] py-20 px-6 md:py-28 md:px-16">
+  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-400/15 blur-[130px]"></div>
+
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mb-16 text-center md:mb-20">
+      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-cyan-300/80 md:text-sm">SPECIAL GUEST SPEAKER</p>
+      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-white md:text-5xl">小川 和也</h2>
+      <p class="mb-4 text-sm font-medium leading-loose text-white/70 [word-break:keep-all] break-words md:text-base">
+        グランドデザイン代表取締役社長 ／ フューチャリスト ／ 北海道大学 客員教授
+      </p>
+      <p class="mx-auto max-w-3xl bg-gradient-to-r from-cyan-300 via-cyan-100 to-amber-200 bg-clip-text text-base font-bold leading-loose text-transparent [word-break:keep-all] break-words md:text-lg">
+        ー テクノロジーが拓く未踏の未来図を、温かな感性と圧倒的な高揚感で描き出すフューチャー・デザイナー
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
+      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">01 ／ PIONEER</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">AIと実業の開拓者</h3>
+        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+          大学卒業後、大手損保を経て2004年にグランドデザインを創業。買い物マッチングプラットフォーム「Gotcha! mall（ガッチャ！モール）」など、テクノロジーとクリエイティブを融合させた事業を展開し、国際的なマーケティングアワードを受賞。
+        </p>
+      </div>
+
+      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-amber-200 p-[2px] shadow-[0_0_60px_rgba(251,191,36,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(251,191,36,0.55)] md:-translate-y-4">
+        <div class="h-full rounded-2xl bg-[#13132b] p-8">
+          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-amber-300/90">02 ／ VISION NAVIGATOR</span>
+          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">メディアを通じて未来への高揚感を届ける「ビジョン・ナビゲーター」</h3>
+          <p class="text-sm leading-loose text-white/70 [word-break:keep-all] break-words">
+            沢井製薬のCM（ミライラボ篇）に出演し、AIがもたらす「未来 of オーダーメイド薬」のビジョンを提示。また、J-WAVEのラジオ番組『FUTURISM』のナビゲーターを務め、難解になりがちな最新テクノロジーの面白さを誰にでも届く言葉でナビゲート。
+          </p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">03 ／ CITY DESIGNER</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">未来都市のグランドデザイン</h3>
+        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+          人工知能を用いた社会システムデザインを専門とし、数多くのAI関連特許を保有。大阪市AIガバナンスアドバイザーを務めるなど、スマートシティ構想やIR構想といった、これからのデジタル未来都市のあり方を多角的にデザインする。
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
