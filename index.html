@@ -28,67 +28,26 @@
     body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
 
     /* ── HERO ── */
-    .hero {
-      position:relative; height:100vh; min-height:600px;
-      display:flex; align-items:center; justify-content:flex-end;
-      overflow:hidden;
-      background:linear-gradient(135deg, #5a1545 0%, #2a0a20 45%, #1a0812 100%);
+    .hero-v2 { background:#15100a; }
+    .hero-v2-img { display:block; width:100%; height:auto; }
+    .hero-v2-bar { background:linear-gradient(135deg,#1c2438 0%,#12182a 100%); padding:40px; }
+    .hero-v2-bar-inner {
+      max-width:1100px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;
     }
-    .hero-bg-img {
-      position:absolute; inset:0; width:100%; height:100%;
-      object-fit:cover; object-position:left top; opacity:0.90;
-    }
-    .hero-overlay {
-      position:absolute; inset:0;
-      background:linear-gradient(
-        to left,
-        rgba(15,5,12,0.97) 0%,
-        rgba(26,10,18,0.95) 38%,
-        rgba(60,20,40,0.60) 56%,
-        rgba(80,30,55,0.15) 70%,
-        transparent 82%
-      );
-    }
-    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
-    .hero-inner {
-      position:relative; z-index:1;
-      max-width:560px; padding:60px 64px 60px 40px;
-      width:100%; margin-left:auto;
-    }
-    .hero-badge {
-      display:inline-block; background:linear-gradient(135deg,var(--pink-deep),#e0569e);
-      color:#fff; font-size:0.78rem; font-weight:700; letter-spacing:0.15em;
-      padding:7px 18px; border-radius:100px; margin-bottom:22px;
-    }
-    .hero-logo {
-      font-family:'Noto Serif JP',serif; font-size:clamp(3.2rem,8vw,6.5rem);
-      font-weight:900; color:#fff; line-height:1; letter-spacing:0.05em;
-      margin-bottom:12px; text-shadow:0 2px 24px rgba(0,0,0,0.6);
-    }
-    .hero-logo span { color:#f9d0e0; }
-    .hero-subtitle {
-      font-family:'Noto Serif JP',serif; font-size:clamp(0.85rem,1.8vw,1.05rem);
-      color:rgba(255,255,255,0.82); margin-bottom:22px;
-      font-weight:400; letter-spacing:0.15em;
-    }
-    .hero-copy {
-      font-size:clamp(1.1rem,2.2vw,1.5rem); font-weight:700; color:#fff;
-      line-height:1.8; margin-bottom:30px; text-shadow:0 1px 10px rgba(0,0,0,0.4);
-    }
-    .hero-copy em { font-style:normal; color:#f9d0e0; }
     .hero-date-box {
-      background:rgba(255,255,255,0.13); border:2px solid rgba(255,255,255,0.38);
+      background:rgba(255,255,255,0.08); border:2px solid rgba(200,151,58,0.4);
       backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-      border-radius:16px; padding:18px 26px; display:inline-block; margin-bottom:36px;
+      border-radius:16px; padding:18px 26px; display:inline-block;
     }
     .hero-date-box .label {
-      font-size:0.72rem; color:#f9d0e0; font-weight:700;
+      font-size:0.72rem; color:var(--gold); font-weight:700;
       letter-spacing:0.2em; margin-bottom:4px;
     }
     .hero-date-box .date {
       font-family:'Noto Serif JP',serif; font-size:1.7rem; font-weight:900; color:#fff;
     }
-    .hero-date-box .date span { color:#f9d0e0; font-size:2rem; }
+    .hero-date-box .date span { color:var(--gold); font-size:2rem; }
     .hero-date-box .time-row {
       margin-top:6px; font-size:1rem; font-weight:700; color:rgba(255,255,255,0.9);
       letter-spacing:0.1em;
@@ -274,16 +233,8 @@
 
     @media (max-width:768px) {
       section { padding:60px 24px; }
-      .hero { min-height:760px; justify-content:center; }
-      .hero-overlay {
-        background:linear-gradient(
-          to bottom,
-          rgba(15,5,12,0.62) 0%,
-          rgba(26,10,18,0.78) 42%,
-          rgba(15,5,12,0.96) 100%
-        );
-      }
-      .hero-inner { padding:60px 28px; margin-left:auto; }
+      .hero-v2-bar { padding:28px 20px; }
+      .hero-v2-bar-inner { flex-direction:column; align-items:center; gap:20px; }
       .hero-date-box { width:100%; padding:16px 18px; }
       .hero-date-box .date { font-size:1.35rem; }
       .hero-date-box .date span { font-size:1.55rem; }
@@ -307,22 +258,18 @@
 <body>
 
 <!-- HERO -->
-<section class="hero">
-  <img class="hero-bg-img" src="images/hero.png" alt="UZUの学校">
-  <div class="hero-overlay"></div>
-  <div class="hero-inner">
-    <div class="hero-badge">✦ FIRST SESSION ✦ 2026.8.23</div>
-    <div class="hero-logo">UZU<span>の</span><br>学校</div>
-    <div class="hero-subtitle">女性の社会進出と活躍を支援するコミュニティ</div>
-    <p class="hero-copy">世界で輝く女性たちが集う<br><em>新しい学びの場</em>が誕生します</p>
-    <div class="hero-date-box">
-      <div class="label">FIRST SESSION</div>
-      <div class="date">2026年<span>8月23日</span>（日）</div>
-      <div class="time-row">⏰ 開場 14:00 〜 終了 17:30</div>
-      <div class="place-row">📍 東京都三田エリア<br>（当選者の方には後日詳しい場所をご案内いたします）</div>
+<section class="hero-v2">
+  <img class="hero-v2-img" src="images/hero_v2.jpg" alt="UZUの学校 ｜ 校長 安倍昭恵 ｜ 未来を、ともに描く学びの場">
+  <div class="hero-v2-bar">
+    <div class="hero-v2-bar-inner">
+      <div class="hero-date-box">
+        <div class="label">FIRST SESSION</div>
+        <div class="date">2026年<span>8月23日</span>（日）</div>
+        <div class="time-row">⏰ 開場 14:00 〜 終了 17:30</div>
+        <div class="place-row">📍 東京都三田エリア<br>（当選者の方には後日詳しい場所をご案内いたします）</div>
+      </div>
+      <a href="apply.html" class="btn-primary">▶ 参加申し込みはこちら</a>
     </div>
-    <br>
-    <a href="apply.html" class="btn-primary">▶ 参加申し込みはこちら</a>
   </div>
 </section>
 
