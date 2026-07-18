@@ -141,6 +141,15 @@
     .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
     .principal-card .bio { font-size:0.9rem; line-height:1.8; color:var(--gray); }
 
+    /* ── STORY ── */
+    .story { background:linear-gradient(180deg,#fdf0f5 0%,#fff 100%); }
+    .story-grid { display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:start; }
+    .story-name-card { background:#fff; border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(201,77,122,0.12); position:sticky; top:40px; }
+    .story-name-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--pink-mid); margin-bottom:6px; }
+    .story-name-card .name { font-family:'Noto Serif JP',serif; font-size:1.6rem; font-weight:900; color:var(--dark); }
+    .story-text p { font-size:1.02rem; line-height:2.1; color:var(--gray); margin-bottom:22px; }
+    .story-quote { font-family:'Noto Serif JP',serif; font-size:1.05rem; line-height:2; color:var(--pink-deep); font-weight:700; margin-bottom:22px; }
+
     /* ── PROGRAM ── */
     .program { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); }
     .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
@@ -213,7 +222,8 @@
       .hero-date-box { width:100%; padding:16px 18px; }
       .hero-date-box .date { font-size:1.35rem; }
       .hero-date-box .date span { font-size:1.55rem; }
-      .about-grid, .future-grid { grid-template-columns:1fr; }
+      .about-grid, .future-grid, .story-grid { grid-template-columns:1fr; }
+      .story-name-card { position:static; }
       .program-cards { grid-template-columns:1fr; }
       .schedule-table th { padding:12px 10px; }
       .schedule-table td { padding:14px 10px; font-size:0.88rem; }
@@ -277,6 +287,27 @@
         <br>
         <div class="petal-row"><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span></div>
         <p style="font-size:1.1rem;font-weight:700;color:var(--pink-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story">
+  <div class="container">
+    <p class="section-label">OUR STORY</p>
+    <h2 class="section-title">主催者<span class="accent">村山さとみ</span>の想い</h2>
+    <div class="section-divider"></div>
+    <div class="story-grid">
+      <div class="story-name-card">
+        <div class="role">ORGANIZER</div>
+        <div class="name">村山 さとみ</div>
+      </div>
+      <div class="story-text">
+        <p class="story-quote">しかし、ある時、ふと立ち止まりました。<br>「私はこの先、どんな人生を歩みたいのだろう。」<br>「本当に目標としたい人は、どんな人なのだろう。」<br>「会社という枠を離れたとき、私には何が残るのだろう。」</p>
+        <p>会社では責任ある役割を任せていただき、充実した毎日を送っていました。しかし、その一方で、いつかは会社を卒業し、自分自身の力で新しい道を歩んでみたいという想いも、少しずつ芽生え始めていました。</p>
+        <p>だからこそ、「どんな人生を築きたいのか」「どんな人と出会い、どんな価値を生み出していきたいのか」を、これまで以上に真剣に考えるようになったのです。</p>
+        <p>多様性が尊重される素晴らしい環境で働いてきたからこそ、多くの価値観に触れる機会には恵まれていました。それでも、自分が心から「こんな生き方をしたい」と思えるロールモデル、特に女性の存在には、なかなか出会うことができませんでした。</p>
       </div>
     </div>
   </div>
