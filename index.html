@@ -143,10 +143,8 @@
 
     /* ── STORY ── */
     .story { background:linear-gradient(180deg,#fdf0f5 0%,#fff 100%); }
-    .story-grid { display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:start; }
-    .story-name-card { background:#fff; border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(201,77,122,0.12); position:sticky; top:40px; }
-    .story-name-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--pink-mid); margin-bottom:6px; }
-    .story-name-card .name { font-family:'Noto Serif JP',serif; font-size:1.6rem; font-weight:900; color:var(--dark); }
+    .story-byline { font-size:0.95rem; font-weight:700; color:var(--pink-deep); letter-spacing:0.05em; margin-bottom:36px; }
+    .story-text { max-width:800px; }
     .story-text p { font-size:1.02rem; line-height:2.1; color:var(--gray); margin-bottom:22px; }
     .story-quote { font-family:'Noto Serif JP',serif; font-size:1.05rem; line-height:2; color:var(--pink-deep); font-weight:700; margin-bottom:22px; }
 
@@ -222,8 +220,7 @@
       .hero-date-box { width:100%; padding:16px 18px; }
       .hero-date-box .date { font-size:1.35rem; }
       .hero-date-box .date span { font-size:1.55rem; }
-      .about-grid, .future-grid, .story-grid { grid-template-columns:1fr; }
-      .story-name-card { position:static; }
+      .about-grid, .future-grid { grid-template-columns:1fr; }
       .program-cards { grid-template-columns:1fr; }
       .schedule-table th { padding:12px 10px; }
       .schedule-table td { padding:14px 10px; font-size:0.88rem; }
@@ -296,19 +293,36 @@
 <section class="story">
   <div class="container">
     <p class="section-label">OUR STORY</p>
-    <h2 class="section-title">主催者<span class="accent">村山さとみ</span>の想い</h2>
+    <h2 class="section-title">UZUの学校を<span class="accent">立ち上げた理由</span></h2>
     <div class="section-divider"></div>
-    <div class="story-grid">
-      <div class="story-name-card">
-        <div class="role">ORGANIZER</div>
-        <div class="name">村山 さとみ</div>
-      </div>
-      <div class="story-text">
-        <p class="story-quote">しかし、ある時、ふと立ち止まりました。<br>「私はこの先、どんな人生を歩みたいのだろう。」<br>「本当に目標としたい人は、どんな人なのだろう。」<br>「会社という枠を離れたとき、私には何が残るのだろう。」</p>
-        <p>会社では責任ある役割を任せていただき、充実した毎日を送っていました。しかし、その一方で、いつかは会社を卒業し、自分自身の力で新しい道を歩んでみたいという想いも、少しずつ芽生え始めていました。</p>
-        <p>だからこそ、「どんな人生を築きたいのか」「どんな人と出会い、どんな価値を生み出していきたいのか」を、これまで以上に真剣に考えるようになったのです。</p>
-        <p>多様性が尊重される素晴らしい環境で働いてきたからこそ、多くの価値観に触れる機会には恵まれていました。それでも、自分が心から「こんな生き方をしたい」と思えるロールモデル、特に女性の存在には、なかなか出会うことができませんでした。</p>
-      </div>
+    <p class="story-byline">文・村山 さとみ（UZUの学校 主催者）</p>
+    <div class="story-text">
+      <p>私は30年以上にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
+      <p>私の職場では、多様な文化や価値観を尊重し、国籍や性別に関係なく、一人ひとりが責任ある仕事に挑戦できる環境がありました。トレーニングやミーティングでは国境を越えて意見を交わし、互いの違いを認め合いながら成長していく――そんな環境の中で、多くの学びと貴重な経験を積ませていただきました。</p>
+      <p>女性が活躍できる環境にも恵まれ、私自身も責任ある仕事を任せていただきながら、やりがいと誇りを持って歩んできました。</p>
+      <p>しかし、ある時、ふと立ち止まりました。</p>
+      <p class="story-quote">「私はこの先、どんな人生を歩みたいのだろう。」<br>「本当に目標としたい人は、どんな人なのだろう。」<br>「会社という枠を離れたとき、私には何が残るのだろう。」</p>
+      <p>会社では責任ある役割を任せていただき、充実した毎日を送っていました。しかしその一方で、いつかは会社を卒業し、自分自身の力で新しい道を歩んでみたいという想いも、少しずつ芽生え始めていました。</p>
+      <p>だからこそ、「どんな人生を築きたいのか」「どんな人と出会い、どんな価値を社会に届けていきたいのか」を、これまで以上に真剣に考えるようになったのです。</p>
+      <p>多様性が尊重される素晴らしい環境で働いてきたからこそ、多くの価値観に触れる機会には恵まれていました。それでも、自分が心から「こんな生き方をしたい」と思えるロールモデル、特に女性の存在には、なかなか出会うことができませんでした。</p>
+      <p>そんな時、安倍昭恵校長をはじめ、多くの素晴らしい方々とのご縁をいただきました。</p>
+      <p>これまで知ることのなかった世界に触れ、多様な経験や価値観に出会い、人との出会いが人生を大きく変え、新しい可能性を広げてくれることを実感しました。</p>
+      <p>そして、自然と思うようになったのです。</p>
+      <p class="story-quote">「この出会いや学びを、私だけのものにするのはもったいない。」</p>
+      <p>かつての私のように、自分の可能性を広げたい方、新しい一歩を踏み出したい方、人生をもっと豊かにしたいと願う方々にも、このような出会いの機会を届けたい。</p>
+      <p>一人では見ることのできなかった景色も、人との出会いによって見えるようになる。</p>
+      <p>誰かとの出会いが勇気となり、その勇気が新しい挑戦を生み、その挑戦がまた誰かの背中を押していく。</p>
+      <p>そんな温かな循環が生まれる場所をつくりたいという想いから、「UZUの学校」は誕生しました。</p>
+      <p>「UZU」という名前は、安倍昭恵校長が名付けてくださいました。</p>
+      <p>その由来には、日本神話に登場する<strong>天鈿女命（あめのうずめのみこと）</strong>への想いが込められています。</p>
+      <p>天鈿女命は、人々を笑顔で巻き込み、その場に新しい流れを生み出し、世界に再び光をもたらしたと伝えられています。</p>
+      <p>私たちも、一人ひとりの想いや挑戦が、人との出会いによって大きな「渦」となり、新しいご縁や可能性を生み出していきたい。</p>
+      <p>この場所で出会った仲間が、互いに刺激を受け、支え合い、それぞれの夢や挑戦を応援し合う。</p>
+      <p>そして、その一人の挑戦が、また新しい誰かの勇気となり、さらに大きな渦へと広がっていく。</p>
+      <p>UZUの学校は、知識を学ぶだけの学校ではありません。</p>
+      <p>人との出会いを通して、自分自身の可能性に気づき、一歩踏み出す勇気を見つける場所です。</p>
+      <p>ここで生まれたご縁が、それぞれの人生をより豊かに、より輝かせ、その輪が未来へとつながっていく。</p>
+      <p>そんな「人生が動き出すきっかけ」となる場所を、皆さまとともにつくっていきたいと心から願っています。</p>
     </div>
   </div>
 </section>
