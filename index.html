@@ -20,9 +20,9 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
     :root {
-      --pink-deep: #c94d7a; --pink-mid: #e8769f; --pink-light: #f9d0e0;
-      --pink-pale: #fdf0f5; --gold: #c8973a; --cream: #fffaf5;
-      --dark: #3a2535; --gray: #6b5060;
+      --pink-deep: #8a5a3a; --pink-light: #ecd6c9;
+      --pink-pale: #faf3ec; --gold: #c8973a; --gold-deep: #8a6420; --cream: #fffaf5;
+      --dark: #35291f; --gray: #6e6259;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
@@ -57,24 +57,24 @@
       line-height:1.6; letter-spacing:0.04em;
     }
     .btn-primary {
-      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#9b2f70 100%);
+      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#5c3a24 100%);
       color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:0.1em;
       padding:16px 44px; border-radius:100px; text-decoration:none;
-      box-shadow:0 8px 30px rgba(201,77,122,0.55); transition:transform 0.2s,box-shadow 0.2s;
+      box-shadow:0 8px 30px rgba(138,90,58,0.55); transition:transform 0.2s,box-shadow 0.2s;
       position:relative; overflow:hidden;
     }
     .btn-primary::before {
       content:''; position:absolute; inset:0;
       background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent); border-radius:inherit;
     }
-    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(201,77,122,0.65); }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(138,90,58,0.65); }
 
     /* ── SECTIONS ── */
     section { padding:80px 40px; }
     .container { max-width:1100px; margin:0 auto; }
-    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.3em; color:var(--pink-mid); text-transform:uppercase; margin-bottom:12px; }
+    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.3em; color:var(--gold-deep); text-transform:uppercase; margin-bottom:12px; }
     .section-title { font-family:'Noto Serif JP',serif; font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; color:var(--dark); line-height:1.4; margin-bottom:20px; }
-    .section-title .accent { color:var(--pink-deep); }
+    .section-title .accent { color:var(--gold-deep); }
     .section-divider { width:60px; height:4px; background:linear-gradient(90deg,var(--pink-deep),var(--pink-light)); border-radius:2px; margin-bottom:40px; }
 
     /* ── STORY ORIGIN (① ご挨拶) ── */
@@ -84,15 +84,15 @@
     .story-origin .section-divider { margin-left:auto; margin-right:auto; margin-top:20px; }
     .story-text { max-width:760px; margin:0 auto; }
     .story-text p { font-size:1.04rem; line-height:2.15; color:var(--gray); margin-bottom:24px; }
-    .story-quote { font-family:'Noto Serif JP',serif; font-size:1.08rem; line-height:2; color:var(--pink-deep); font-weight:700; margin-bottom:24px; }
-    .story-signature { font-size:0.95rem; font-weight:700; color:var(--pink-deep); letter-spacing:0.05em; white-space:nowrap; }
+    .story-quote { font-family:'Noto Serif JP',serif; font-size:1.08rem; line-height:2; color:var(--gold-deep); font-weight:700; margin-bottom:24px; }
+    .story-signature { font-size:0.95rem; font-weight:700; color:var(--gold-deep); letter-spacing:0.05em; white-space:nowrap; }
 
     /* ── UZU CONCEPT (② UZUに込めた想い) ── */
-    .uzu-concept { position:relative; background:linear-gradient(160deg,#2a0a20 0%,#3a1030 50%,#1a0812 100%); overflow:hidden; padding:120px 40px; }
+    .uzu-concept { position:relative; background:linear-gradient(160deg,#1c2438 0%,#232d42 50%,#12182a 100%); overflow:hidden; padding:120px 40px; }
     .uzu-spiral {
       position:absolute; top:50%; left:50%; width:1000px; height:1000px; max-width:180vw; max-height:180vw;
       transform:translate(-50%,-50%);
-      background:conic-gradient(from 0deg, transparent 0%, rgba(200,151,58,0.22) 12%, transparent 28%, rgba(232,118,159,0.18) 50%, transparent 66%, rgba(200,151,58,0.16) 84%, transparent 100%);
+      background:conic-gradient(from 0deg, transparent 0%, rgba(200,151,58,0.22) 12%, transparent 28%, rgba(138,90,58,0.18) 50%, transparent 66%, rgba(200,151,58,0.16) 84%, transparent 100%);
       border-radius:50%; filter:blur(50px); pointer-events:none; animation:spin 60s linear infinite;
     }
     @keyframes spin { from{transform:translate(-50%,-50%) rotate(0deg);} to{transform:translate(-50%,-50%) rotate(360deg);} }
@@ -101,7 +101,7 @@
     .uzu-concept .section-title { color:#fff; text-align:center; }
     .uzu-concept .section-title .accent-gold { color:var(--gold); }
     .uzu-concept > .container > .section-label { text-align:center; }
-    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#f9d0e0); margin-left:auto; margin-right:auto; }
+    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#ecd6c9); margin-left:auto; margin-right:auto; }
     .uzu-name-mark { text-align:center; margin:8px 0 56px; }
     .uzu-name-mark .word {
       font-family:'Noto Serif JP',serif; font-size:clamp(3.4rem,11vw,6.5rem); font-weight:900;
@@ -129,25 +129,25 @@
     .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
     .audience-card {
       background:linear-gradient(160deg,#fff,var(--pink-pale)); border-radius:20px; padding:40px 26px;
-      text-align:center; box-shadow:0 6px 26px rgba(201,77,122,0.1); transition:transform 0.2s,box-shadow 0.2s;
+      text-align:center; box-shadow:0 6px 26px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s;
     }
-    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(201,77,122,0.18); }
+    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(138,90,58,0.18); }
     .audience-card .icon-circle {
       width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
-      background:linear-gradient(135deg,var(--pink-light),#fff0f7);
+      background:linear-gradient(135deg,var(--pink-light),#faf3ec);
       display:flex; align-items:center; justify-content:center; font-size:1.7rem;
-      box-shadow:0 4px 16px rgba(201,77,122,0.18);
+      box-shadow:0 4px 16px rgba(138,90,58,0.18);
     }
     .audience-card p { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); line-height:1.7; }
 
     /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
-    .experience { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); }
+    .experience { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); }
     .experience-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
     .experience-card {
       background:#fff; border-radius:18px; padding:30px 32px; display:flex; gap:20px; align-items:flex-start;
-      box-shadow:0 4px 22px rgba(201,77,122,0.08); transition:transform 0.2s,box-shadow 0.2s;
+      box-shadow:0 4px 22px rgba(138,90,58,0.08); transition:transform 0.2s,box-shadow 0.2s;
     }
-    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(201,77,122,0.16); }
+    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(138,90,58,0.16); }
     .experience-card .num {
       flex-shrink:0; width:44px; height:44px; border-radius:50%;
       background:linear-gradient(135deg,var(--gold),#e0b45a); color:#fff;
@@ -158,63 +158,63 @@
     .experience-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
 
     /* ── ABOUT ── */
-    .about { background:#fdf0f5; }
+    .about { background:#faf3ec; }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
     .about-text p { font-size:1.05rem; line-height:2; color:var(--gray); margin-bottom:20px; }
 
-    .principal-card { background:linear-gradient(145deg,#fff0f7,#f8e8ff); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(201,77,122,0.12); }
+    .principal-card { background:linear-gradient(145deg,#faf3ec,#f5ecdf); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(138,90,58,0.12); }
     .principal-avatar {
       width:140px; height:140px; border-radius:50%; margin:0 auto 16px;
-      overflow:hidden; border:4px solid #f9d0e0;
-      box-shadow:0 6px 24px rgba(201,77,122,0.25);
+      overflow:hidden; border:4px solid #ecd6c9;
+      box-shadow:0 6px 24px rgba(138,90,58,0.25);
     }
     .principal-avatar img {
       width:100%; height:100%; object-fit:cover; object-position:35% 8%;
     }
-    .principal-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--pink-mid); margin-bottom:6px; }
+    .principal-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--gold-deep); margin-bottom:6px; }
     .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
     .principal-card .bio { font-size:0.9rem; line-height:1.8; color:var(--gray); }
 
     /* ── PROGRAM ── */
     .program { background:#fff; }
     .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
-    .program-card { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(201,77,122,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
-    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(201,77,122,0.18); }
+    .program-card { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(138,90,58,0.18); }
     .program-card .icon { font-size:2.8rem; margin-bottom:16px; display:block; }
     .program-card h3 { font-family:'Noto Serif JP',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:12px; }
     .program-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
-    .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--pink-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
+    .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--gold-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
 
     /* ── SCHEDULE ── */
-    .schedule { background:#fdf0f5; }
+    .schedule { background:#faf3ec; }
     .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; background:#fff; border-radius:12px; overflow:hidden; }
-    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#9b2f70); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
+    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
     .schedule-table th:first-child { border-radius:12px 0 0 0; }
     .schedule-table th:last-child { border-radius:0 12px 0 0; }
     .schedule-table td { padding:16px 20px; border-bottom:1px solid var(--pink-light); font-size:0.95rem; vertical-align:top; }
     .schedule-table tr:last-child td { border-bottom:none; }
     .schedule-table tr:nth-child(even) td { background:var(--pink-pale); }
-    .schedule-table .time { color:var(--pink-deep); font-weight:700; white-space:nowrap; }
+    .schedule-table .time { color:var(--gold-deep); font-weight:700; white-space:nowrap; }
 
     /* ── FUTURE ── */
-    .future { background:linear-gradient(180deg,#fff8fc 0%,#f0f0ff 100%); }
+    .future { background:linear-gradient(180deg,#fffaf2 0%,#f7ede0 100%); }
     .future-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(100,80,180,0.15); }
+    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(138,90,58,0.15); }
     .future-list { list-style:none; }
     .future-list li { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--pink-light); }
     .future-list li:last-child { border-bottom:none; }
-    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#9b2f70); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
     .future-list .content h4 { font-weight:700; font-size:1rem; color:var(--dark); margin-bottom:4px; }
     .future-list .content p { font-size:0.85rem; line-height:1.7; color:var(--gray); }
 
     /* ── CTA ── */
-    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#7b1f5e 50%,#4a1a6b 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
+    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#4a3020 50%,#1c2438 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
     .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
     .cta > * { position:relative; z-index:1; }
     .cta .label { color:rgba(255,255,255,0.7); margin-bottom:16px; }
     .cta h2 { font-family:'Noto Serif JP',serif; font-size:clamp(1.8rem,4vw,3rem); color:#fff; font-weight:900; line-height:1.5; margin-bottom:16px; }
     .cta .sub { color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
-    .btn-white { display:inline-block; background:#fff; color:var(--pink-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
+    .btn-white { display:inline-block; background:#fff; color:var(--gold-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
     .btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
     .cta-note { margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.6); }
     .cta-select-box {
@@ -224,13 +224,13 @@
       margin:0 auto 36px; font-size:0.88rem; color:rgba(255,255,255,0.88);
       line-height:1.9; text-align:left;
     }
-    .cta-select-box strong { color:#f9d0e0; }
+    .cta-select-box strong { color:#ecd6c9; }
 
     /* ── FOOTER ── */
     footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
     footer .logo { font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:900; color:var(--pink-light); margin-bottom:8px; }
     .petal-row { display:flex; justify-content:center; gap:8px; margin:16px 0; }
-    .petal-row span { color:var(--pink-mid); font-size:1rem; opacity:0.6; }
+    .petal-row span { color:var(--gold-deep); font-size:1rem; opacity:0.6; }
 
     @media (max-width:768px) {
       section { padding:60px 24px; }
@@ -286,7 +286,7 @@
     </div>
     <div class="section-divider"></div>
     <div class="story-text">
-      <p>私は30年以上にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
+      <p>私は長年にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
       <p>私の職場では、多様な文化や価値観を尊重し、国籍や性別に関係なく、一人ひとりが責任ある仕事に挑戦できる環境がありました。トレーニングやミーティングでは国境を越えて意見を交わし、互いの違いを認め合いながら成長していく――そんな環境の中で、多くの学びと貴重な経験を積ませていただきました。</p>
       <p>女性が活躍できる環境にも恵まれ、私自身も責任ある仕事を任せていただきながら、やりがいと誇りを持って歩んできました。</p>
       <p>しかし、ある時、ふと立ち止まりました。</p>
@@ -444,7 +444,7 @@
         <p class="bio">はじめまして、安倍昭恵です。世界各国のリーダーたちと直接交流し、多くの貴重な経験を積んできました。無農薬のお米や地域おこしにも積極的に関わってきました。「女性が自分らしく輝ける社会」を実現するため、UZUの学校の校長として皆さんを全力で応援します。</p>
         <br>
         <div class="petal-row"><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span></div>
-        <p style="font-size:1.1rem;font-weight:700;color:var(--pink-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
+        <p style="font-size:1.1rem;font-weight:700;color:var(--gold-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
       </div>
     </div>
   </div>
@@ -581,7 +581,7 @@
 <section class="cta" id="cta">
   <p class="section-label label">JOIN US</p>
   <h2>さあ、あなたも<br>UZUの学校で輝こう</h2>
-  <p class="sub">第1回 UZUの学校は2026年8月23日（日）に開催されます<br>申し込み締め切りは、<strong style="color:#f9d0e0;">8月15日（土）</strong>です。<br>お座席に限りがあるため、お早めのお申し込みをお願い申し上げます。</p>
+  <p class="sub">第1回 UZUの学校は2026年8月23日（日）に開催されます<br>申し込み締め切りは、<strong style="color:#ecd6c9;">8月15日（土）</strong>です。<br>お座席に限りがあるため、お早めのお申し込みをお願い申し上げます。</p>
   <div class="cta-select-box">
     <strong>【お申し込みにあたってのお願い】</strong><br>
     定員に限りがございますため、お申し込みいただいた皆さまの熱意や想いを丁寧に拝見した上で、参加者様を選考させていただいております。ご記入いただいた内容をもとに慎重にご案内申し上げますので、あらかじめご了承いただけますと幸いです。
