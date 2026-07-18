@@ -78,13 +78,14 @@
     .section-divider { width:60px; height:4px; background:linear-gradient(90deg,var(--pink-deep),var(--pink-light)); border-radius:2px; margin-bottom:40px; }
 
     /* ── STORY ORIGIN (① ご挨拶) ── */
-    .story-origin { background:linear-gradient(180deg,#fdf0f5 0%,#fff 100%); }
-    .story-origin .section-title { text-align:center; }
-    .story-origin .section-divider { margin-left:auto; margin-right:auto; }
+    .story-origin { background:linear-gradient(180deg,var(--cream) 0%,#fff 100%); }
+    .story-header { display:flex; align-items:baseline; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .story-origin .section-title { text-align:center; margin-bottom:0; }
+    .story-origin .section-divider { margin-left:auto; margin-right:auto; margin-top:20px; }
     .story-text { max-width:760px; margin:0 auto; }
     .story-text p { font-size:1.04rem; line-height:2.15; color:var(--gray); margin-bottom:24px; }
     .story-quote { font-family:'Noto Serif JP',serif; font-size:1.08rem; line-height:2; color:var(--pink-deep); font-weight:700; margin-bottom:24px; }
-    .story-signature { text-align:right; font-size:0.95rem; font-weight:700; color:var(--dark); letter-spacing:0.05em; margin-top:36px; }
+    .story-signature { font-size:0.95rem; font-weight:700; color:var(--pink-deep); letter-spacing:0.05em; white-space:nowrap; }
 
     /* ── UZU CONCEPT (② UZUに込めた想い) ── */
     .uzu-concept { position:relative; background:linear-gradient(160deg,#2a0a20 0%,#3a1030 50%,#1a0812 100%); overflow:hidden; padding:120px 40px; }
@@ -238,6 +239,8 @@
       .hero-date-box { width:100%; padding:16px 18px; }
       .hero-date-box .date { font-size:1.35rem; }
       .hero-date-box .date span { font-size:1.55rem; }
+      .story-header { flex-direction:column; gap:8px; }
+      .story-signature { white-space:normal; }
       .about-grid, .future-grid { grid-template-columns:1fr; }
       .audience-grid { grid-template-columns:1fr 1fr; }
       .experience-grid { grid-template-columns:1fr; }
@@ -277,7 +280,10 @@
 <section class="story-origin">
   <div class="container">
     <p class="section-label">GREETING</p>
-    <h2 class="section-title"><span class="accent">ご挨拶</span></h2>
+    <div class="story-header">
+      <h2 class="section-title"><span class="accent">ご挨拶</span></h2>
+      <p class="story-signature">UZUの学校事務局　村山里美</p>
+    </div>
     <div class="section-divider"></div>
     <div class="story-text">
       <p>私は30年以上にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
@@ -296,7 +302,6 @@
       <p>一人では見ることのできなかった景色も、人との出会いによって見えるようになる。</p>
       <p>誰かとの出会いが勇気となり、その勇気が新しい挑戦を生み、その挑戦がまた誰かの背中を押していく。</p>
       <p>そんな温かな循環が生まれる場所をつくりたいという想いから、「UZUの学校」は誕生しました。</p>
-      <p class="story-signature">UZUの学校事務局　村山里美</p>
     </div>
   </div>
 </section>
