@@ -118,11 +118,94 @@
     .section-title .accent { color:var(--pink-deep); }
     .section-divider { width:60px; height:4px; background:linear-gradient(90deg,var(--pink-deep),var(--pink-light)); border-radius:2px; margin-bottom:40px; }
 
+    /* ── STORY ORIGIN (① 立ち上げた理由) ── */
+    .story-origin { background:linear-gradient(180deg,#fdf0f5 0%,#fff 100%); }
+    .story-origin-grid { display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:start; }
+    .story-origin-photo { position:sticky; top:80px; }
+    .story-origin-photo img {
+      width:100%; aspect-ratio:4/5; object-fit:cover; object-position:35% 12%;
+      border-radius:24px; box-shadow:0 24px 60px rgba(58,37,53,0.2);
+    }
+    .story-origin-photo .caption { margin-top:18px; text-align:center; font-size:0.82rem; color:var(--gray); letter-spacing:0.08em; }
+    .story-byline { font-size:0.95rem; font-weight:700; color:var(--pink-deep); letter-spacing:0.05em; margin-bottom:36px; }
+    .story-text p { font-size:1.04rem; line-height:2.15; color:var(--gray); margin-bottom:24px; }
+    .story-quote { font-family:'Noto Serif JP',serif; font-size:1.08rem; line-height:2; color:var(--pink-deep); font-weight:700; margin-bottom:24px; }
+
+    /* ── UZU CONCEPT (② UZUに込めた想い) ── */
+    .uzu-concept { position:relative; background:linear-gradient(160deg,#2a0a20 0%,#3a1030 50%,#1a0812 100%); overflow:hidden; padding:120px 40px; }
+    .uzu-spiral {
+      position:absolute; top:50%; left:50%; width:1000px; height:1000px; max-width:180vw; max-height:180vw;
+      transform:translate(-50%,-50%);
+      background:conic-gradient(from 0deg, transparent 0%, rgba(200,151,58,0.22) 12%, transparent 28%, rgba(232,118,159,0.18) 50%, transparent 66%, rgba(200,151,58,0.16) 84%, transparent 100%);
+      border-radius:50%; filter:blur(50px); pointer-events:none; animation:spin 60s linear infinite;
+    }
+    @keyframes spin { from{transform:translate(-50%,-50%) rotate(0deg);} to{transform:translate(-50%,-50%) rotate(360deg);} }
+    .uzu-concept .container { position:relative; z-index:1; }
+    .uzu-concept .section-label { color:var(--gold); }
+    .uzu-concept .section-title { color:#fff; text-align:center; }
+    .uzu-concept .section-title .accent-gold { color:var(--gold); }
+    .uzu-concept > .container > .section-label { text-align:center; }
+    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#f9d0e0); margin-left:auto; margin-right:auto; }
+    .uzu-name-mark { text-align:center; margin:8px 0 56px; }
+    .uzu-name-mark .word {
+      font-family:'Noto Serif JP',serif; font-size:clamp(3.4rem,11vw,6.5rem); font-weight:900;
+      letter-spacing:0.12em; background:linear-gradient(135deg,#fff 20%,var(--gold) 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;
+    }
+    .uzu-name-mark .reading { display:block; font-size:0.9rem; color:rgba(255,255,255,0.55); letter-spacing:0.35em; margin-top:14px; }
+    .uzu-concept-text { max-width:720px; margin:0 auto; }
+    .uzu-concept-text p { font-size:1.02rem; line-height:2.1; color:rgba(255,255,255,0.82); margin-bottom:22px; text-align:center; }
+    .uzu-myth-card {
+      background:rgba(255,255,255,0.06); border:1px solid rgba(200,151,58,0.4);
+      border-radius:22px; padding:36px; margin:40px auto; max-width:640px; text-align:center;
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    }
+    .uzu-myth-card .myth-name { font-family:'Noto Serif JP',serif; font-size:1.5rem; font-weight:900; color:var(--gold); }
+    .uzu-myth-card .myth-reading { display:block; font-size:0.8rem; color:rgba(255,255,255,0.5); letter-spacing:0.15em; margin:6px 0 18px; }
+    .uzu-myth-card p { color:rgba(255,255,255,0.82); font-size:0.95rem; line-height:1.9; margin:0; text-align:center; }
+    .uzu-pull-quote {
+      font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:700; color:#fff;
+      line-height:1.95; text-align:center; margin-top:44px;
+    }
+
+    /* ── AUDIENCE (③ こんな方に参加していただきたい) ── */
+    .audience { background:#fff; }
+    .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .audience-card {
+      background:linear-gradient(160deg,#fff,var(--pink-pale)); border-radius:20px; padding:40px 26px;
+      text-align:center; box-shadow:0 6px 26px rgba(201,77,122,0.1); transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(201,77,122,0.18); }
+    .audience-card .icon-circle {
+      width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
+      background:linear-gradient(135deg,var(--pink-light),#fff0f7);
+      display:flex; align-items:center; justify-content:center; font-size:1.7rem;
+      box-shadow:0 4px 16px rgba(201,77,122,0.18);
+    }
+    .audience-card p { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); line-height:1.7; }
+
+    /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
+    .experience { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); }
+    .experience-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+    .experience-card {
+      background:#fff; border-radius:18px; padding:30px 32px; display:flex; gap:20px; align-items:flex-start;
+      box-shadow:0 4px 22px rgba(201,77,122,0.08); transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(201,77,122,0.16); }
+    .experience-card .num {
+      flex-shrink:0; width:44px; height:44px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#e0b45a); color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Noto Serif JP',serif; font-weight:900; font-size:1.05rem;
+    }
+    .experience-card h3 { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); margin-bottom:8px; line-height:1.5; }
+    .experience-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
+
     /* ── ABOUT ── */
-    .about { background:#fff; }
+    .about { background:#fdf0f5; }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
     .about-text p { font-size:1.05rem; line-height:2; color:var(--gray); margin-bottom:20px; }
-    .motto-card { background:var(--pink-pale); border-left:4px solid var(--pink-deep); border-radius:0 12px 12px 0; padding:20px 24px; margin-top:24px; }
+    .motto-card { background:#fff; border-left:4px solid var(--pink-deep); border-radius:0 12px 12px 0; padding:20px 24px; margin-top:24px; }
     .motto-card h4 { font-family:'Noto Serif JP',serif; font-size:1rem; color:var(--pink-deep); font-weight:700; margin-bottom:12px; }
     .motto-card ul { list-style:none; }
     .motto-card ul li { font-size:0.95rem; color:var(--dark); padding:4px 0; padding-left:1.4em; position:relative; }
@@ -141,17 +224,10 @@
     .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
     .principal-card .bio { font-size:0.9rem; line-height:1.8; color:var(--gray); }
 
-    /* ── STORY ── */
-    .story { background:linear-gradient(180deg,#fdf0f5 0%,#fff 100%); }
-    .story-byline { font-size:0.95rem; font-weight:700; color:var(--pink-deep); letter-spacing:0.05em; margin-bottom:36px; }
-    .story-text { max-width:800px; }
-    .story-text p { font-size:1.02rem; line-height:2.1; color:var(--gray); margin-bottom:22px; }
-    .story-quote { font-family:'Noto Serif JP',serif; font-size:1.05rem; line-height:2; color:var(--pink-deep); font-weight:700; margin-bottom:22px; }
-
     /* ── PROGRAM ── */
-    .program { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); }
+    .program { background:#fff; }
     .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
-    .program-card { background:#fff; border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(201,77,122,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card { background:linear-gradient(160deg,#fce4f0 0%,#fff0fa 60%,#ede8ff 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(201,77,122,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
     .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(201,77,122,0.18); }
     .program-card .icon { font-size:2.8rem; margin-bottom:16px; display:block; }
     .program-card h3 { font-family:'Noto Serif JP',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:12px; }
@@ -159,8 +235,8 @@
     .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--pink-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
 
     /* ── SCHEDULE ── */
-    .schedule { background:#fff; }
-    .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; }
+    .schedule { background:#fdf0f5; }
+    .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; background:#fff; border-radius:12px; overflow:hidden; }
     .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#9b2f70); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
     .schedule-table th:first-child { border-radius:12px 0 0 0; }
     .schedule-table th:last-child { border-radius:0 12px 0 0; }
@@ -220,7 +296,11 @@
       .hero-date-box { width:100%; padding:16px 18px; }
       .hero-date-box .date { font-size:1.35rem; }
       .hero-date-box .date span { font-size:1.55rem; }
+      .story-origin-grid { grid-template-columns:1fr; }
+      .story-origin-photo { position:static; max-width:340px; margin:0 auto 8px; }
       .about-grid, .future-grid { grid-template-columns:1fr; }
+      .audience-grid { grid-template-columns:1fr 1fr; }
+      .experience-grid { grid-template-columns:1fr; }
       .program-cards { grid-template-columns:1fr; }
       .schedule-table th { padding:12px 10px; }
       .schedule-table td { padding:14px 10px; font-size:0.88rem; }
@@ -229,6 +309,9 @@
       .future-image img { max-width:320px; }
       .cta { padding:80px 24px; }
       .btn-primary, .btn-white { width:100%; max-width:320px; text-align:center; padding-left:20px; padding-right:20px; }
+    }
+    @media (max-width:560px) {
+      .audience-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -251,6 +334,160 @@
     </div>
     <br>
     <a href="apply.html" class="btn-primary">▶ 参加申し込みはこちら</a>
+  </div>
+</section>
+
+<!-- ① STORY ORIGIN -->
+<section class="story-origin">
+  <div class="container">
+    <p class="section-label">OUR STORY</p>
+    <h2 class="section-title">UZUの学校を<span class="accent">立ち上げた理由</span></h2>
+    <div class="section-divider"></div>
+    <div class="story-origin-grid">
+      <div class="story-origin-photo">
+        <img src="images/hero.png" alt="村山 さとみ">
+        <p class="caption">村山 さとみ（UZUの学校 主催者）</p>
+      </div>
+      <div>
+        <p class="story-byline">文・村山 さとみ（UZUの学校 主催者）</p>
+        <div class="story-text">
+          <p>私は30年以上にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
+          <p>私の職場では、多様な文化や価値観を尊重し、国籍や性別に関係なく、一人ひとりが責任ある仕事に挑戦できる環境がありました。トレーニングやミーティングでは国境を越えて意見を交わし、互いの違いを認め合いながら成長していく――そんな環境の中で、多くの学びと貴重な経験を積ませていただきました。</p>
+          <p>女性が活躍できる環境にも恵まれ、私自身も責任ある仕事を任せていただきながら、やりがいと誇りを持って歩んできました。</p>
+          <p>しかし、ある時、ふと立ち止まりました。</p>
+          <p class="story-quote">「私はこの先、どんな人生を歩みたいのだろう。」<br>「本当に目標としたい人は、どんな人なのだろう。」<br>「会社という枠を離れたとき、私には何が残るのだろう。」</p>
+          <p>会社では責任ある役割を任せていただき、充実した毎日を送っていました。しかしその一方で、いつかは会社を卒業し、自分自身の力で新しい道を歩んでみたいという想いも、少しずつ芽生え始めていました。</p>
+          <p>だからこそ、「どんな人生を築きたいのか」「どんな人と出会い、どんな価値を社会に届けていきたいのか」を、これまで以上に真剣に考えるようになったのです。</p>
+          <p>多様性が尊重される素晴らしい環境で働いてきたからこそ、多くの価値観に触れる機会には恵まれていました。それでも、自分が心から「こんな生き方をしたい」と思えるロールモデル、特に女性の存在には、なかなか出会うことができませんでした。</p>
+          <p>そんな時、安倍昭恵校長をはじめ、多くの素晴らしい方々とのご縁をいただきました。</p>
+          <p>これまで知ることのなかった世界に触れ、多様な経験や価値観に出会い、人との出会いが人生を大きく変え、新しい可能性を広げてくれることを実感しました。</p>
+          <p>そして、自然と思うようになったのです。</p>
+          <p class="story-quote">「この出会いや学びを、私だけのものにするのはもったいない。」</p>
+          <p>かつての私のように、自分の可能性を広げたい方、新しい一歩を踏み出したい方、人生をもっと豊かにしたいと願う方々にも、このような出会いの機会を届けたい。</p>
+          <p>一人では見ることのできなかった景色も、人との出会いによって見えるようになる。</p>
+          <p>誰かとの出会いが勇気となり、その勇気が新しい挑戦を生み、その挑戦がまた誰かの背中を押していく。</p>
+          <p>そんな温かな循環が生まれる場所をつくりたいという想いから、「UZUの学校」は誕生しました。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ② UZU CONCEPT -->
+<section class="uzu-concept">
+  <div class="uzu-spiral"></div>
+  <div class="container">
+    <p class="section-label">OUR CONCEPT</p>
+    <h2 class="section-title">UZUに<span class="accent-gold">込めた想い</span></h2>
+    <div class="section-divider"></div>
+    <div class="uzu-name-mark">
+      <span class="word">UZU</span>
+      <span class="reading">「 UZU 」 ＝ 渦</span>
+    </div>
+    <div class="uzu-concept-text">
+      <p>「UZU」という名前は、安倍昭恵校長が名付けてくださいました。</p>
+    </div>
+    <div class="uzu-myth-card">
+      <span class="myth-name">天鈿女命</span>
+      <span class="myth-reading">あめのうずめのみこと</span>
+      <p>天鈿女命は、人々を笑顔で巻き込み、その場に新しい流れを生み出し、世界に再び光をもたらしたと伝えられています。その由来には、日本神話に登場する天鈿女命への想いが込められています。</p>
+    </div>
+    <div class="uzu-concept-text">
+      <p>私たちも、一人ひとりの想いや挑戦が、人との出会いによって大きな「渦」となり、新しいご縁や可能性を生み出していきたい。</p>
+      <p>この場所で出会った仲間が、互いに刺激を受け、支え合い、それぞれの夢や挑戦を応援し合う。</p>
+      <p>そして、その一人の挑戦が、また新しい誰かの勇気となり、さらに大きな渦へと広がっていく。</p>
+      <p>UZUの学校は、知識を学ぶだけの学校ではありません。人との出会いを通して、自分自身の可能性に気づき、一歩踏み出す勇気を見つける場所です。</p>
+      <p>ここで生まれたご縁が、それぞれの人生をより豊かに、より輝かせ、その輪が未来へとつながっていく。</p>
+    </div>
+    <p class="uzu-pull-quote">そんな「人生が動き出すきっかけ」となる場所を、<br>皆さまとともにつくっていきたいと心から願っています。</p>
+  </div>
+</section>
+
+<!-- ③ AUDIENCE -->
+<section class="audience">
+  <div class="container">
+    <p class="section-label">FOR WHO</p>
+    <h2 class="section-title">こんな方に<span class="accent">参加していただきたい</span></h2>
+    <div class="section-divider"></div>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="icon-circle">✨</div>
+        <p>今の人生を<br>もっと輝かせたい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle">🌱</div>
+        <p>新しい一歩を<br>踏み出したい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle">🚀</div>
+        <p>起業や新しい挑戦を<br>考えている方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle">🤖</div>
+        <p>AIを味方につけ、<br>自分の可能性を広げたい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle">👑</div>
+        <p>女性リーダーとして<br>成長したい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle">🤝</div>
+        <p>志の高い仲間と出会い、<br>人生をより豊かにしたい方</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ EXPERIENCE -->
+<section class="experience">
+  <div class="container">
+    <p class="section-label">WHY UZU SCHOOL</p>
+    <h2 class="section-title">UZUの学校だからこそ<span class="accent">得られる体験</span></h2>
+    <div class="section-divider"></div>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="num">01</div>
+        <div>
+          <h3>少人数だからこそ生まれる対話</h3>
+          <p>一人ひとりの声がしっかり届く、少人数制だからこその深い対話が生まれます。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">02</div>
+        <div>
+          <h3>安倍昭恵校長との距離の近さ</h3>
+          <p>壇上からの一方通行ではなく、校長と直接言葉を交わせる近さがあります。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">03</div>
+        <div>
+          <h3>第一線で活躍するゲストとの交流</h3>
+          <p>各分野のトップランナーと、リアルな経験や知恵を分かち合う時間があります。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">04</div>
+        <div>
+          <h3>講義だけではなく参加者同士の交流</h3>
+          <p>聞くだけで終わらない、参加者同士が深くつながるワークショップの時間があります。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">05</div>
+        <div>
+          <h3>イベントで終わらないコミュニティ</h3>
+          <p>当日だけで終わらない、卒業後も続くつながりとネットワークを育みます。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">06</div>
+        <div>
+          <h3>UZUの学校だからこそ体験できる<br>特別な学びと出会い</h3>
+          <p>知識だけでなく、人生を動かす出会いと気づきが、ここにはあります。</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -289,40 +526,49 @@
   </div>
 </section>
 
-<!-- STORY -->
-<section class="story">
-  <div class="container">
-    <p class="section-label">OUR STORY</p>
-    <h2 class="section-title">UZUの学校を<span class="accent">立ち上げた理由</span></h2>
-    <div class="section-divider"></div>
-    <p class="story-byline">文・村山 さとみ（UZUの学校 主催者）</p>
-    <div class="story-text">
-      <p>私は30年以上にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
-      <p>私の職場では、多様な文化や価値観を尊重し、国籍や性別に関係なく、一人ひとりが責任ある仕事に挑戦できる環境がありました。トレーニングやミーティングでは国境を越えて意見を交わし、互いの違いを認め合いながら成長していく――そんな環境の中で、多くの学びと貴重な経験を積ませていただきました。</p>
-      <p>女性が活躍できる環境にも恵まれ、私自身も責任ある仕事を任せていただきながら、やりがいと誇りを持って歩んできました。</p>
-      <p>しかし、ある時、ふと立ち止まりました。</p>
-      <p class="story-quote">「私はこの先、どんな人生を歩みたいのだろう。」<br>「本当に目標としたい人は、どんな人なのだろう。」<br>「会社という枠を離れたとき、私には何が残るのだろう。」</p>
-      <p>会社では責任ある役割を任せていただき、充実した毎日を送っていました。しかしその一方で、いつかは会社を卒業し、自分自身の力で新しい道を歩んでみたいという想いも、少しずつ芽生え始めていました。</p>
-      <p>だからこそ、「どんな人生を築きたいのか」「どんな人と出会い、どんな価値を社会に届けていきたいのか」を、これまで以上に真剣に考えるようになったのです。</p>
-      <p>多様性が尊重される素晴らしい環境で働いてきたからこそ、多くの価値観に触れる機会には恵まれていました。それでも、自分が心から「こんな生き方をしたい」と思えるロールモデル、特に女性の存在には、なかなか出会うことができませんでした。</p>
-      <p>そんな時、安倍昭恵校長をはじめ、多くの素晴らしい方々とのご縁をいただきました。</p>
-      <p>これまで知ることのなかった世界に触れ、多様な経験や価値観に出会い、人との出会いが人生を大きく変え、新しい可能性を広げてくれることを実感しました。</p>
-      <p>そして、自然と思うようになったのです。</p>
-      <p class="story-quote">「この出会いや学びを、私だけのものにするのはもったいない。」</p>
-      <p>かつての私のように、自分の可能性を広げたい方、新しい一歩を踏み出したい方、人生をもっと豊かにしたいと願う方々にも、このような出会いの機会を届けたい。</p>
-      <p>一人では見ることのできなかった景色も、人との出会いによって見えるようになる。</p>
-      <p>誰かとの出会いが勇気となり、その勇気が新しい挑戦を生み、その挑戦がまた誰かの背中を押していく。</p>
-      <p>そんな温かな循環が生まれる場所をつくりたいという想いから、「UZUの学校」は誕生しました。</p>
-      <p>「UZU」という名前は、安倍昭恵校長が名付けてくださいました。</p>
-      <p>その由来には、日本神話に登場する<strong>天鈿女命（あめのうずめのみこと）</strong>への想いが込められています。</p>
-      <p>天鈿女命は、人々を笑顔で巻き込み、その場に新しい流れを生み出し、世界に再び光をもたらしたと伝えられています。</p>
-      <p>私たちも、一人ひとりの想いや挑戦が、人との出会いによって大きな「渦」となり、新しいご縁や可能性を生み出していきたい。</p>
-      <p>この場所で出会った仲間が、互いに刺激を受け、支え合い、それぞれの夢や挑戦を応援し合う。</p>
-      <p>そして、その一人の挑戦が、また新しい誰かの勇気となり、さらに大きな渦へと広がっていく。</p>
-      <p>UZUの学校は、知識を学ぶだけの学校ではありません。</p>
-      <p>人との出会いを通して、自分自身の可能性に気づき、一歩踏み出す勇気を見つける場所です。</p>
-      <p>ここで生まれたご縁が、それぞれの人生をより豊かに、より輝かせ、その輪が未来へとつながっていく。</p>
-      <p>そんな「人生が動き出すきっかけ」となる場所を、皆さまとともにつくっていきたいと心から願っています。</p>
+<!-- SPEAKER -->
+<section class="relative overflow-hidden bg-[#0D0D1F] py-20 px-6 md:py-28 md:px-16">
+  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-400/15 blur-[130px]"></div>
+
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mb-16 text-center md:mb-20">
+      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-cyan-300/80 md:text-sm">SPECIAL GUEST SPEAKER</p>
+      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-white md:text-5xl">小川 和也</h2>
+      <p class="mb-4 text-sm font-medium leading-loose text-white/70 [word-break:keep-all] break-words md:text-base">
+        グランドデザイン代表取締役社長 ／ フューチャリスト ／ 北海道大学 客員教授
+      </p>
+      <p class="mx-auto max-w-3xl bg-gradient-to-r from-cyan-300 via-cyan-100 to-amber-200 bg-clip-text text-base font-bold leading-loose text-transparent [word-break:keep-all] break-words md:text-lg">
+        ー テクノロジーが拓く未踏の未来図を、温かな感性と圧倒的な高揚感で描き出すフューチャリスト
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
+      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">01 ／ PIONEER</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">AIと実業の開拓者</h3>
+        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+          大手損保を経て2004年にグランドデザインを創業。買い物マッチングプラットフォーム「Gotcha! mall（ガッチャ！モール）」など、テクノロジーとクリエイティブを融合させた事業を展開し、国際的なマーケティングアワードを受賞。
+        </p>
+      </div>
+
+      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-amber-200 p-[2px] shadow-[0_0_60px_rgba(251,191,36,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(251,191,36,0.55)] md:-translate-y-4">
+        <div class="h-full rounded-2xl bg-[#13132b] p-8">
+          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-amber-300/90">02 ／ VISION NAVIGATOR</span>
+          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">メディアを通じて未来への高揚感を届ける「ビジョン・ナビゲーター」</h3>
+          <p class="text-sm leading-loose text-white/70 [word-break:keep-all] break-words">
+            沢井製薬のCM（ミライラボ篇）に出演し、AIがもたらす「未来 of オーダーメイド薬」のビジョンを提示。<span class="whitespace-nowrap">また、J-WAVE</span>のラジオ番組『FUTURISM』のナビゲーターを務め、難解になりがちな最新テクノロジーの面白さを誰にでも届く言葉でナビゲート。
+          </p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">03 ／ CITY DESIGNER</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">未来都市のグランドデザイン</h3>
+        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+          人工知能を用いた社会システムデザインを専門とし、数多くのAI関連特許を保有。大阪市AIガバナンスアドバイザーを務めるなど、スマートシティ構想やIR構想といった、これからのデジタル未来都市のあり方を多角的にデザインする。AI技術を活用した実業・研究で数多くの特許を持つ起業家。「AIと人間の共生」をテーマに、テクノロジーと人の可能性を融合した新しい未来を描いている。
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -376,53 +622,6 @@
       </tbody>
     </table>
     <p style="margin-top:16px;font-size:0.82rem;color:var(--gray);">※ タイムテーブルは変更になる場合があります。</p>
-  </div>
-</section>
-
-<!-- SPEAKER -->
-<section class="relative overflow-hidden bg-[#0D0D1F] py-20 px-6 md:py-28 md:px-16">
-  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-[120px]"></div>
-  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-400/15 blur-[130px]"></div>
-
-  <div class="relative mx-auto max-w-6xl">
-    <div class="mb-16 text-center md:mb-20">
-      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-cyan-300/80 md:text-sm">SPECIAL GUEST SPEAKER</p>
-      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-white md:text-5xl">小川 和也</h2>
-      <p class="mb-4 text-sm font-medium leading-loose text-white/70 [word-break:keep-all] break-words md:text-base">
-        グランドデザイン代表取締役社長 ／ フューチャリスト ／ 北海道大学 客員教授
-      </p>
-      <p class="mx-auto max-w-3xl bg-gradient-to-r from-cyan-300 via-cyan-100 to-amber-200 bg-clip-text text-base font-bold leading-loose text-transparent [word-break:keep-all] break-words md:text-lg">
-        ー テクノロジーが拓く未踏の未来図を、温かな感性と圧倒的な高揚感で描き出すフューチャリスト
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
-      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">01 ／ PIONEER</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">AIと実業の開拓者</h3>
-        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
-          大手損保を経て2004年にグランドデザインを創業。買い物マッチングプラットフォーム「Gotcha! mall（ガッチャ！モール）」など、テクノロジーとクリエイティブを融合させた事業を展開し、国際的なマーケティングアワードを受賞。
-        </p>
-      </div>
-
-      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-amber-200 p-[2px] shadow-[0_0_60px_rgba(251,191,36,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(251,191,36,0.55)] md:-translate-y-4">
-        <div class="h-full rounded-2xl bg-[#13132b] p-8">
-          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-amber-300/90">02 ／ VISION NAVIGATOR</span>
-          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">メディアを通じて未来への高揚感を届ける「ビジョン・ナビゲーター」</h3>
-          <p class="text-sm leading-loose text-white/70 [word-break:keep-all] break-words">
-            沢井製薬のCM（ミライラボ篇）に出演し、AIがもたらす「未来 of オーダーメイド薬」のビジョンを提示。<span class="whitespace-nowrap">また、J-WAVE</span>のラジオ番組『FUTURISM』のナビゲーターを務め、難解になりがちな最新テクノロジーの面白さを誰にでも届く言葉でナビゲート。
-          </p>
-        </div>
-      </div>
-
-      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">03 ／ CITY DESIGNER</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">未来都市のグランドデザイン</h3>
-        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
-          人工知能を用いた社会システムデザインを専門とし、数多くのAI関連特許を保有。大阪市AIガバナンスアドバイザーを務めるなど、スマートシティ構想やIR構想といった、これからのデジタル未来都市のあり方を多角的にデザインする。AI技術を活用した実業・研究で数多くの特許を持つ起業家。「AIと人間の共生」をテーマに、テクノロジーと人の可能性を融合した新しい未来を描いている。
-        </p>
-      </div>
-    </div>
   </div>
 </section>
 
