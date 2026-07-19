@@ -56,6 +56,7 @@
       margin-top:8px; font-size:0.82rem; color:rgba(255,255,255,0.78);
       line-height:1.6; letter-spacing:0.04em;
     }
+    .row-icon { display:inline-block; width:1em; height:1em; vertical-align:-0.15em; margin-right:2px; }
     .btn-primary {
       display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#5c3a24 100%);
       color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:0.1em;
@@ -135,9 +136,11 @@
     .audience-card .icon-circle {
       width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
       background:linear-gradient(135deg,var(--pink-light),#faf3ec);
-      display:flex; align-items:center; justify-content:center; font-size:1.7rem;
+      display:flex; align-items:center; justify-content:center;
       box-shadow:0 4px 16px rgba(138,90,58,0.18);
+      color:var(--gold-deep);
     }
+    .audience-card .icon-circle svg { width:28px; height:28px; }
     .audience-card p { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); line-height:1.7; }
 
     /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
@@ -169,7 +172,7 @@
       box-shadow:0 6px 24px rgba(138,90,58,0.25);
     }
     .principal-avatar img {
-      width:100%; height:100%; object-fit:cover; object-position:35% 8%;
+      width:100%; height:100%; object-fit:cover; object-position:100% 30%;
     }
     .principal-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--gold-deep); margin-bottom:6px; }
     .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
@@ -180,7 +183,8 @@
     .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
     .program-card { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
     .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(138,90,58,0.18); }
-    .program-card .icon { font-size:2.8rem; margin-bottom:16px; display:block; }
+    .program-card .icon { margin-bottom:16px; display:flex; justify-content:center; color:var(--gold-deep); }
+    .program-card .icon svg { width:2.6rem; height:2.6rem; }
     .program-card h3 { font-family:'Noto Serif JP',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:12px; }
     .program-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
     .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--gold-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
@@ -229,8 +233,8 @@
     /* ── FOOTER ── */
     footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
     footer .logo { font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:900; color:var(--pink-light); margin-bottom:8px; }
-    .petal-row { display:flex; justify-content:center; gap:8px; margin:16px 0; }
-    .petal-row span { color:var(--gold-deep); font-size:1rem; opacity:0.6; }
+    .petal-row { display:flex; justify-content:center; gap:10px; margin:16px 0; }
+    .petal-row svg { width:15px; height:15px; color:var(--gold-deep); opacity:0.6; }
 
     @media (max-width:768px) {
       section { padding:60px 24px; }
@@ -268,10 +272,10 @@
       <div class="hero-date-box">
         <div class="label">FIRST SESSION</div>
         <div class="date">2026年<span>8月23日</span>（日）</div>
-        <div class="time-row">⏰ 開場 14:00 〜 終了 17:30</div>
-        <div class="place-row">📍 東京都三田エリア<br>（当選者の方には後日詳しい場所をご案内いたします）</div>
+        <div class="time-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7V12L15.5 14.5"/></svg> 開場 14:00 〜 終了 17:30</div>
+        <div class="place-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> 東京都三田エリア<br>（当選者の方には後日詳しい場所をご案内いたします）</div>
       </div>
-      <a href="apply.html" class="btn-primary">▶ 参加申し込みはこちら</a>
+      <a href="apply.html" class="btn-primary">参加申し込みはこちら <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
     </div>
   </div>
 </section>
@@ -344,27 +348,27 @@
     <div class="section-divider"></div>
     <div class="audience-grid">
       <div class="audience-card">
-        <div class="icon-circle">✨</div>
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg></div>
         <p>今の人生を<br>もっと輝かせたい方、新しい一歩を<br>踏み出したい方</p>
       </div>
       <div class="audience-card">
-        <div class="icon-circle">🚀</div>
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V11"/><path d="M12 11C12 7 9 5 5 5C5 9 8 12 12 12"/><path d="M12 11C12 7 15 5 19 5C19 9 16 12 12 12"/></svg></div>
         <p>起業や新しい挑戦を<br>考えている方</p>
       </div>
       <div class="audience-card">
-        <div class="icon-circle">📈</div>
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17L9 11L13 15L21 6"/><path d="M15 6H21V12"/></svg></div>
         <p>現在経営している事業を<br>次のステージへ発展させたい方</p>
       </div>
       <div class="audience-card">
-        <div class="icon-circle">🤖</div>
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2V13M12 13L6.6 16.3M12 13L17.4 16.3"/></svg></div>
         <p>AIを味方につけ、<br>自分の可能性を広げたい方</p>
       </div>
       <div class="audience-card">
-        <div class="icon-circle">👑</div>
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3C9 6 8 10 8 14C8 17.5 10 20 12 21"/><path d="M8.5 7C7.2 6.6 6 7 6 7M7.6 10.5C6.2 10.3 5 11 5 11M7.8 14C6.4 14.1 5.4 15 5.4 15"/><path d="M12 3C15 6 16 10 16 14C16 17.5 14 20 12 21"/><path d="M15.5 7C16.8 6.6 18 7 18 7M16.4 10.5C17.8 10.3 19 11 19 11M16.2 14C17.6 14.1 18.6 15 18.6 15"/></svg></div>
         <p>女性リーダーとして<br>成長したい方</p>
       </div>
       <div class="audience-card">
-        <div class="icon-circle">🤝</div>
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></svg></div>
         <p>志の高い仲間と出会い、<br>人生をより豊かにしたい方</p>
       </div>
     </div>
@@ -437,13 +441,19 @@
       </div>
       <div class="principal-card">
         <div class="principal-avatar">
-          <img src="images/hero.png" alt="安倍昭恵 校長">
+          <img src="images/hero_v2.jpg" alt="安倍昭恵 校長">
         </div>
         <div class="role">校長 安倍昭恵 ご挨拶</div>
         <div class="name">安倍 昭恵</div>
         <p class="bio">はじめまして、安倍昭恵です。世界各国のリーダーたちと直接交流し、多くの貴重な経験を積んできました。無農薬のお米や地域おこしにも積極的に関わってきました。「女性が自分らしく輝ける社会」を実現するため、UZUの学校の校長として皆さんを全力で応援します。</p>
         <br>
-        <div class="petal-row"><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span><span>🌸</span></div>
+        <div class="petal-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+        </div>
         <p style="font-size:1.1rem;font-weight:700;color:var(--gold-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
       </div>
     </div>
@@ -512,19 +522,19 @@
     <div class="program-cards">
       <div class="program-card">
         <span class="tag">OPEN TALK</span>
-        <span class="icon">🎤</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11C5 14.9 8.1 18 12 18C15.9 18 19 14.9 19 11"/><path d="M12 18V21M9 21H15"/></svg></span>
         <h3>校長 安倍昭恵<br>スペシャルトーク</h3>
         <p>世界で体験してきた貴重なエピソードや、<br>女性の活躍に対する想いを語ります。</p>
       </div>
       <div class="program-card">
         <span class="tag">PANEL DISCUSSION</span>
-        <span class="icon">💬</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6H20V15H9L5 18V15H4V6Z"/><circle cx="9" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10.5" r="0.9" fill="currentColor" stroke="none"/></svg></span>
         <h3>ゲストスピーカーによる<br>パネルディスカッション</h3>
         <p>各分野の最前線で活躍するゲストスピーカーを迎え、テーマに沿ってリアルな経験と知恵を語り合います。</p>
       </div>
       <div class="program-card">
         <span class="tag">WORKSHOP</span>
-        <span class="icon">✍️</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L4.8 16.4L15.5 5.7C16.3 4.9 17.6 4.9 18.4 5.7C19.2 6.5 19.2 7.8 18.4 8.6L7.7 19.3L4 20Z"/><path d="M14 7.5L16.5 10"/></svg></span>
         <h3>参加者ワーク<br>ショップ</h3>
         <p>テーマをもとに少人数グループで対話し、<br>自分のビジョンや行動計画を深堀りします。</p>
       </div>
@@ -543,10 +553,10 @@
       <tbody>
         <tr><td class="time">14:00</td><td>開場・受付</td></tr>
         <tr><td class="time">14:30</td><td>オープニング ／ UZUの学校とは？</td></tr>
-        <tr><td class="time">14:45</td><td>🎤 校長 安倍昭恵スペシャルトーク</td></tr>
-        <tr><td class="time">15:00</td><td>💬 ゲストスピーカーによるパネルディスカッション</td></tr>
+        <tr><td class="time">14:45</td><td><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11C5 14.9 8.1 18 12 18C15.9 18 19 14.9 19 11"/><path d="M12 18V21M9 21H15"/></svg> 校長 安倍昭恵スペシャルトーク</td></tr>
+        <tr><td class="time">15:00</td><td><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6H20V15H9L5 18V15H4V6Z"/><circle cx="9" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10.5" r="0.9" fill="currentColor" stroke="none"/></svg> ゲストスピーカーによるパネルディスカッション</td></tr>
         <tr><td class="time">16:00</td><td>休憩・交流タイム</td></tr>
-        <tr><td class="time">16:15</td><td>✍️ 参加者ワークショップ（少人数グループ対話）</td></tr>
+        <tr><td class="time">16:15</td><td><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L4.8 16.4L15.5 5.7C16.3 4.9 17.6 4.9 18.4 5.7C19.2 6.5 19.2 7.8 18.4 8.6L7.7 19.3L4 20Z"/><path d="M14 7.5L16.5 10"/></svg> 参加者ワークショップ（少人数グループ対話）</td></tr>
         <tr><td class="time">17:00</td><td>発表・まとめ ／ クロージング</td></tr>
         <tr><td class="time">17:30</td><td>閉場</td></tr>
       </tbody>
@@ -586,7 +596,7 @@
     <strong>【お申し込みにあたってのお願い】</strong><br>
     定員に限りがございますため、お申し込みいただいた皆さまの熱意や想いを丁寧に拝見した上で、参加者様を選考させていただいております。ご記入いただいた内容をもとに慎重にご案内申し上げますので、あらかじめご了承いただけますと幸いです。
   </div>
-  <a href="apply.html" class="btn-white">✉ 今すぐ参加申し込み</a>
+  <a href="apply.html" class="btn-white">今すぐ参加申し込み <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
   <p class="cta-note">参加費の詳細は、お申し込みフォームにてご確認ください。<br>開催場所の詳細につきましては、当選者の方へ別途ご案内いたします。</p>
 </section>
 
