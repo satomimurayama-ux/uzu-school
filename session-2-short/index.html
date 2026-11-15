@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>UZUの学校 ｜ 第2回 2027年1月30日（土）開催</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap');
+    :root {
+      --pink-deep: #735981; --pink-light: #e9ddec;
+      --pink-pale: #f7f0f8; --gold: #765783; --gold-deep: #694b76; --cream: #fffaf7;
+      --dark: #3d3041; --gray: #64586a;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { background:var(--cream); color-scheme:light; }
+    body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
+
+    /* ── HERO ── */
+    .hero-v2 { background:#f5edeb; padding:0; }
+    .hero-announcement {
+      padding:clamp(20px,4vw,36px) 16px; text-align:center;
+      background:linear-gradient(135deg,#f4ebf6 0%,#fcf5ef 100%);
+    }
+    .hero-announcement .hero-event,
+    .hero-announcement h1 { font-family:'Noto Serif JP',serif; }
+    .hero-announcement .hero-event {
+      color:var(--gold-deep); font-size:clamp(1.75rem,5vw,2.5rem);
+      font-weight:700; letter-spacing:0.08em; margin-bottom:8px;
+    }
+    .hero-announcement h1 {
+      font-weight:900; font-size:clamp(1.5rem,5vw,3.5rem); line-height:1.35;
+    }
+    .hero-announcement h1 span { display:inline-block; }
+    .hero-application {
+      display:inline-flex; flex-wrap:wrap; justify-content:center; align-items:center;
+      gap:6px 14px; margin-top:20px; padding:10px 18px;
+      background:var(--gold-deep); color:#fff; border-radius:20px;
+      font-size:clamp(1.15rem,3vw,1.5rem); font-weight:700; line-height:1.45;
+    }
+    .hero-application time { display:inline-block; white-space:nowrap; }
+    .hero-application strong { font-size:1.2em; }
+    .hero-v2-img { display:block; width:100%; height:auto; }
+    .hero-v2-bar { background:linear-gradient(135deg,#f4ebf6 0%,#fcf5ef 100%); padding:40px; }
+    .hero-v2-bar-inner {
+      max-width:1240px; margin:0 auto;
+      display:grid; grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+      grid-template-areas:"details photo" "apply photo";
+      align-content:center; align-items:center; gap:20px 32px;
+    }
+    .hero-v2-bar .hero-date-box { grid-area:details; width:100%; }
+    .hero-v2-bar .btn-primary { grid-area:apply; justify-self:start; }
+    .hero-group-photo {
+      grid-area:photo; position:relative; overflow:hidden; aspect-ratio:1024 / 528;
+      border-radius:16px; box-shadow:0 8px 24px rgba(115,89,129,0.16);
+    }
+    .hero-group-photo img { display:block; position:absolute; top:-32.58%; width:100%; height:auto; }
+    .hero-date-box {
+      background:rgba(255,255,255,0.08); border:2px solid rgba(115,89,129,0.4);
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+      border-radius:16px; padding:clamp(22px,3vw,34px);
+    }
+    .hero-date-box .label {
+      font-size:0.9rem; color:var(--gold); font-weight:700;
+      letter-spacing:0.2em; margin-bottom:4px;
+    }
+    .hero-date-box .date {
+      font-family:'Noto Serif JP',serif; font-size:clamp(1.55rem,3.15vw,2.4rem); font-weight:900; color:#fff;
+    }
+    .hero-date-box .date span { color:var(--gold); font-size:1.17em; }
+    .hero-date-box .time-row {
+      margin-top:8px; font-size:clamp(1.05rem,1.7vw,1.3rem); font-weight:700; color:rgba(255,255,255,0.9);
+      letter-spacing:0.1em;
+    }
+    .hero-date-box .place-row {
+      margin-top:10px; font-size:clamp(1rem,1.55vw,1.2rem); color:rgba(255,255,255,0.78);
+      line-height:1.6; letter-spacing:0.04em;
+    }
+    .hero-date-detail { margin-top:8px; font-size:clamp(1rem,1.5vw,1.15rem); }
+    .row-icon { display:inline-block; width:1em; height:1em; vertical-align:-0.15em; margin-right:2px; }
+    .btn-primary {
+      display:inline-flex; align-items:center; justify-content:center; gap:0.55em;
+      width:min(100%, 22rem); background:linear-gradient(135deg,#694780 0%,#452c59 100%);
+      color:#fff; font-size:clamp(1.25rem,2.2vw,1.65rem); font-weight:900; letter-spacing:0.04em;
+      padding:18px 22px; border-radius:100px; text-decoration:none;
+      box-shadow:0 8px 30px rgba(115,89,129,0.55); transition:transform 0.2s,box-shadow 0.2s;
+      position:relative; overflow:hidden;
+    }
+    .btn-primary::before {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent); border-radius:inherit;
+    }
+    .btn-primary:not(:disabled):hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(115,89,129,0.65); }
+
+    .btn-primary .row-icon { flex-shrink:0; margin:0; }
+    .btn-primary:focus-visible { outline:3px solid var(--gold-deep); outline-offset:4px; }
+
+    /* ── SECTIONS ── */
+    section { padding:80px 40px; }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.3em; color:var(--gold-deep); text-transform:uppercase; margin-bottom:12px; }
+    .section-title { font-family:'Noto Serif JP',serif; font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; color:var(--dark); line-height:1.4; margin-bottom:20px; }
+    h1, h2, h3, .audience-card p { line-break:strict; word-break:auto-phrase; text-wrap:balance; }
+    .story-text p, .experience-card p, .speaker-copy, .schedule-table td, .cta-select-box p {
+      line-break:strict; word-break:auto-phrase; text-wrap:pretty;
+    }
+    .cta-select-box p + p { margin-top:0.65em; }
+    .section-title .accent { color:var(--gold-deep); }
+    .section-divider { width:60px; height:4px; background:linear-gradient(90deg,var(--pink-deep),var(--pink-light)); border-radius:2px; margin-bottom:40px; }
+
+    /* ── STORY ORIGIN (① ご挨拶) ── */
+    .story-origin { background:linear-gradient(180deg,var(--cream) 0%,#fff 100%); }
+    .story-header { display:flex; align-items:baseline; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .story-origin .section-label, .uzu-concept .section-label { font-size:clamp(0.95rem,2vw,1.15rem); }
+    .story-origin .section-title { text-align:center; margin-bottom:0; }
+    .story-origin .section-divider { margin-left:auto; margin-right:auto; margin-top:20px; }
+    .story-text { max-width:920px; margin:0 auto; }
+    .story-text p {
+      font-size:clamp(1.2rem,2vw,1.35rem); line-height:1.9;
+      color:var(--gray); margin-bottom:24px; line-break:strict; text-wrap:pretty;
+    }
+    .story-text .story-quote {
+      font-family:'Noto Serif JP',serif; font-size:clamp(1.25rem,2.15vw,1.45rem);
+      color:var(--gold-deep); font-weight:700;
+    }
+    .story-signature { font-size:clamp(1.1rem,2.1vw,1.4rem); font-weight:700; color:var(--gold-deep); letter-spacing:0.05em; white-space:nowrap; }
+
+    /* ── UZU CONCEPT (② UZUに込めた想い) ── */
+    .uzu-concept { position:relative; background:linear-gradient(160deg,#f4ebf6 0%,#232d42 50%,#fcf5ef 100%); overflow:hidden; padding:120px 40px; }
+    .uzu-spiral {
+      position:absolute; top:50%; left:50%; width:1000px; height:1000px; max-width:180vw; max-height:180vw;
+      transform:translate(-50%,-50%);
+      background:conic-gradient(from 0deg, transparent 0%, rgba(115,89,129,0.22) 12%, transparent 28%, rgba(115,89,129,0.18) 50%, transparent 66%, rgba(115,89,129,0.16) 84%, transparent 100%);
+      border-radius:50%; filter:blur(50px); pointer-events:none; animation:spin 60s linear infinite;
+    }
+    @keyframes spin { from{transform:translate(-50%,-50%) rotate(0deg);} to{transform:translate(-50%,-50%) rotate(360deg);} }
+    .uzu-concept .container { position:relative; z-index:1; }
+    .uzu-concept .section-label { color:var(--gold); }
+    .uzu-concept .section-title { color:#fff; text-align:center; }
+    .uzu-concept .section-title .accent-gold { color:var(--gold); }
+    .uzu-concept > .container > .section-label { text-align:center; }
+    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#e9ddec); margin-left:auto; margin-right:auto; }
+    .uzu-name-mark { text-align:center; margin:8px 0 56px; }
+    .uzu-name-mark .word {
+      font-family:'Noto Serif JP',serif; font-size:clamp(3.4rem,11vw,6.5rem); font-weight:900;
+      letter-spacing:0.12em; background:linear-gradient(135deg,#fff 20%,var(--gold) 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;
+    }
+    .uzu-name-mark .reading { display:block; font-size:clamp(1.1rem,2vw,1.3rem); color:rgba(255,255,255,0.55); letter-spacing:0.35em; margin-top:14px; }
+    .uzu-concept-text { max-width:850px; margin:0 auto; }
+    .uzu-concept-text p { font-size:clamp(1.125rem,2vw,1.35rem); line-height:1.9; color:rgba(255,255,255,0.82); margin-bottom:22px; text-align:center;
+      line-break:strict; text-wrap:balance; }
+    .uzu-myth-card {
+      background:rgba(255,255,255,0.06); border:1px solid rgba(115,89,129,0.4);
+      border-radius:22px; padding:clamp(20px,5vw,36px); margin:40px auto; max-width:760px; text-align:center;
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    }
+    .uzu-myth-card .myth-name { font-family:'Noto Serif JP',serif; font-size:clamp(1.7rem,3vw,2.1rem); font-weight:900; color:#fff8ff; }
+    .uzu-myth-card .myth-reading { display:block; font-size:clamp(1rem,1.8vw,1.15rem); color:rgba(255,255,255,0.5); letter-spacing:0.15em; margin:6px 0 18px; }
+    .uzu-myth-card p { color:rgba(255,255,255,0.82); font-size:clamp(1.1rem,1.9vw,1.25rem); line-height:1.9; margin:0; text-align:center; }
+    .uzu-pull-quote {
+      font-family:'Noto Serif JP',serif; font-size:clamp(1.45rem,2.8vw,1.8rem); font-weight:700; color:#fff;
+      line-height:1.95; text-align:center; max-width:850px; margin:44px auto 0;
+      line-break:strict; text-wrap:balance;
+    }
+
+    /* ── AUDIENCE (③ こんな方に参加していただきたい) ── */
+    .audience { background:#fff; }
+    .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .audience-card {
+      background:linear-gradient(160deg,#fff,var(--pink-pale)); border-radius:20px; padding:40px 26px;
+      text-align:center; box-shadow:0 6px 26px rgba(115,89,129,0.1); transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(115,89,129,0.18); }
+    .audience-card .icon-circle {
+      width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
+      background:linear-gradient(135deg,var(--pink-light),#f7f0f8);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 16px rgba(115,89,129,0.18);
+      color:var(--gold-deep);
+    }
+    .audience-card .icon-circle svg { width:28px; height:28px; }
+    .audience-card p { font-family:'Noto Serif JP',serif; font-size:clamp(1.2rem,2vw,1.45rem); text-wrap:balance; font-weight:700; color:var(--dark); line-height:1.7; }
+
+    /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
+    .experience { background:linear-gradient(160deg,#f5edf8 0%,#fffaf7 60%,#f3e9f4 100%); }
+    .experience-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+    .experience-card {
+      background:#fff; border-radius:18px; padding:30px 32px; display:flex; gap:20px; align-items:flex-start;
+      box-shadow:0 4px 22px rgba(115,89,129,0.08); transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(115,89,129,0.16); }
+    .experience-card .num {
+      flex-shrink:0; width:44px; height:44px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#e0b45a); color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Noto Serif JP',serif; font-weight:900; font-size:1.05rem;
+    }
+    .experience-card h3 { font-family:'Noto Serif JP',serif; font-size:clamp(1.2rem,2vw,1.45rem); font-weight:700; color:var(--dark); margin-bottom:8px; line-height:1.5; }
+    .experience-card p { font-size:clamp(1.05rem,1.75vw,1.25rem); text-wrap:pretty; line-height:1.8; color:var(--gray); }
+
+    /* ── ABOUT ── */
+    .about { background:#f7f0f8; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .about-text p, .principal-card .bio {
+      font-size:clamp(1.1rem,2vw,1.25rem); line-height:1.8; color:var(--gray);
+      line-break:strict; word-break:auto-phrase; text-wrap:pretty;
+    }
+    .about-text p { margin-bottom:20px; }
+
+    .principal-card { background:linear-gradient(145deg,#f7f0f8,#f3e9f4); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(115,89,129,0.12); }
+    .principal-avatar {
+      width:140px; height:140px; border-radius:50%; margin:0 auto 16px;
+      overflow:hidden; border:4px solid #e9ddec;
+      box-shadow:0 6px 24px rgba(115,89,129,0.25);
+    }
+    .principal-avatar img {
+      width:100%; height:100%; object-fit:cover; object-position:100% 30%;
+    }
+    .principal-card .role { font-size:clamp(1rem,2vw,1.2rem); font-weight:700; letter-spacing:0.2em; color:var(--gold-deep); margin-bottom:6px; }
+    .principal-card .name { font-family:'Noto Serif JP',serif; font-size:clamp(2.1rem,4vw,2.6rem); font-weight:900; color:var(--dark); margin-bottom:16px; }
+
+    /* ── PROGRAM ── */
+    .program { background:#fff; }
+    .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+    .program-card { background:linear-gradient(160deg,#f5edf8 0%,#fffaf7 60%,#f3e9f4 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(115,89,129,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(115,89,129,0.18); }
+    .program-card .icon { margin-bottom:16px; display:flex; justify-content:center; color:var(--gold-deep); }
+    .program-card .icon svg { width:2.6rem; height:2.6rem; }
+    .program-card h3, .program-card p { line-break:strict; text-wrap:balance; }
+    .program-card h3 { font-family:'Noto Serif JP',serif; font-size:clamp(1.3rem,2vw,1.55rem); font-weight:700; color:var(--dark); margin-bottom:12px; }
+    .program-card p { font-size:clamp(1.05rem,1.5vw,1.2rem); line-height:1.8; color:var(--gray); }
+    .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--gold-deep); font-size:clamp(0.9rem,1.3vw,1.05rem); font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
+
+    /* ── SCHEDULE ── */
+    .schedule { background:#f7f0f8; }
+    .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; background:#fff; border-radius:12px; overflow:hidden; }
+    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#60466e); color:#fff; padding:14px 20px; text-align:left; font-size:clamp(1.05rem,1.8vw,1.25rem); letter-spacing:0.1em; }
+    .schedule-table th:first-child { border-radius:12px 0 0 0; }
+    .schedule-table th:last-child { border-radius:0 12px 0 0; }
+    .schedule-table td { padding:16px 20px; border-bottom:1px solid var(--pink-light); font-size:clamp(1.1rem,1.9vw,1.3rem); line-height:1.6; vertical-align:top; }
+    .schedule-table tr:last-child td { border-bottom:none; }
+    .schedule-table tr:nth-child(even) td { background:var(--pink-pale); }
+    .schedule-note { margin-top:16px; font-size:clamp(1rem,1.6vw,1.15rem); color:var(--gray); }
+    #access h3 { font-size:clamp(1.35rem,2.3vw,1.65rem); font-weight:700; }
+    #access p:not(.section-label), #access li { font-size:clamp(1.125rem,2vw,1.35rem); line-height:1.7; text-wrap:pretty; }
+    .schedule-table .time { color:var(--gold-deep); font-weight:700; white-space:nowrap; }
+
+    /* ── CTA ── */
+    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#eadcee 50%,#f4ebf6 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
+    .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
+    .cta > * { position:relative; z-index:1; }
+    .cta .label { color:rgba(255,255,255,0.7); margin-bottom:16px; }
+    .cta h2 { font-family:'Noto Serif JP',serif; font-size:clamp(1.8rem,4vw,3rem); color:#fff; font-weight:900; line-height:1.5; margin-bottom:16px; }
+    .cta .sub { color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
+    .btn-white { display:inline-block; background:#fff; color:var(--gold-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
+    .btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
+    .cta .cta-event-date {
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+      gap:4px 18px; padding:16px; max-width:740px; line-height:1.4;
+      background:var(--cream); border:2px solid var(--gold-deep); border-radius:14px;
+      color:var(--gold-deep); font-weight:900;
+    }
+    .cta-event-date time { font-size:clamp(1.65rem,4vw,2.65rem); }
+    .cta-note { margin-top:20px; font-size:clamp(1.05rem,2vw,1.2rem); color:rgba(255,255,255,0.6); }
+    .cta-select-box {
+      background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.30);
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+      border-radius:14px; padding:clamp(18px,3vw,30px); max-width:740px;
+      margin:0 auto 36px; font-size:clamp(1.1rem,2vw,1.25rem); color:rgba(255,255,255,0.88);
+      line-height:1.9; text-align:left;
+    }
+    .cta-select-box h3 { color:var(--gold-deep); font-size:clamp(1.25rem,2.5vw,1.5rem); font-weight:700; margin-bottom:6px; }
+    .cta-select-box .priority-deadline {
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+      gap:4px 16px; margin-top:18px; padding:12px;
+      background:var(--gold-deep); color:#fff; border-radius:12px;
+      font-weight:700; line-height:1.5; text-align:center;
+    }
+    .priority-deadline time { font-size:clamp(1.15rem,2.7vw,1.7rem); }
+    .cta-line { margin:0 auto 32px; font-size:clamp(1.15rem,2vw,1.4rem); }
+    .cta-line h3 { font-size:clamp(1.35rem,3vw,1.75rem); text-wrap:balance; font-weight:700; margin-bottom:16px; }
+    .cta-line img { display:block; width:224px; max-width:100%; height:auto; margin:0 auto 12px; }
+    .cta-line p { margin:0 auto 12px; max-width:900px; text-wrap:pretty; }
+    .cta #application-form-note { font-size:clamp(1.15rem,2vw,1.4rem); max-width:860px; text-wrap:pretty; }
+    .cta-line a { text-decoration:underline; text-underline-offset:0.2em; font-weight:700; }
+
+    /* ── FOOTER ── */
+    footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:clamp(1rem,1.8vw,1.15rem); }
+    footer .logo { font-family:'Noto Serif JP',serif; font-size:clamp(1.65rem,3vw,1.9rem); font-weight:900; color:var(--pink-light); margin-bottom:8px; }
+    .petal-row { display:flex; justify-content:center; gap:10px; margin:16px 0; }
+    .petal-row svg { width:15px; height:15px; color:var(--gold-deep); opacity:0.6; }
+
+    @media (max-width:768px) {
+      section { padding:60px 24px; }
+      .hero-v2-bar { padding:28px 20px; }
+      .hero-v2-bar-inner {
+        grid-template-columns:minmax(0,1fr); grid-template-areas:"details" "photo" "apply";
+        justify-items:center;
+      }
+      .hero-v2-bar .hero-date-box, .hero-v2-bar .btn-primary { justify-self:center; }
+      .hero-group-photo { width:100%; max-width:560px; }
+      .hero-date-box { padding:22px 16px; }
+      .story-header { flex-direction:column; gap:8px; }
+      .story-signature { white-space:normal; }
+      .about-grid { grid-template-columns:1fr; }
+      .audience-grid { grid-template-columns:1fr 1fr; }
+      .experience-grid { grid-template-columns:1fr; }
+      .program-cards { grid-template-columns:1fr; }
+      .schedule-table th { padding:12px 10px; }
+      .schedule-table td { padding:14px 10px; }
+      .schedule-table th:first-child { width:88px !important; }
+      .cta { padding:80px 24px; }
+      .btn-primary, .btn-white { width:100%; max-width:320px; text-align:center; padding-left:20px; padding-right:20px; }
+    }
+    @media (max-width:560px) {
+      .audience-grid { grid-template-columns:1fr; }
+    }
+
+    .hero-date-box {
+      background:#fffaf7;
+      border:1px solid var(--pink-light);
+    }
+    .hero-date-box .date, .hero-date-box .time-row, .hero-date-box .place-row,
+    .cta h2, .cta .sub, .cta-select-box { color:var(--dark); }
+    .cta { background:linear-gradient(135deg,#faf1ed,#eee2f3); }
+    .cta .label, .cta-note { color:var(--gold-deep); }
+    .cta-select-box { background:#fffaf7; border-color:var(--pink-light); }
+    .guest-speaker { background:linear-gradient(160deg,#faf4f9,#f0e4f3); }
+    .guest-speaker .speaker-copy { color:var(--dark); }
+    .guest-speaker .award-phrase { white-space:nowrap; }
+    .guest-speaker .speaker-accent { color:var(--gold-deep); }
+    .guest-speaker .speaker-card {
+      background:#fffaf7;
+      border:1px solid var(--pink-light);
+      box-shadow:0 8px 24px rgba(115,89,129,0.1);
+    }
+
+    .guest-portrait {
+      display:block; width:clamp(180px,24vw,300px); height:auto;
+      aspect-ratio:1; object-fit:cover; object-position:center 30%;
+      border-radius:50%; border:5px solid #fffaf7;
+      box-shadow:0 10px 28px rgba(115,89,129,0.16);
+    }
+    .guest-books { margin:48px auto 0; text-align:center; }
+    .guest-books h3 {
+      font-family:'Noto Serif JP',serif; font-weight:700;
+      font-size:clamp(1.4rem,3vw,1.8rem); margin-bottom:20px;
+    }
+    .guest-books ul {
+      list-style:none; display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:clamp(12px,4vw,32px); max-width:420px; margin:0 auto;
+    }
+    .guest-books a { display:grid; justify-items:center; gap:6px; }
+    .guest-books img {
+      width:100%; height:clamp(145px,33vw,205px);
+      object-fit:contain; margin-bottom:8px;
+    }
+    .guest-books span { font-size:clamp(1.125rem,2vw,1.3rem); color:var(--gold-deep); text-decoration:underline; text-underline-offset:0.2em; }
+    .guest-books small { font-size:1rem; color:var(--gray); }
+    .page-link-band { background:#fffaf7; text-align:center; padding:28px 24px; border-bottom:1px solid var(--pink-light); }
+    .page-link-band a { display:inline-flex; align-items:center; gap:0.5em; font-size:clamp(1.1rem,2vw,1.3rem); font-weight:700; color:var(--gold-deep); text-decoration:underline; text-underline-offset:0.25em; }
+    .page-link-band p { margin-bottom:8px; color:var(--gray); font-size:clamp(1rem,1.8vw,1.15rem); }
+    footer a { color:var(--pink-light); text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero-v2">
+  <div class="hero-announcement">
+    <p class="hero-event">UZUの学校 第2回</p>
+    <h1><span>ゲストスピーカーに</span> <span>林真理子さんの登壇が決定しました！</span></h1>
+    <p class="hero-application">
+      <span>先着順でご案内</span>
+      <span>応募締切 <time datetime="2026-12-20">2026年<strong>12月20日</strong>（日）</time></span>
+    </p>
+  </div>
+  <img class="hero-v2-img" src="../images/hero_v2.jpg" alt="UZUの学校 ｜ 安倍昭恵校長 ｜ 未来を、ともに描く学びの場">
+  <div class="hero-v2-bar">
+    <div class="hero-v2-bar-inner">
+      <div class="hero-date-box">
+        <div class="label">SECOND SESSION</div>
+        <div class="date">2027年<span>1月30日</span>（土）</div>
+        <div class="time-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7V12L15.5 14.5"/></svg> <span class="inline-block">開場 14:00</span> ／ <span class="inline-block">開始 14:30</span> 〜 <span class="inline-block">終了 17:30</span></div>
+        <div class="time-row">会費 5,000円（税込）</div>
+        <div class="place-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <span>東京都三田　弘法寺</span></div>
+        <p class="hero-date-detail">〒108-0073 東京都港区三田2-12-5</p>
+        <p class="hero-date-detail"><a class="underline" href="#access">弘法寺までのアクセス　詳しくはこちらをクリック</a></p>
+      </div>
+      <figure class="hero-group-photo">
+        <img src="../session-2/images/uzu-group.jpeg" alt="UZUの学校の集合写真" width="1024" height="768">
+      </figure>
+      <a href="#cta" class="btn-primary">お申し込みのご案内 <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- LINK TO ABOUT -->
+<div class="page-link-band">
+  <p>UZUの学校の想い・ご挨拶・コンセプトはこちら</p>
+  <a href="../about/">UZUの学校について <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
+</div>
+
+<!-- SPEAKER -->
+<section class="guest-speaker">
+  <div class="container" style="text-align:center">
+    <p class="section-label">SPECIAL GUEST SPEAKER</p>
+    <img class="guest-portrait" style="margin:0 auto 20px" src="../session-2/images/hayashi-mariko.png" alt="林真理子さん" width="1354" height="1438" loading="lazy">
+    <h2 class="section-title" style="margin-bottom:8px">林真理子さん<span style="font-size:0.55em;font-weight:700;color:var(--gray)">（作家）</span></h2>
+    <p class="speaker-copy" style="max-width:760px;margin:0 auto;font-size:clamp(1.1rem,2vw,1.25rem);line-height:1.8;text-align:left">コピーライターを経て作家に。『最終便に間に合えば』『京都まで』で<span class="award-phrase">第94回直木賞</span>を受賞。2022年に日本大学理事長に就任。</p>
+    <p style="margin-top:16px"><a class="underline speaker-accent" href="https://www.shinchosha.co.jp/writer/2558/">著者プロフィール（新潮社）</a></p>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule">
+  <div class="container">
+    <p class="section-label">PROGRAM</p>
+    <h2 class="section-title">当日のプログラム</h2>
+    <div class="section-divider"></div>
+    <table class="schedule-table">
+      <thead><tr><th style="width:140px">時 間</th><th>内 容</th></tr></thead>
+      <tbody>
+        <tr><td class="time">14:00</td><td>開場・受付</td></tr>
+        <tr><td class="time">14:30</td><td>オープニング ／ 安倍昭恵校長ご挨拶</td></tr>
+        <tr><td class="time">14:45</td><td>林真理子さん ご講演</td></tr>
+        <tr><td class="time">15:15</td><td>安倍昭恵校長 × 林真理子さん スペシャル対談</td></tr>
+        <tr><td class="time">16:00</td><td>参加者交流</td></tr>
+        <tr><td class="time">16:45</td><td>まとめ ／ クロージング（17:30 閉場）</td></tr>
+      </tbody>
+    </table>
+    <p class="schedule-note">※ 内容・時間は変更になる場合があります。</p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="schedule" id="access" aria-labelledby="access-title" style="padding-top:0">
+  <div class="container">
+    <p class="section-label">ACCESS</p>
+    <h2 class="section-title" id="access-title">会場・アクセス</h2>
+    <div class="section-divider"></div>
+    <h3>東京都三田　弘法寺</h3>
+    <p>〒108-0073 東京都港区三田2-12-5</p>
+    <p>JR「田町駅」徒歩7分 ／ 都営線「三田駅」徒歩6分（<a class="underline" href="https://koboji.jp/access">詳しいアクセス</a>）</p>
+    <p><strong>駐車場はございません。弘法寺への直接のお問い合わせはご遠慮ください。</strong></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <p class="section-label label">JOIN US</p>
+  <h2>お申し込み</h2>
+  <section class="cta-select-box" aria-labelledby="priority-seating-heading">
+    <h3 id="priority-seating-heading">先着順でご案内します</h3>
+    <p>第1回にお申し込みの皆さまと、そのご紹介の方を優先してご案内します。</p>
+    <p class="priority-deadline"><strong>応募締切</strong> <time datetime="2026-12-20">2026年12月20日（日）</time></p>
+  </section>
+  <section class="cta-line" aria-labelledby="line-registration-heading">
+    <h3 id="line-registration-heading">UZUの学校公式LINE</h3>
+    <img src="../session-2/images/uzu-official-line-qr.png" alt="UZUの学校公式LINEの友だち追加用QRコード" width="808" height="780" loading="lazy">
+    <p>LINE ID：<strong>@690xlmjf</strong>　<a href="https://lin.ee/6Z85ZC6">友だち追加</a></p>
+  </section>
+  <p class="sub" id="application-form-note"><strong>※ LINE登録だけではお申し込みになりません。必ずお申し込みフォームから送信してください。</strong></p>
+  <button type="button" class="btn-primary" aria-describedby="application-form-note" disabled>お申し込みフォーム <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">UZUの学校</div>
+  <p>女性の社会進出と活躍を支援するコミュニティ</p>
+  <p style="margin-top:12px"><a href="../about/">UZUの学校について</a></p>
+  <br>
+  <p>&copy; 2027 UZUの学校. All rights reserved.</p>
+</footer>
+</body>
+</html>
