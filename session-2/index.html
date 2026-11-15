@@ -274,6 +274,13 @@
       line-height:1.9; text-align:left;
     }
     .cta-select-box h3 { color:var(--gold-deep); font-size:clamp(1.25rem,2.5vw,1.5rem); font-weight:700; margin-bottom:6px; }
+    .cta-select-box .priority-deadline {
+      display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+      gap:4px 16px; margin-top:18px; padding:12px;
+      background:var(--gold-deep); color:#fff; border-radius:12px;
+      font-weight:700; line-height:1.5; text-align:center;
+    }
+    .priority-deadline time { font-size:clamp(1.15rem,2.7vw,1.7rem); }
     .cta-line { margin:0 auto 32px; font-size:clamp(1.15rem,2vw,1.4rem); }
     .cta-line h3 { font-size:clamp(1.35rem,3vw,1.75rem); text-wrap:balance; font-weight:700; margin-bottom:16px; }
     .cta-line img { display:block; width:224px; max-width:100%; height:auto; margin:0 auto 12px; }
@@ -723,7 +730,7 @@
     <h3 id="priority-seating-heading">第2回の優先ご案内について</h3>
     <p>第2回「UZUの学校」では、第1回にお申し込みくださった皆さま（当日ご参加がかなわなかった方も含みます）と、その皆さまからご紹介いただいた方のお席を、優先してご用意いたします。</p>
     <p>お席に限りがございますため、先着順でのご案内になりますこと、あらかじめご了承ください。</p>
-    <p><strong>応募締切</strong> <time datetime="2026-12-20">2026年12月20日（日）</time></p>
+    <p class="priority-deadline"><strong>応募締切</strong> <time datetime="2026-12-20">2026年12月20日（日）</time></p>
   </section>
   <section class="cta-line" aria-labelledby="line-registration-heading">
     <h3 id="line-registration-heading">まずはUZUの学校公式LINEにご登録ください</h3>
