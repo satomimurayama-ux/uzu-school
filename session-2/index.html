@@ -232,17 +232,6 @@
     .schedule-table tr:nth-child(even) td { background:var(--pink-pale); }
     .schedule-table .time { color:var(--gold-deep); font-weight:700; white-space:nowrap; }
 
-    /* ── FUTURE ── */
-    .future { background:linear-gradient(180deg,#fffaf7 0%,#f1e6f3 100%); }
-    .future-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(115,89,129,0.15); }
-    .future-list { list-style:none; }
-    .future-list li { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--pink-light); }
-    .future-list li:last-child { border-bottom:none; }
-    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#60466e); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
-    .future-list .content h4 { font-weight:700; font-size:1rem; color:var(--dark); margin-bottom:4px; }
-    .future-list .content p { font-size:0.85rem; line-height:1.7; color:var(--gray); }
-
     /* ── CTA ── */
     .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#eadcee 50%,#f4ebf6 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
     .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
@@ -287,15 +276,13 @@
       .hero-date-box .date span { font-size:1.55rem; }
       .story-header { flex-direction:column; gap:8px; }
       .story-signature { white-space:normal; }
-      .about-grid, .future-grid { grid-template-columns:1fr; }
+      .about-grid { grid-template-columns:1fr; }
       .audience-grid { grid-template-columns:1fr 1fr; }
       .experience-grid { grid-template-columns:1fr; }
       .program-cards { grid-template-columns:1fr; }
       .schedule-table th { padding:12px 10px; }
       .schedule-table td { padding:14px 10px; font-size:0.88rem; }
       .schedule-table th:first-child { width:88px !important; }
-      .future-image { text-align:center; }
-      .future-image img { max-width:320px; }
       .cta { padding:80px 24px; }
       .btn-primary, .btn-white { width:100%; max-width:320px; text-align:center; padding-left:20px; padding-right:20px; }
     }
@@ -695,28 +682,6 @@
     </ul>
     <p class="mt-4"><a class="underline font-bold" href="https://koboji.jp/access">弘法寺へのアクセス詳細（公式サイト）</a></p>
     <p><strong>駐車場はございませんので、お車でのご来場、弘法寺への直接のお問い合わせはご遠慮ください。</strong></p>
-  </div>
-</section>
-
-<!-- FUTURE -->
-<section class="future">
-  <div class="container">
-    <div class="future-grid">
-      <div class="future-image">
-        <img src="../images/uzu_photo.jpg" alt="大地とともに輝く女性">
-      </div>
-      <div>
-        <p class="section-label">FUTURE PLANS</p>
-        <h2 class="section-title">これからの<span class="accent">UZU</span>の学校</h2>
-        <div class="section-divider"></div>
-        <ul class="future-list">
-          <li><div class="num">01</div><div class="content"><h4>継続的な講座開催</h4><p>パネルディスカッションとワークショップを継続的に行い、学びと対話の場を育てていきます。</p></div></li>
-          <li><div class="num">02</div><div class="content"><h4>ボランティア活動</h4><p>地域社会に貢献するボランティアを通じて、実践的な社会参加の経験を積みます。</p></div></li>
-          <li><div class="num">03</div><div class="content"><h4>稲刈り体験</h4><p>大地と向き合い、命の大切さを体で感じる稲刈り体験。都市で生きる女性たちへの特別な贈り物。</p></div></li>
-          <li><div class="num">04</div><div class="content"><h4>継続的な学びと交流</h4><p>定期的な学校開催と卒業生ネットワーク構築により、長期的な女性活躍を支援します。</p></div></li>
-        </ul>
-      </div>
-    </div>
   </div>
 </section>
 
