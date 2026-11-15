@@ -209,9 +209,9 @@
     .principal-avatar img {
       width:100%; height:100%; object-fit:cover; object-position:100% 30%;
     }
-    .principal-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--gold-deep); margin-bottom:6px; }
-    .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
-    .principal-card .bio { font-size:0.9rem; line-height:1.8; color:var(--gray); }
+    .principal-card .role { font-size:clamp(1rem,2vw,1.2rem); font-weight:700; letter-spacing:0.2em; color:var(--gold-deep); margin-bottom:6px; }
+    .principal-card .name { font-family:'Noto Serif JP',serif; font-size:clamp(2.1rem,4vw,2.6rem); font-weight:900; color:var(--dark); margin-bottom:16px; }
+    .principal-card .bio { font-size:clamp(1.1rem,2vw,1.25rem); line-height:1.8; color:var(--gray); }
 
     /* ── PROGRAM ── */
     .program { background:#fff; }
@@ -244,15 +244,16 @@
     .cta .sub { color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
     .btn-white { display:inline-block; background:#fff; color:var(--gold-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
     .btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
-    .cta-note { margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.6); }
+    .cta .cta-event-date { font-size:clamp(1.15rem,2.4vw,1.4rem); max-width:740px; }
+    .cta-note { margin-top:20px; font-size:clamp(1.05rem,2vw,1.2rem); color:rgba(255,255,255,0.6); }
     .cta-select-box {
       background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.30);
       backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-      border-radius:14px; padding:18px 28px; max-width:580px;
-      margin:0 auto 36px; font-size:0.88rem; color:rgba(255,255,255,0.88);
+      border-radius:14px; padding:clamp(18px,3vw,30px); max-width:740px;
+      margin:0 auto 36px; font-size:clamp(1.1rem,2vw,1.25rem); color:rgba(255,255,255,0.88);
       line-height:1.9; text-align:left;
     }
-    .cta-select-box h3 { color:var(--gold-deep); font-size:1rem; font-weight:700; margin-bottom:6px; }
+    .cta-select-box h3 { color:var(--gold-deep); font-size:clamp(1.25rem,2.5vw,1.5rem); font-weight:700; margin-bottom:6px; }
     .cta-line { margin:0 auto 32px; }
     .cta-line h3 { font-size:clamp(1rem,3vw,1.25rem); font-weight:700; margin-bottom:16px; }
     .cta-line img { display:block; width:224px; max-width:100%; height:auto; margin:0 auto 12px; }
@@ -260,8 +261,8 @@
     .cta-line a { text-decoration:underline; text-underline-offset:0.2em; font-weight:700; }
 
     /* ── FOOTER ── */
-    footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
-    footer .logo { font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:900; color:var(--pink-light); margin-bottom:8px; }
+    footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:clamp(1rem,1.8vw,1.15rem); }
+    footer .logo { font-family:'Noto Serif JP',serif; font-size:clamp(1.65rem,3vw,1.9rem); font-weight:900; color:var(--pink-light); margin-bottom:8px; }
     .petal-row { display:flex; justify-content:center; gap:10px; margin:16px 0; }
     .petal-row svg { width:15px; height:15px; color:var(--gold-deep); opacity:0.6; }
 
@@ -544,7 +545,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
           <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
         </div>
-        <p style="font-size:1.1rem;font-weight:700;color:var(--gold-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
+        <p style="font-size:clamp(1.25rem,2.5vw,1.55rem);font-weight:700;color:var(--gold-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
       </div>
     </div>
   </div>
@@ -694,7 +695,7 @@
 <section class="cta" id="cta">
   <p class="section-label label">JOIN US</p>
   <h2>さあ、あなたも<br>UZUの学校で輝こう</h2>
-  <p class="sub">第2回 UZUの学校は2027年1月30日（土）に開催されます。</p>
+  <p class="sub cta-event-date">第2回 UZUの学校は2027年1月30日（土）に開催されます。</p>
   <section class="cta-select-box" id="priority-seating" aria-labelledby="priority-seating-heading">
     <h3 id="priority-seating-heading">第2回の優先ご案内について</h3>
     <p>第2回「UZUの学校」では、第1回にお申し込みくださった皆さま（当日ご参加がかなわなかった方も含みます）と、その皆さまからご紹介いただいた方のお席を、優先してご用意いたします。<br>お席に限りがございますため、先着順でのご案内になりますこと、あらかじめご了承ください。</p>
