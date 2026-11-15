@@ -21,24 +21,24 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
     :root {
-      --pink-deep: #8a5a3a; --pink-light: #ecd6c9;
-      --pink-pale: #faf3ec; --gold: #c8973a; --gold-deep: #8a6420; --cream: #fffaf5;
-      --dark: #35291f; --gray: #6e6259;
+      --pink-deep: #735981; --pink-light: #e9ddec;
+      --pink-pale: #f7f0f8; --gold: #765783; --gold-deep: #694b76; --cream: #fffaf7;
+      --dark: #3d3041; --gray: #64586a;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     html { background:var(--cream); color-scheme:light; }
     body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
 
     /* ── HERO ── */
-    .hero-v2 { background:#15100a; padding:0; }
+    .hero-v2 { background:#f5edeb; padding:0; }
     .hero-v2-img { display:block; width:100%; height:auto; }
-    .hero-v2-bar { background:linear-gradient(135deg,#1c2438 0%,#12182a 100%); padding:40px; }
+    .hero-v2-bar { background:linear-gradient(135deg,#f4ebf6 0%,#fcf5ef 100%); padding:40px; }
     .hero-v2-bar-inner {
       max-width:1100px; margin:0 auto;
       display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;
     }
     .hero-date-box {
-      background:rgba(255,255,255,0.08); border:2px solid rgba(200,151,58,0.4);
+      background:rgba(255,255,255,0.08); border:2px solid rgba(115,89,129,0.4);
       backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
       border-radius:16px; padding:18px 26px; display:inline-block;
     }
@@ -60,17 +60,17 @@
     }
     .row-icon { display:inline-block; width:1em; height:1em; vertical-align:-0.15em; margin-right:2px; }
     .btn-primary {
-      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#5c3a24 100%);
+      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#60466e 100%);
       color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:0.1em;
       padding:16px 44px; border-radius:100px; text-decoration:none;
-      box-shadow:0 8px 30px rgba(138,90,58,0.55); transition:transform 0.2s,box-shadow 0.2s;
+      box-shadow:0 8px 30px rgba(115,89,129,0.55); transition:transform 0.2s,box-shadow 0.2s;
       position:relative; overflow:hidden;
     }
     .btn-primary::before {
       content:''; position:absolute; inset:0;
       background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent); border-radius:inherit;
     }
-    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(138,90,58,0.65); }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(115,89,129,0.65); }
 
     /* ── SECTIONS ── */
     section { padding:80px 40px; }
@@ -91,11 +91,11 @@
     .story-signature { font-size:0.95rem; font-weight:700; color:var(--gold-deep); letter-spacing:0.05em; white-space:nowrap; }
 
     /* ── UZU CONCEPT (② UZUに込めた想い) ── */
-    .uzu-concept { position:relative; background:linear-gradient(160deg,#1c2438 0%,#232d42 50%,#12182a 100%); overflow:hidden; padding:120px 40px; }
+    .uzu-concept { position:relative; background:linear-gradient(160deg,#f4ebf6 0%,#232d42 50%,#fcf5ef 100%); overflow:hidden; padding:120px 40px; }
     .uzu-spiral {
       position:absolute; top:50%; left:50%; width:1000px; height:1000px; max-width:180vw; max-height:180vw;
       transform:translate(-50%,-50%);
-      background:conic-gradient(from 0deg, transparent 0%, rgba(200,151,58,0.22) 12%, transparent 28%, rgba(138,90,58,0.18) 50%, transparent 66%, rgba(200,151,58,0.16) 84%, transparent 100%);
+      background:conic-gradient(from 0deg, transparent 0%, rgba(115,89,129,0.22) 12%, transparent 28%, rgba(115,89,129,0.18) 50%, transparent 66%, rgba(115,89,129,0.16) 84%, transparent 100%);
       border-radius:50%; filter:blur(50px); pointer-events:none; animation:spin 60s linear infinite;
     }
     @keyframes spin { from{transform:translate(-50%,-50%) rotate(0deg);} to{transform:translate(-50%,-50%) rotate(360deg);} }
@@ -104,7 +104,7 @@
     .uzu-concept .section-title { color:#fff; text-align:center; }
     .uzu-concept .section-title .accent-gold { color:var(--gold); }
     .uzu-concept > .container > .section-label { text-align:center; }
-    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#ecd6c9); margin-left:auto; margin-right:auto; }
+    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#e9ddec); margin-left:auto; margin-right:auto; }
     .uzu-name-mark { text-align:center; margin:8px 0 56px; }
     .uzu-name-mark .word {
       font-family:'Noto Serif JP',serif; font-size:clamp(3.4rem,11vw,6.5rem); font-weight:900;
@@ -115,7 +115,7 @@
     .uzu-concept-text { max-width:720px; margin:0 auto; }
     .uzu-concept-text p { font-size:1.02rem; line-height:2.1; color:rgba(255,255,255,0.82); margin-bottom:22px; text-align:center; }
     .uzu-myth-card {
-      background:rgba(255,255,255,0.06); border:1px solid rgba(200,151,58,0.4);
+      background:rgba(255,255,255,0.06); border:1px solid rgba(115,89,129,0.4);
       border-radius:22px; padding:36px; margin:40px auto; max-width:640px; text-align:center;
       backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
     }
@@ -132,27 +132,27 @@
     .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
     .audience-card {
       background:linear-gradient(160deg,#fff,var(--pink-pale)); border-radius:20px; padding:40px 26px;
-      text-align:center; box-shadow:0 6px 26px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s;
+      text-align:center; box-shadow:0 6px 26px rgba(115,89,129,0.1); transition:transform 0.2s,box-shadow 0.2s;
     }
-    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(138,90,58,0.18); }
+    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(115,89,129,0.18); }
     .audience-card .icon-circle {
       width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
-      background:linear-gradient(135deg,var(--pink-light),#faf3ec);
+      background:linear-gradient(135deg,var(--pink-light),#f7f0f8);
       display:flex; align-items:center; justify-content:center;
-      box-shadow:0 4px 16px rgba(138,90,58,0.18);
+      box-shadow:0 4px 16px rgba(115,89,129,0.18);
       color:var(--gold-deep);
     }
     .audience-card .icon-circle svg { width:28px; height:28px; }
     .audience-card p { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); line-height:1.7; }
 
     /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
-    .experience { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); }
+    .experience { background:linear-gradient(160deg,#f5edf8 0%,#fffaf7 60%,#f3e9f4 100%); }
     .experience-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
     .experience-card {
       background:#fff; border-radius:18px; padding:30px 32px; display:flex; gap:20px; align-items:flex-start;
-      box-shadow:0 4px 22px rgba(138,90,58,0.08); transition:transform 0.2s,box-shadow 0.2s;
+      box-shadow:0 4px 22px rgba(115,89,129,0.08); transition:transform 0.2s,box-shadow 0.2s;
     }
-    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(138,90,58,0.16); }
+    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(115,89,129,0.16); }
     .experience-card .num {
       flex-shrink:0; width:44px; height:44px; border-radius:50%;
       background:linear-gradient(135deg,var(--gold),#e0b45a); color:#fff;
@@ -163,15 +163,15 @@
     .experience-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
 
     /* ── ABOUT ── */
-    .about { background:#faf3ec; }
+    .about { background:#f7f0f8; }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
     .about-text p { font-size:1.05rem; line-height:2; color:var(--gray); margin-bottom:20px; }
 
-    .principal-card { background:linear-gradient(145deg,#faf3ec,#f5ecdf); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(138,90,58,0.12); }
+    .principal-card { background:linear-gradient(145deg,#f7f0f8,#f3e9f4); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(115,89,129,0.12); }
     .principal-avatar {
       width:140px; height:140px; border-radius:50%; margin:0 auto 16px;
-      overflow:hidden; border:4px solid #ecd6c9;
-      box-shadow:0 6px 24px rgba(138,90,58,0.25);
+      overflow:hidden; border:4px solid #e9ddec;
+      box-shadow:0 6px 24px rgba(115,89,129,0.25);
     }
     .principal-avatar img {
       width:100%; height:100%; object-fit:cover; object-position:100% 30%;
@@ -183,8 +183,8 @@
     /* ── PROGRAM ── */
     .program { background:#fff; }
     .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
-    .program-card { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
-    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(138,90,58,0.18); }
+    .program-card { background:linear-gradient(160deg,#f5edf8 0%,#fffaf7 60%,#f3e9f4 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(115,89,129,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(115,89,129,0.18); }
     .program-card .icon { margin-bottom:16px; display:flex; justify-content:center; color:var(--gold-deep); }
     .program-card .icon svg { width:2.6rem; height:2.6rem; }
     .program-card h3 { font-family:'Noto Serif JP',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:12px; }
@@ -192,9 +192,9 @@
     .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--gold-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
 
     /* ── SCHEDULE ── */
-    .schedule { background:#faf3ec; }
+    .schedule { background:#f7f0f8; }
     .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; background:#fff; border-radius:12px; overflow:hidden; }
-    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
+    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#60466e); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
     .schedule-table th:first-child { border-radius:12px 0 0 0; }
     .schedule-table th:last-child { border-radius:0 12px 0 0; }
     .schedule-table td { padding:16px 20px; border-bottom:1px solid var(--pink-light); font-size:0.95rem; vertical-align:top; }
@@ -203,18 +203,18 @@
     .schedule-table .time { color:var(--gold-deep); font-weight:700; white-space:nowrap; }
 
     /* ── FUTURE ── */
-    .future { background:linear-gradient(180deg,#fffaf2 0%,#f7ede0 100%); }
+    .future { background:linear-gradient(180deg,#fffaf7 0%,#f1e6f3 100%); }
     .future-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
-    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(138,90,58,0.15); }
+    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(115,89,129,0.15); }
     .future-list { list-style:none; }
     .future-list li { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--pink-light); }
     .future-list li:last-child { border-bottom:none; }
-    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#60466e); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
     .future-list .content h4 { font-weight:700; font-size:1rem; color:var(--dark); margin-bottom:4px; }
     .future-list .content p { font-size:0.85rem; line-height:1.7; color:var(--gray); }
 
     /* ── CTA ── */
-    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#4a3020 50%,#1c2438 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
+    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#eadcee 50%,#f4ebf6 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
     .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
     .cta > * { position:relative; z-index:1; }
     .cta .label { color:rgba(255,255,255,0.7); margin-bottom:16px; }
@@ -230,7 +230,7 @@
       margin:0 auto 36px; font-size:0.88rem; color:rgba(255,255,255,0.88);
       line-height:1.9; text-align:left;
     }
-    .cta-select-box strong { color:#ecd6c9; }
+    .cta-select-box strong { color:#e9ddec; }
 
     /* ── FOOTER ── */
     footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
@@ -262,6 +262,47 @@
     @media (max-width:560px) {
       .audience-grid { grid-template-columns:1fr; }
     }
+
+    .hero-date-box {
+      background:#fffaf7;
+      border:1px solid var(--pink-light);
+    }
+    .hero-date-box .date, .hero-date-box .time-row, .hero-date-box .place-row,
+    .cta h2, .cta .sub, .cta-select-box { color:var(--dark); }
+    .cta { background:linear-gradient(135deg,#faf1ed,#eee2f3); }
+    .cta .label, .cta-note { color:var(--gold-deep); }
+    .cta-select-box { background:#fffaf7; border-color:var(--pink-light); }
+    .guest-speaker { background:linear-gradient(160deg,#faf4f9,#f0e4f3); }
+    .guest-speaker .speaker-copy { color:var(--dark); }
+    .guest-speaker .speaker-accent { color:var(--gold-deep); }
+    .guest-speaker .speaker-card {
+      background:#fffaf7;
+      border:1px solid var(--pink-light);
+      box-shadow:0 8px 24px rgba(115,89,129,0.1);
+    }
+
+    .guest-portrait {
+      display:block; width:clamp(180px,24vw,300px); height:auto;
+      aspect-ratio:1; object-fit:cover; object-position:center 30%;
+      border-radius:50%; border:5px solid #fffaf7;
+      box-shadow:0 10px 28px rgba(115,89,129,0.16);
+    }
+    .guest-books { margin:48px auto 0; text-align:center; }
+    .guest-books h3 {
+      font-family:'Noto Serif JP',serif; font-weight:700;
+      font-size:clamp(1.16rem,3vw,1.5rem); margin-bottom:20px;
+    }
+    .guest-books ul {
+      list-style:none; display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:clamp(12px,4vw,32px); max-width:420px; margin:0 auto;
+    }
+    .guest-books a { display:grid; justify-items:center; gap:6px; }
+    .guest-books img {
+      width:100%; height:clamp(145px,33vw,205px);
+      object-fit:contain; margin-bottom:8px;
+    }
+    .guest-books span { color:var(--gold-deep); text-decoration:underline; text-underline-offset:0.2em; }
+    .guest-books small { color:var(--gray); }
   </style>
 </head>
 <body>
@@ -464,56 +505,71 @@
 </section>
 
 <!-- SPEAKER -->
-<section class="relative overflow-hidden bg-[#0D0D1F] py-20 px-6 md:py-28 md:px-16">
-  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-[120px]"></div>
-  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-400/15 blur-[130px]"></div>
+<section class="relative overflow-hidden guest-speaker py-20 px-6 md:py-28 md:px-16">
+  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-purple-300/20 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-rose-200/20 blur-[130px]"></div>
 
   <div class="relative mx-auto max-w-6xl">
     <div class="mb-16 text-center md:mb-20">
       <div class="mb-8 flex justify-center">
         <div class="relative">
-          <div class="absolute -inset-1.5 rounded-full bg-gradient-to-br from-cyan-300 via-amber-200 to-cyan-300 opacity-60 blur-md"></div>
-          <div aria-hidden="true" class="relative flex h-36 w-36 items-center justify-center rounded-full bg-[#13132b] font-serif text-5xl text-amber-200 ring-4 ring-[#0D0D1F] md:h-44 md:w-44">林</div>
+          <div class="absolute -inset-1.5 rounded-full bg-[#c9a9d1] opacity-60 blur-md"></div>
+          <img class="guest-portrait relative" src="images/hayashi-mariko.png" alt="林真理子さん" width="1354" height="1438" loading="lazy">
         </div>
       </div>
-      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-cyan-300/80 md:text-sm">SPECIAL GUEST SPEAKER</p>
-      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-white md:text-5xl">林 真理子</h2>
-      <p class="mb-4 text-sm font-medium leading-loose text-white/70 [word-break:keep-all] break-words md:text-base">
+      <p class="mb-4 text-xs font-bold tracking-[0.35em] speaker-accent md:text-sm">SPECIAL GUEST SPEAKER</p>
+      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide speaker-copy md:text-5xl">林 真理子</h2>
+      <p class="mb-4 text-sm font-medium leading-loose speaker-copy [word-break:keep-all] break-words md:text-base">
         作家
       </p>
-      <p class="mx-auto max-w-3xl bg-gradient-to-r from-cyan-300 via-cyan-100 to-amber-200 bg-clip-text text-base font-bold leading-loose text-transparent [word-break:keep-all] break-words md:text-lg">
+      <p class="mx-auto max-w-3xl speaker-accent text-base font-bold leading-loose [word-break:keep-all] break-words md:text-lg">
         小説やエッセイを手がけ、第94回直木賞を受賞。
       </p>
     </div>
 
     <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
-      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">01 ／ ESSAY</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">エッセイから執筆活動へ</h3>
-        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+      <div class="group relative rounded-2xl speaker-card p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2  hover:shadow-[0_0_45px_rgba(115,89,129,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] speaker-accent">01 ／ ESSAY</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug speaker-copy [word-break:keep-all] break-words md:text-xl">エッセイから執筆活動へ</h3>
+        <p class="text-sm leading-loose speaker-copy [word-break:keep-all] break-words">
           コピーライターを経て、1982年にエッセイ集『ルンルンを買っておうちに帰ろう』を刊行しました。
         </p>
       </div>
 
-      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-amber-200 p-[2px] shadow-[0_0_60px_rgba(251,191,36,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(251,191,36,0.55)] md:-translate-y-4">
-        <div class="h-full rounded-2xl bg-[#13132b] p-8">
-          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-amber-300/90">02 ／ NAOKI PRIZE</span>
-          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">第94回直木賞</h3>
-          <p class="text-sm leading-loose text-white/70 [word-break:keep-all] break-words">
+      <div class="relative z-10 rounded-2xl bg-[#e5d2e8] p-[2px] shadow-[0_0_60px_rgba(115,89,129,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(115,89,129,0.55)] md:-translate-y-4">
+        <div class="h-full rounded-2xl speaker-card p-8">
+          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] speaker-accent">02 ／ NAOKI PRIZE</span>
+          <h3 class="mb-4 font-serif text-lg font-bold leading-snug speaker-copy [word-break:keep-all] break-words md:text-xl">第94回直木賞</h3>
+          <p class="text-sm leading-loose speaker-copy [word-break:keep-all] break-words">
             1986年、「最終便に間に合えば」「京都まで」で第94回直木賞を受賞しました。
           </p>
         </div>
       </div>
 
-      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">03 ／ LITERARY AWARDS</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">作品と受賞歴</h3>
-        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+      <div class="group relative rounded-2xl speaker-card p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2  hover:shadow-[0_0_45px_rgba(115,89,129,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] speaker-accent">03 ／ LITERARY AWARDS</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug speaker-copy [word-break:keep-all] break-words md:text-xl">作品と受賞歴</h3>
+        <p class="text-sm leading-loose speaker-copy [word-break:keep-all] break-words">
           『白蓮れんれん』で柴田錬三郎賞、『みんなの秘密』で吉川英治文学賞を受賞しました。
         </p>
       </div>
     </div>
-    <p class="mt-8 text-center text-sm text-white/70"><a class="underline" href="https://www.shinchosha.co.jp/writer/2558/">林真理子さんの著者プロフィール（新潮社）</a></p>
+    <div class="guest-books">
+      <h3>林真理子さんの代表的な著書</h3>
+      <ul>
+        <li><a href="https://www.kodansha.co.jp/titles/1000014975">
+          <img src="images/yashin-no-susume.jpg" alt="『野心のすすめ』の表紙" width="640" height="1045" loading="lazy">
+          <span>野心のすすめ</span>
+          <small>講談社</small>
+        </a></li>
+        <li><a href="https://www.chuko.co.jp/bunko/1998/10/203255.html">
+          <img src="images/byakuren-renren.jpg" alt="『白蓮れんれん』の表紙" width="250" height="366" loading="lazy">
+          <span>白蓮れんれん</span>
+          <small>中央公論新社</small>
+        </a></li>
+      </ul>
+    </div>
+    <p class="mt-8 text-center text-sm speaker-copy"><a class="underline" href="https://www.shinchosha.co.jp/writer/2558/">林真理子さんの著者プロフィール（新潮社）</a></p>
   </div>
 </section>
 
