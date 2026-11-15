@@ -324,7 +324,7 @@
     .guest-books { margin:48px auto 0; text-align:center; }
     .guest-books h3 {
       font-family:'Noto Serif JP',serif; font-weight:700;
-      font-size:clamp(1.16rem,3vw,1.5rem); margin-bottom:20px;
+      font-size:clamp(1.4rem,3vw,1.8rem); margin-bottom:20px;
     }
     .guest-books ul {
       list-style:none; display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
@@ -335,8 +335,8 @@
       width:100%; height:clamp(145px,33vw,205px);
       object-fit:contain; margin-bottom:8px;
     }
-    .guest-books span { color:var(--gold-deep); text-decoration:underline; text-underline-offset:0.2em; }
-    .guest-books small { color:var(--gray); }
+    .guest-books span { font-size:clamp(1.125rem,2vw,1.3rem); color:var(--gold-deep); text-decoration:underline; text-underline-offset:0.2em; }
+    .guest-books small { font-size:1rem; color:var(--gray); }
   </style>
 </head>
 <body>
@@ -572,39 +572,39 @@
           <img class="guest-portrait relative" src="images/hayashi-mariko.png" alt="林真理子様" width="1354" height="1438" loading="lazy">
         </div>
       </div>
-      <p class="mb-4 text-xs font-bold tracking-[0.35em] speaker-accent md:text-sm">SPECIAL GUEST SPEAKER</p>
-      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide speaker-copy md:text-5xl">林真理子様</h2>
-      <p class="mb-4 text-sm font-medium leading-loose speaker-copy [word-break:keep-all] break-words md:text-base">
+      <p class="mb-4 text-sm font-bold tracking-[0.35em] speaker-accent md:text-base">SPECIAL GUEST SPEAKER</p>
+      <h2 class="mb-6 font-serif text-4xl font-black tracking-wide speaker-copy md:text-6xl">林真理子様</h2>
+      <p class="mb-4 text-lg font-medium leading-loose speaker-copy">
         作家
       </p>
-      <p class="mx-auto max-w-3xl text-left text-base leading-loose speaker-copy">
+      <p class="mx-auto max-w-4xl text-left text-lg leading-relaxed speaker-copy md:text-xl">
         日本大学卒業。コピーライターを経て作家に。『最終便に間に合えば』『京都まで』で第94回直木賞を受賞。2011年にフランス政府よりレジオン・ドヌール勲章シュヴァリエを受章。2018年に紫綬褒章を受章。2020年に第68回菊池寛賞を受賞。2022年に日本大学理事長に就任。
       </p>
     </div>
 
-    <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
+    <div class="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3 md:gap-8">
       <div class="group relative rounded-2xl speaker-card p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2  hover:shadow-[0_0_45px_rgba(115,89,129,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] speaker-accent">01 ／ ESSAY</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug speaker-copy [word-break:keep-all] break-words md:text-xl">エッセイから執筆活動へ</h3>
-        <p class="text-sm leading-loose speaker-copy [word-break:keep-all] break-words">
+        <span class="mb-5 inline-block text-sm font-bold tracking-[0.25em] speaker-accent">01 ／ ESSAY</span>
+        <h3 class="mb-4 font-serif text-xl font-bold leading-snug speaker-copy md:text-2xl">エッセイから執筆活動へ</h3>
+        <p class="text-base leading-relaxed speaker-copy md:text-lg">
           コピーライターを経て、1982年にエッセイ集『ルンルンを買っておうちに帰ろう』を刊行しました。
         </p>
       </div>
 
-      <div class="relative z-10 rounded-2xl bg-[#e5d2e8] p-[2px] shadow-[0_0_60px_rgba(115,89,129,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(115,89,129,0.55)] md:-translate-y-4">
+      <div class="relative z-10 rounded-2xl bg-[#e5d2e8] p-[2px] shadow-[0_0_60px_rgba(115,89,129,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(115,89,129,0.55)] lg:-translate-y-4">
         <div class="h-full rounded-2xl speaker-card p-8">
-          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] speaker-accent">02 ／ NAOKI PRIZE</span>
-          <h3 class="mb-4 font-serif text-lg font-bold leading-snug speaker-copy [word-break:keep-all] break-words md:text-xl">第94回直木賞</h3>
-          <p class="text-sm leading-loose speaker-copy [word-break:keep-all] break-words">
+          <span class="mb-5 inline-block text-sm font-bold tracking-[0.25em] speaker-accent">02 ／ NAOKI PRIZE</span>
+          <h3 class="mb-4 font-serif text-xl font-bold leading-snug speaker-copy md:text-2xl">第94回直木賞</h3>
+          <p class="text-base leading-relaxed speaker-copy md:text-lg">
             1986年、「最終便に間に合えば」「京都まで」で第94回直木賞を受賞しました。
           </p>
         </div>
       </div>
 
       <div class="group relative rounded-2xl speaker-card p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2  hover:shadow-[0_0_45px_rgba(115,89,129,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] speaker-accent">03 ／ LITERARY AWARDS</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug speaker-copy [word-break:keep-all] break-words md:text-xl">作品と受賞歴</h3>
-        <p class="text-sm leading-loose speaker-copy [word-break:keep-all] break-words">
+        <span class="mb-5 inline-block text-sm font-bold tracking-[0.25em] speaker-accent">03 ／ LITERARY AWARDS</span>
+        <h3 class="mb-4 font-serif text-xl font-bold leading-snug speaker-copy md:text-2xl">作品と受賞歴</h3>
+        <p class="text-base leading-relaxed speaker-copy md:text-lg">
           『白蓮れんれん』で柴田錬三郎賞、『みんなの秘密』で吉川英治文学賞を受賞しました。
         </p>
       </div>
@@ -624,7 +624,7 @@
         </a></li>
       </ul>
     </div>
-    <p class="mt-8 text-center text-sm speaker-copy"><a class="underline" href="https://www.shinchosha.co.jp/writer/2558/">林真理子様の著者プロフィール（新潮社）</a></p>
+    <p class="mt-8 text-center text-base speaker-copy md:text-lg"><a class="underline" href="https://www.shinchosha.co.jp/writer/2558/">林真理子様の著者プロフィール（新潮社）</a></p>
   </div>
 </section>
 
