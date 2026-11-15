@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>UZUの学校 ｜ 第2回 2027年1月30日（土）開催</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Noto Serif JP"', 'serif'],
+            sans: ['"Noto Sans JP"', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+    :root {
+      --pink-deep: #8a5a3a; --pink-light: #ecd6c9;
+      --pink-pale: #faf3ec; --gold: #c8973a; --gold-deep: #8a6420; --cream: #fffaf5;
+      --dark: #35291f; --gray: #6e6259;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { background:var(--cream); color-scheme:light; }
+    body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
+
+    /* ── HERO ── */
+    .hero-v2 { background:#15100a; padding:0; }
+    .hero-v2-img { display:block; width:100%; height:auto; }
+    .hero-v2-bar { background:linear-gradient(135deg,#1c2438 0%,#12182a 100%); padding:40px; }
+    .hero-v2-bar-inner {
+      max-width:1100px; margin:0 auto;
+      display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;
+    }
+    .hero-date-box {
+      background:rgba(255,255,255,0.08); border:2px solid rgba(200,151,58,0.4);
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+      border-radius:16px; padding:18px 26px; display:inline-block;
+    }
+    .hero-date-box .label {
+      font-size:0.72rem; color:var(--gold); font-weight:700;
+      letter-spacing:0.2em; margin-bottom:4px;
+    }
+    .hero-date-box .date {
+      font-family:'Noto Serif JP',serif; font-size:1.7rem; font-weight:900; color:#fff;
+    }
+    .hero-date-box .date span { color:var(--gold); font-size:2rem; }
+    .hero-date-box .time-row {
+      margin-top:6px; font-size:1rem; font-weight:700; color:rgba(255,255,255,0.9);
+      letter-spacing:0.1em;
+    }
+    .hero-date-box .place-row {
+      margin-top:8px; font-size:0.82rem; color:rgba(255,255,255,0.78);
+      line-height:1.6; letter-spacing:0.04em;
+    }
+    .row-icon { display:inline-block; width:1em; height:1em; vertical-align:-0.15em; margin-right:2px; }
+    .btn-primary {
+      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#5c3a24 100%);
+      color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:0.1em;
+      padding:16px 44px; border-radius:100px; text-decoration:none;
+      box-shadow:0 8px 30px rgba(138,90,58,0.55); transition:transform 0.2s,box-shadow 0.2s;
+      position:relative; overflow:hidden;
+    }
+    .btn-primary::before {
+      content:''; position:absolute; inset:0;
+      background:linear-gradient(135deg,rgba(255,255,255,0.15),transparent); border-radius:inherit;
+    }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(138,90,58,0.65); }
+
+    /* ── SECTIONS ── */
+    section { padding:80px 40px; }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.75rem; font-weight:700; letter-spacing:0.3em; color:var(--gold-deep); text-transform:uppercase; margin-bottom:12px; }
+    .section-title { font-family:'Noto Serif JP',serif; font-size:clamp(1.6rem,4vw,2.6rem); font-weight:900; color:var(--dark); line-height:1.4; margin-bottom:20px; }
+    .section-title .accent { color:var(--gold-deep); }
+    .section-divider { width:60px; height:4px; background:linear-gradient(90deg,var(--pink-deep),var(--pink-light)); border-radius:2px; margin-bottom:40px; }
+
+    /* ── STORY ORIGIN (① ご挨拶) ── */
+    .story-origin { background:linear-gradient(180deg,var(--cream) 0%,#fff 100%); }
+    .story-header { display:flex; align-items:baseline; justify-content:center; gap:20px; flex-wrap:wrap; }
+    .story-origin .section-title { text-align:center; margin-bottom:0; }
+    .story-origin .section-divider { margin-left:auto; margin-right:auto; margin-top:20px; }
+    .story-text { max-width:760px; margin:0 auto; }
+    .story-text p { font-size:1.04rem; line-height:2.15; color:var(--gray); margin-bottom:24px; }
+    .story-quote { font-family:'Noto Serif JP',serif; font-size:1.08rem; line-height:2; color:var(--gold-deep); font-weight:700; margin-bottom:24px; }
+    .story-signature { font-size:0.95rem; font-weight:700; color:var(--gold-deep); letter-spacing:0.05em; white-space:nowrap; }
+
+    /* ── UZU CONCEPT (② UZUに込めた想い) ── */
+    .uzu-concept { position:relative; background:linear-gradient(160deg,#1c2438 0%,#232d42 50%,#12182a 100%); overflow:hidden; padding:120px 40px; }
+    .uzu-spiral {
+      position:absolute; top:50%; left:50%; width:1000px; height:1000px; max-width:180vw; max-height:180vw;
+      transform:translate(-50%,-50%);
+      background:conic-gradient(from 0deg, transparent 0%, rgba(200,151,58,0.22) 12%, transparent 28%, rgba(138,90,58,0.18) 50%, transparent 66%, rgba(200,151,58,0.16) 84%, transparent 100%);
+      border-radius:50%; filter:blur(50px); pointer-events:none; animation:spin 60s linear infinite;
+    }
+    @keyframes spin { from{transform:translate(-50%,-50%) rotate(0deg);} to{transform:translate(-50%,-50%) rotate(360deg);} }
+    .uzu-concept .container { position:relative; z-index:1; }
+    .uzu-concept .section-label { color:var(--gold); }
+    .uzu-concept .section-title { color:#fff; text-align:center; }
+    .uzu-concept .section-title .accent-gold { color:var(--gold); }
+    .uzu-concept > .container > .section-label { text-align:center; }
+    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#ecd6c9); margin-left:auto; margin-right:auto; }
+    .uzu-name-mark { text-align:center; margin:8px 0 56px; }
+    .uzu-name-mark .word {
+      font-family:'Noto Serif JP',serif; font-size:clamp(3.4rem,11vw,6.5rem); font-weight:900;
+      letter-spacing:0.12em; background:linear-gradient(135deg,#fff 20%,var(--gold) 100%);
+      -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;
+    }
+    .uzu-name-mark .reading { display:block; font-size:0.9rem; color:rgba(255,255,255,0.55); letter-spacing:0.35em; margin-top:14px; }
+    .uzu-concept-text { max-width:720px; margin:0 auto; }
+    .uzu-concept-text p { font-size:1.02rem; line-height:2.1; color:rgba(255,255,255,0.82); margin-bottom:22px; text-align:center; }
+    .uzu-myth-card {
+      background:rgba(255,255,255,0.06); border:1px solid rgba(200,151,58,0.4);
+      border-radius:22px; padding:36px; margin:40px auto; max-width:640px; text-align:center;
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    }
+    .uzu-myth-card .myth-name { font-family:'Noto Serif JP',serif; font-size:1.5rem; font-weight:900; color:var(--gold); }
+    .uzu-myth-card .myth-reading { display:block; font-size:0.8rem; color:rgba(255,255,255,0.5); letter-spacing:0.15em; margin:6px 0 18px; }
+    .uzu-myth-card p { color:rgba(255,255,255,0.82); font-size:0.95rem; line-height:1.9; margin:0; text-align:center; }
+    .uzu-pull-quote {
+      font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:700; color:#fff;
+      line-height:1.95; text-align:center; margin-top:44px;
+    }
+
+    /* ── AUDIENCE (③ こんな方に参加していただきたい) ── */
+    .audience { background:#fff; }
+    .audience-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+    .audience-card {
+      background:linear-gradient(160deg,#fff,var(--pink-pale)); border-radius:20px; padding:40px 26px;
+      text-align:center; box-shadow:0 6px 26px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(138,90,58,0.18); }
+    .audience-card .icon-circle {
+      width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
+      background:linear-gradient(135deg,var(--pink-light),#faf3ec);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 16px rgba(138,90,58,0.18);
+      color:var(--gold-deep);
+    }
+    .audience-card .icon-circle svg { width:28px; height:28px; }
+    .audience-card p { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); line-height:1.7; }
+
+    /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
+    .experience { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); }
+    .experience-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+    .experience-card {
+      background:#fff; border-radius:18px; padding:30px 32px; display:flex; gap:20px; align-items:flex-start;
+      box-shadow:0 4px 22px rgba(138,90,58,0.08); transition:transform 0.2s,box-shadow 0.2s;
+    }
+    .experience-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(138,90,58,0.16); }
+    .experience-card .num {
+      flex-shrink:0; width:44px; height:44px; border-radius:50%;
+      background:linear-gradient(135deg,var(--gold),#e0b45a); color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      font-family:'Noto Serif JP',serif; font-weight:900; font-size:1.05rem;
+    }
+    .experience-card h3 { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); margin-bottom:8px; line-height:1.5; }
+    .experience-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
+
+    /* ── ABOUT ── */
+    .about { background:#faf3ec; }
+    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .about-text p { font-size:1.05rem; line-height:2; color:var(--gray); margin-bottom:20px; }
+
+    .principal-card { background:linear-gradient(145deg,#faf3ec,#f5ecdf); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(138,90,58,0.12); }
+    .principal-avatar {
+      width:140px; height:140px; border-radius:50%; margin:0 auto 16px;
+      overflow:hidden; border:4px solid #ecd6c9;
+      box-shadow:0 6px 24px rgba(138,90,58,0.25);
+    }
+    .principal-avatar img {
+      width:100%; height:100%; object-fit:cover; object-position:100% 30%;
+    }
+    .principal-card .role { font-size:0.75rem; font-weight:700; letter-spacing:0.2em; color:var(--gold-deep); margin-bottom:6px; }
+    .principal-card .name { font-family:'Noto Serif JP',serif; font-size:1.8rem; font-weight:900; color:var(--dark); margin-bottom:16px; }
+    .principal-card .bio { font-size:0.9rem; line-height:1.8; color:var(--gray); }
+
+    /* ── PROGRAM ── */
+    .program { background:#fff; }
+    .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
+    .program-card { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(138,90,58,0.18); }
+    .program-card .icon { margin-bottom:16px; display:flex; justify-content:center; color:var(--gold-deep); }
+    .program-card .icon svg { width:2.6rem; height:2.6rem; }
+    .program-card h3 { font-family:'Noto Serif JP',serif; font-size:1.15rem; font-weight:700; color:var(--dark); margin-bottom:12px; }
+    .program-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
+    .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--gold-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
+
+    /* ── SCHEDULE ── */
+    .schedule { background:#faf3ec; }
+    .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; background:#fff; border-radius:12px; overflow:hidden; }
+    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
+    .schedule-table th:first-child { border-radius:12px 0 0 0; }
+    .schedule-table th:last-child { border-radius:0 12px 0 0; }
+    .schedule-table td { padding:16px 20px; border-bottom:1px solid var(--pink-light); font-size:0.95rem; vertical-align:top; }
+    .schedule-table tr:last-child td { border-bottom:none; }
+    .schedule-table tr:nth-child(even) td { background:var(--pink-pale); }
+    .schedule-table .time { color:var(--gold-deep); font-weight:700; white-space:nowrap; }
+
+    /* ── FUTURE ── */
+    .future { background:linear-gradient(180deg,#fffaf2 0%,#f7ede0 100%); }
+    .future-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+    .future-image img { width:100%; max-width:440px; border-radius:20px; box-shadow:0 16px 50px rgba(138,90,58,0.15); }
+    .future-list { list-style:none; }
+    .future-list li { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--pink-light); }
+    .future-list li:last-child { border-bottom:none; }
+    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    .future-list .content h4 { font-weight:700; font-size:1rem; color:var(--dark); margin-bottom:4px; }
+    .future-list .content p { font-size:0.85rem; line-height:1.7; color:var(--gray); }
+
+    /* ── CTA ── */
+    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#4a3020 50%,#1c2438 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
+    .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
+    .cta > * { position:relative; z-index:1; }
+    .cta .label { color:rgba(255,255,255,0.7); margin-bottom:16px; }
+    .cta h2 { font-family:'Noto Serif JP',serif; font-size:clamp(1.8rem,4vw,3rem); color:#fff; font-weight:900; line-height:1.5; margin-bottom:16px; }
+    .cta .sub { color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
+    .btn-white { display:inline-block; background:#fff; color:var(--gold-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
+    .btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
+    .cta-note { margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.6); }
+    .cta-select-box {
+      background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.30);
+      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+      border-radius:14px; padding:18px 28px; max-width:580px;
+      margin:0 auto 36px; font-size:0.88rem; color:rgba(255,255,255,0.88);
+      line-height:1.9; text-align:left;
+    }
+    .cta-select-box strong { color:#ecd6c9; }
+
+    /* ── FOOTER ── */
+    footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
+    footer .logo { font-family:'Noto Serif JP',serif; font-size:1.4rem; font-weight:900; color:var(--pink-light); margin-bottom:8px; }
+    .petal-row { display:flex; justify-content:center; gap:10px; margin:16px 0; }
+    .petal-row svg { width:15px; height:15px; color:var(--gold-deep); opacity:0.6; }
+
+    @media (max-width:768px) {
+      section { padding:60px 24px; }
+      .hero-v2-bar { padding:28px 20px; }
+      .hero-v2-bar-inner { flex-direction:column; align-items:center; gap:20px; }
+      .hero-date-box { width:100%; padding:16px 18px; }
+      .hero-date-box .date { font-size:1.35rem; }
+      .hero-date-box .date span { font-size:1.55rem; }
+      .story-header { flex-direction:column; gap:8px; }
+      .story-signature { white-space:normal; }
+      .about-grid, .future-grid { grid-template-columns:1fr; }
+      .audience-grid { grid-template-columns:1fr 1fr; }
+      .experience-grid { grid-template-columns:1fr; }
+      .program-cards { grid-template-columns:1fr; }
+      .schedule-table th { padding:12px 10px; }
+      .schedule-table td { padding:14px 10px; font-size:0.88rem; }
+      .schedule-table th:first-child { width:88px !important; }
+      .future-image { text-align:center; }
+      .future-image img { max-width:320px; }
+      .cta { padding:80px 24px; }
+      .btn-primary, .btn-white { width:100%; max-width:320px; text-align:center; padding-left:20px; padding-right:20px; }
+    }
+    @media (max-width:560px) {
+      .audience-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero-v2">
+  <img class="hero-v2-img" src="../images/hero_v2.jpg" alt="UZUの学校 ｜ 校長 安倍昭恵 ｜ 未来を、ともに描く学びの場">
+  <div class="hero-v2-bar">
+    <div class="hero-v2-bar-inner">
+      <div class="hero-date-box">
+        <div class="label">SECOND SESSION</div>
+        <div class="date">2027年<span>1月30日</span>（土）</div>
+        <div class="time-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7V12L15.5 14.5"/></svg> 開場 14:00 〜 終了 17:30</div>
+        <div class="time-row">会費 5,000円（税込）</div>
+        <div class="place-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <a href="#access" style="text-decoration:underline;text-underline-offset:0.2em">東京都三田　弘法寺</a></div>
+      </div>
+      <a href="#cta" class="btn-primary">参加申し込みのご案内 <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ① STORY ORIGIN -->
+<section class="story-origin">
+  <div class="container">
+    <p class="section-label">GREETING</p>
+    <div class="story-header">
+      <h2 class="section-title"><span class="accent">ご挨拶</span></h2>
+      <p class="story-signature">UZUの学校事務局　村山里美</p>
+    </div>
+    <div class="section-divider"></div>
+    <div class="story-text">
+      <p>私は長年にわたり、世界中のさまざまな国籍の仲間とともに働いてきました。</p>
+      <p>私の職場では、多様な文化や価値観を尊重し、国籍や性別に関係なく、一人ひとりが責任ある仕事に挑戦できる環境がありました。トレーニングやミーティングでは国境を越えて意見を交わし、互いの違いを認め合いながら成長していく――そんな環境の中で、多くの学びと貴重な経験を積ませていただきました。</p>
+      <p>女性が活躍できる環境にも恵まれ、私自身も責任ある仕事を任せていただきながら、やりがいと誇りを持って歩んできました。</p>
+      <p>しかし、ある時、ふと立ち止まりました。</p>
+      <p class="story-quote">「私はこの先、どんな人生を歩みたいのだろう。」<br>「本当に目標としたい人は、どんな人なのだろう。」<br>「会社という枠を離れたとき、私には何が残るのだろう。」</p>
+      <p>会社では責任ある役割を任せていただき、充実した毎日を送っていました。しかしその一方で、いつかは会社を卒業し、自分自身の力で新しい道を歩んでみたいという想いも、少しずつ芽生え始めていました。</p>
+      <p>だからこそ、「どんな人生を築きたいのか」「どんな人と出会い、どんな価値を社会に届けていきたいのか」を、これまで以上に真剣に考えるようになったのです。</p>
+      <p>多様性が尊重される素晴らしい環境で働いてきたからこそ、多くの価値観に触れる機会には恵まれていました。それでも、自分が心から「こんな生き方をしたい」と思えるロールモデル、特に女性の存在には、なかなか出会うことができませんでした。</p>
+      <p>そんな時、安倍昭恵校長をはじめ、多くの素晴らしい方々とのご縁をいただきました。</p>
+      <p>これまで知ることのなかった世界に触れ、多様な経験や価値観に出会い、人との出会いが人生を大きく変え、新しい可能性を広げてくれることを実感しました。</p>
+      <p>そして、自然と思うようになったのです。</p>
+      <p class="story-quote">「この出会いや学びを、私だけのものにするのはもったいない。」</p>
+      <p>かつての私のように、自分の可能性を広げたい方、新しい一歩を踏み出したい方、現在のご自身の事業をさらに飛躍させたい方、人生をもっと豊かにしたいと願う方々にも、このような出会いの機会を届けたい。</p>
+      <p>一人では見ることのできなかった景色も、人との出会いによって見えるようになる。</p>
+      <p>誰かとの出会いが勇気となり、その勇気が新しい挑戦を生み、その挑戦がまた誰かの背中を押していく。</p>
+      <p>そんな温かな循環が生まれる場所をつくりたいという想いから、「UZUの学校」は誕生しました。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ② UZU CONCEPT -->
+<section class="uzu-concept">
+  <div class="uzu-spiral"></div>
+  <div class="container">
+    <p class="section-label">OUR CONCEPT</p>
+    <h2 class="section-title">UZUに<span class="accent-gold">込めた想い</span></h2>
+    <div class="section-divider"></div>
+    <div class="uzu-name-mark">
+      <span class="word">UZU</span>
+      <span class="reading">「 UZU 」 ＝ 渦</span>
+    </div>
+    <div class="uzu-concept-text">
+      <p>「UZU」という名前は、安倍昭恵校長の想いから生まれました。</p>
+    </div>
+    <div class="uzu-myth-card">
+      <span class="myth-name">天鈿女命</span>
+      <span class="myth-reading">あめのうずめのみこと</span>
+      <p>天鈿女命は、人々を笑顔で巻き込み、その場に新しい流れを生み出し、世界に再び光をもたらしたと伝えられています。その由来には、日本神話に登場する天鈿女命への想いが込められています。</p>
+    </div>
+    <div class="uzu-concept-text">
+      <p>私たちも、一人ひとりの想いや挑戦が、人との出会いによって大きな「渦」となり、新しいご縁や可能性を生み出していきたい。</p>
+      <p>この場所で出会った仲間が、互いに刺激を受け、支え合い、それぞれの夢や挑戦を応援し合う。</p>
+      <p>そして、その一人の挑戦が、また新しい誰かの勇気となり、さらに大きな渦へと広がっていく。</p>
+      <p>UZUの学校は、知識を学ぶだけの学校ではありません。人との出会いを通して、自分自身の可能性に気づき、一歩踏み出す勇気を見つける場所です。</p>
+      <p>ここで生まれたご縁が、それぞれの人生をより豊かに、より輝かせ、その輪が未来へとつながっていく。</p>
+    </div>
+    <p class="uzu-pull-quote">そんな「人生が動き出すきっかけ」となる場所を、<br>皆さまとともにつくっていきたいと心から願っています。</p>
+  </div>
+</section>
+
+<!-- ③ AUDIENCE -->
+<section class="audience">
+  <div class="container">
+    <p class="section-label">FOR WHO</p>
+    <h2 class="section-title">こんな方に<span class="accent">参加していただきたい</span></h2>
+    <div class="section-divider"></div>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></div>
+        <p>今の人生を<br>もっと輝かせたい方、新しい一歩を<br>踏み出したい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></div>
+        <p>起業や新しい挑戦を<br>考えている方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></div>
+        <p>現在経営している事業を<br>次のステージへ発展させたい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M9 13a4.5 4.5 0 0 0 3-4"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M6 18a4 4 0 0 1-1.967-.516"/><path d="M12 13h4"/><path d="M12 18h6a2 2 0 0 1 2 2v1"/><path d="M12 8h8"/><path d="M16 8V5a2 2 0 0 1 2-2"/><circle cx="16" cy="13" r=".5"/><circle cx="18" cy="3" r=".5"/><circle cx="20" cy="21" r=".5"/><circle cx="20" cy="8" r=".5"/></svg></div>
+        <p>AIを味方につけ、<br>自分の可能性を広げたい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg></div>
+        <p>女性リーダーとして<br>成長したい方</p>
+      </div>
+      <div class="audience-card">
+        <div class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></div>
+        <p>志の高い仲間と出会い、<br>人生をより豊かにしたい方</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ④ EXPERIENCE -->
+<section class="experience">
+  <div class="container">
+    <p class="section-label">WHY UZU SCHOOL</p>
+    <h2 class="section-title">UZUの学校だからこそ<span class="accent">得られる体験</span></h2>
+    <div class="section-divider"></div>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <div class="num">01</div>
+        <div>
+          <h3>少人数だからこそ生まれる対話</h3>
+          <p>一人ひとりの声がしっかり届く、少人数制だからこその深い対話が生まれます。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">02</div>
+        <div>
+          <h3>安倍昭恵校長との距離の近さ</h3>
+          <p>壇上からの一方通行ではなく、校長と直接言葉を交わせる近さがあります。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">03</div>
+        <div>
+          <h3>第一線で活躍するゲストとの交流</h3>
+          <p>各分野のトップランナーと、リアルな経験や知恵を分かち合う時間があります。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">04</div>
+        <div>
+          <h3>講義だけではなく参加者同士の交流</h3>
+          <p>聞くだけで終わらない、参加者同士が深くつながるワークショップの時間があります。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">05</div>
+        <div>
+          <h3>学びを行動へつなげるサポート</h3>
+          <p>学んで終わりではなく、一歩を踏み出すための気づきと行動を後押しします。</p>
+        </div>
+      </div>
+      <div class="experience-card">
+        <div class="num">06</div>
+        <div>
+          <h3>UZUの学校だからこそ体験できる<br>特別な学びと出会い</h3>
+          <p>知識だけでなく、人生を動かす出会いと気づきが、ここにはあります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="section-label">ABOUT UZU SCHOOL</p>
+        <h2 class="section-title">女性が<span class="accent">自分らしく</span>輝くためのコミュニティ</h2>
+        <div class="section-divider"></div>
+        <p>「UZUの学校」は、女性の社会進出と活躍を支援するために生まれたコミュニティです。<br>世界各地で貴重な経験を積んできた校長 安倍昭恵が、様々な分野で活躍する女性リーダーたちを招いて、学び・対話・行動の場を創ります。</p>
+        <p>パネルディスカッションではゲストスピーカーから直接話を聞き<br>ワークショップではテーマに沿って参加者同士が深く対話します。<br>ここでの出会いと学びが、あなたの次のステップを後押しします。</p>
+      </div>
+      <div class="principal-card">
+        <div class="principal-avatar">
+          <img src="../images/hero_v2.jpg" alt="安倍昭恵 校長">
+        </div>
+        <div class="role">校長 安倍昭恵 ご挨拶</div>
+        <div class="name">安倍 昭恵</div>
+        <p class="bio">はじめまして、安倍昭恵です。世界各国のリーダーたちと直接交流し、多くの貴重な経験を積んできました。無農薬のお米や地域おこしにも積極的に関わってきました。「女性が自分らしく輝ける社会」を実現するため、UZUの学校の校長として皆さんを全力で応援します。</p>
+        <br>
+        <div class="petal-row">
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(72 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(144 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(216 12 12)"/><ellipse cx="12" cy="6.5" rx="2.6" ry="3.6" transform="rotate(288 12 12)"/></svg>
+        </div>
+        <p style="font-size:1.1rem;font-weight:700;color:var(--gold-deep);margin-top:8px;">「みんなの夢を応援します！」</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKER -->
+<section class="relative overflow-hidden bg-[#0D0D1F] py-20 px-6 md:py-28 md:px-16">
+  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-400/15 blur-[130px]"></div>
+
+  <div class="relative mx-auto max-w-6xl">
+    <div class="mb-16 text-center md:mb-20">
+      <div class="mb-8 flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-1.5 rounded-full bg-gradient-to-br from-cyan-300 via-amber-200 to-cyan-300 opacity-60 blur-md"></div>
+          <div aria-hidden="true" class="relative flex h-36 w-36 items-center justify-center rounded-full bg-[#13132b] font-serif text-5xl text-amber-200 ring-4 ring-[#0D0D1F] md:h-44 md:w-44">林</div>
+        </div>
+      </div>
+      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-cyan-300/80 md:text-sm">SPECIAL GUEST SPEAKER</p>
+      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-white md:text-5xl">林 真理子</h2>
+      <p class="mb-4 text-sm font-medium leading-loose text-white/70 [word-break:keep-all] break-words md:text-base">
+        作家
+      </p>
+      <p class="mx-auto max-w-3xl bg-gradient-to-r from-cyan-300 via-cyan-100 to-amber-200 bg-clip-text text-base font-bold leading-loose text-transparent [word-break:keep-all] break-words md:text-lg">
+        小説やエッセイを手がけ、第94回直木賞を受賞。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
+      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">01 ／ ESSAY</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">エッセイから執筆活動へ</h3>
+        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+          コピーライターを経て、1982年にエッセイ集『ルンルンを買っておうちに帰ろう』を刊行しました。
+        </p>
+      </div>
+
+      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-amber-200 p-[2px] shadow-[0_0_60px_rgba(251,191,36,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(251,191,36,0.55)] md:-translate-y-4">
+        <div class="h-full rounded-2xl bg-[#13132b] p-8">
+          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-amber-300/90">02 ／ NAOKI PRIZE</span>
+          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">第94回直木賞</h3>
+          <p class="text-sm leading-loose text-white/70 [word-break:keep-all] break-words">
+            1986年、「最終便に間に合えば」「京都まで」で第94回直木賞を受賞しました。
+          </p>
+        </div>
+      </div>
+
+      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">03 ／ LITERARY AWARDS</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">作品と受賞歴</h3>
+        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+          『白蓮れんれん』で柴田錬三郎賞、『みんなの秘密』で吉川英治文学賞を受賞しました。
+        </p>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-sm text-white/70"><a class="underline" href="https://www.shinchosha.co.jp/writer/2558/">林真理子さんの著者プロフィール（新潮社）</a></p>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program">
+  <div class="container">
+    <p class="section-label">PROGRAM</p>
+    <h2 class="section-title">当日のプログラム</h2>
+    <div class="section-divider"></div>
+    <div class="program-cards">
+      <div class="program-card">
+        <span class="tag">OPEN TALK</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11C5 14.9 8.1 18 12 18C15.9 18 19 14.9 19 11"/><path d="M12 18V21M9 21H15"/></svg></span>
+        <h3>校長 安倍昭恵<br>スペシャルトーク</h3>
+        <p>世界で体験してきた貴重なエピソードや、<br>女性の活躍に対する想いを語ります。</p>
+      </div>
+      <div class="program-card">
+        <span class="tag">PANEL DISCUSSION</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6H20V15H9L5 18V15H4V6Z"/><circle cx="9" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10.5" r="0.9" fill="currentColor" stroke="none"/></svg></span>
+        <h3>ゲストスピーカーによる<br>パネルディスカッション</h3>
+        <p>各分野の最前線で活躍するゲストスピーカーを迎え、テーマに沿ってリアルな経験と知恵を語り合います。</p>
+      </div>
+      <div class="program-card">
+        <span class="tag">WORKSHOP</span>
+        <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L4.8 16.4L15.5 5.7C16.3 4.9 17.6 4.9 18.4 5.7C19.2 6.5 19.2 7.8 18.4 8.6L7.7 19.3L4 20Z"/><path d="M14 7.5L16.5 10"/></svg></span>
+        <h3>参加者ワーク<br>ショップ</h3>
+        <p>テーマをもとに少人数グループで対話し、<br>自分のビジョンや行動計画を深堀りします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="schedule">
+  <div class="container">
+    <p class="section-label">TIMETABLE</p>
+    <h2 class="section-title">2027年1月30日（土）<span class="accent">タイムテーブル</span></h2>
+    <div class="section-divider"></div>
+    <table class="schedule-table">
+      <thead><tr><th style="width:140px">時 間</th><th>内 容</th></tr></thead>
+      <tbody>
+        <tr><td class="time">14:00</td><td>開場・受付</td></tr>
+        <tr><td class="time">14:30</td><td>オープニング ／ UZUの学校とは？</td></tr>
+        <tr><td class="time">14:45</td><td><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11C5 14.9 8.1 18 12 18C15.9 18 19 14.9 19 11"/><path d="M12 18V21M9 21H15"/></svg> 校長 安倍昭恵スペシャルトーク</td></tr>
+        <tr><td class="time">15:00</td><td><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6H20V15H9L5 18V15H4V6Z"/><circle cx="9" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="12" cy="10.5" r="0.9" fill="currentColor" stroke="none"/><circle cx="15" cy="10.5" r="0.9" fill="currentColor" stroke="none"/></svg> ゲストスピーカーによるパネルディスカッション</td></tr>
+        <tr><td class="time">16:00</td><td>休憩・交流タイム</td></tr>
+        <tr><td class="time">16:15</td><td><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20L4.8 16.4L15.5 5.7C16.3 4.9 17.6 4.9 18.4 5.7C19.2 6.5 19.2 7.8 18.4 8.6L7.7 19.3L4 20Z"/><path d="M14 7.5L16.5 10"/></svg> 参加者ワークショップ（少人数グループ対話）</td></tr>
+        <tr><td class="time">17:00</td><td>発表・まとめ ／ クロージング</td></tr>
+        <tr><td class="time">17:30</td><td>閉場</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;font-size:0.82rem;color:var(--gray);">※ タイムテーブルは第1回をもとにした予定です。内容は変更になる場合があります。</p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="schedule" id="access" aria-labelledby="access-title">
+  <div class="container">
+    <p class="section-label">ACCESS</p>
+    <h2 class="section-title" id="access-title">会場・アクセス</h2>
+    <div class="section-divider"></div>
+    <h3>東京都三田　弘法寺</h3>
+    <ul style="list-style:disc;padding-left:1.5em;margin:12px 0 20px;line-height:1.9">
+      <li>JR山手線・京浜東北線「田町駅」西口改札から徒歩7分</li>
+      <li>都営三田線・浅草線「三田駅」から徒歩6分</li>
+      <li>都営大江戸線「赤羽橋駅」から徒歩7分</li>
+      <li>東急バス98系「慶應義塾東門停留所」から徒歩1分</li>
+    </ul>
+    <p><strong>駐車場はございませんので、お車でのご来場、弘法寺への直接のお問い合わせはご遠慮ください。</strong></p>
+  </div>
+</section>
+
+<!-- FUTURE -->
+<section class="future">
+  <div class="container">
+    <div class="future-grid">
+      <div class="future-image">
+        <img src="../images/uzu_photo.jpg" alt="大地とともに輝く女性">
+      </div>
+      <div>
+        <p class="section-label">FUTURE PLANS</p>
+        <h2 class="section-title">これからの<span class="accent">UZU</span>の学校</h2>
+        <div class="section-divider"></div>
+        <ul class="future-list">
+          <li><div class="num">01</div><div class="content"><h4>継続的な講座開催</h4><p>パネルディスカッションとワークショップを継続的に行い、学びと対話の場を育てていきます。</p></div></li>
+          <li><div class="num">02</div><div class="content"><h4>ボランティア活動</h4><p>地域社会に貢献するボランティアを通じて、実践的な社会参加の経験を積みます。</p></div></li>
+          <li><div class="num">03</div><div class="content"><h4>稲刈り体験</h4><p>大地と向き合い、命の大切さを体で感じる稲刈り体験。都市で生きる女性たちへの特別な贈り物。</p></div></li>
+          <li><div class="num">04</div><div class="content"><h4>継続的な学びと交流</h4><p>定期的な学校開催と卒業生ネットワーク構築により、長期的な女性活躍を支援します。</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="cta">
+  <p class="section-label label">JOIN US</p>
+  <h2>さあ、あなたも<br>UZUの学校で輝こう</h2>
+  <p class="sub">第2回 UZUの学校は2027年1月30日（土）に開催されます。<br>お申し込み方法は、詳細が決まり次第ご案内します。</p>
+  <div class="cta-select-box">
+    <strong>【お申し込みにあたってのお願い】</strong><br>
+    定員に限りがございますため、お申し込みいただいた皆さまの熱意や想いを丁寧に拝見した上で、参加者様を選考させていただいております。ご記入いただいた内容をもとに慎重にご案内申し上げますので、あらかじめご了承いただけますと幸いです。
+  </div>
+  <p class="cta-note"><a href="#access" style="text-decoration:underline">会場・アクセスを確認する</a></p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">UZUの学校</div>
+  <p>女性の社会進出と活躍を支援するコミュニティ</p>
+  <br>
+  <p>&copy; 2027 UZUの学校. All rights reserved.</p>
+</footer>
+</body>
+</html>
