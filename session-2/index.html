@@ -19,7 +19,7 @@
     };
   </script>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap');
     :root {
       --pink-deep: #735981; --pink-light: #e9ddec;
       --pink-pale: #f7f0f8; --gold: #765783; --gold-deep: #694b76; --cream: #fffaf7;
@@ -35,14 +35,23 @@
       padding:clamp(20px,4vw,36px) 16px; text-align:center;
       background:linear-gradient(135deg,#f4ebf6 0%,#fcf5ef 100%);
     }
-    .hero-announcement p {
-      color:var(--gold-deep); font-size:clamp(0.9rem,2.5vw,1.1rem); margin-bottom:6px;
+    .hero-announcement .hero-event {
+      color:var(--gold-deep); font-size:clamp(1rem,2.5vw,1.25rem);
+      font-weight:700; letter-spacing:0.08em; margin-bottom:8px;
     }
     .hero-announcement h1 {
-      font-family:'Noto Serif JP',serif; font-weight:700;
-      font-size:clamp(1.25rem,4.5vw,2.5rem); line-height:1.45;
+      font-family:'Noto Sans JP',sans-serif; font-weight:900;
+      font-size:clamp(1.5rem,5vw,3.5rem); line-height:1.35;
     }
     .hero-announcement h1 span { display:inline-block; }
+    .hero-application {
+      display:inline-flex; flex-wrap:wrap; justify-content:center; align-items:center;
+      gap:6px 14px; margin-top:20px; padding:10px 18px;
+      background:var(--gold-deep); color:#fff; border-radius:20px;
+      font-size:clamp(0.86rem,2.5vw,1.05rem); font-weight:700;
+    }
+    .hero-application time { display:inline-block; white-space:nowrap; }
+    .hero-application strong { font-size:1.2em; }
     .hero-v2-img { display:block; width:100%; height:auto; }
     .hero-v2-bar { background:linear-gradient(135deg,#f4ebf6 0%,#fcf5ef 100%); padding:40px; }
     .hero-v2-bar-inner {
@@ -341,8 +350,12 @@
 <!-- HERO -->
 <section class="hero-v2">
   <div class="hero-announcement">
-    <p>お待たせいたしました</p>
-    <h1><span>UZUの学校 第2回を</span><span>開催いたします</span></h1>
+    <p class="hero-event">UZUの学校 第2回 開催決定！</p>
+    <h1><span>新しい出会いが、</span><span>次の一歩になる。</span></h1>
+    <p class="hero-application">
+      <span>先着順でご案内</span>
+      <span>一次応募締切 <time datetime="2026-12-20">2026年<strong>12月20日</strong>（日）</time></span>
+    </p>
   </div>
   <img class="hero-v2-img" src="../images/hero_v2.jpg" alt="UZUの学校 ｜ 校長 安倍昭恵 ｜ 未来を、ともに描く学びの場">
   <div class="hero-v2-bar">
@@ -715,6 +728,7 @@
   <section class="cta-select-box" id="priority-seating" aria-labelledby="priority-seating-heading">
     <h3 id="priority-seating-heading">第2回の優先ご案内について</h3>
     <p>第2回「UZUの学校」では、第1回にお申し込みくださった皆さま（当日ご参加がかなわなかった方も含みます）と、その皆さまからご紹介いただいた方のお席を、優先してご用意いたします。<br>お席に限りがございますため、先着順でのご案内になりますこと、あらかじめご了承ください。</p>
+    <p><strong>一次応募締切</strong> <time datetime="2026-12-20">2026年12月20日（日）</time></p>
   </section>
   <section class="cta-line" aria-labelledby="line-registration-heading">
     <h3 id="line-registration-heading">まずはUZUの学校公式LINEにご登録ください</h3>
