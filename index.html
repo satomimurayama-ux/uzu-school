@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
-  <title>UZUの学校 ｜ 第1回 2026年8月23日（日）開催</title>
+  <title>UZUの学校 ｜ 第2回 2027年1月30日（土）開催</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -21,46 +21,25 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&family=Noto+Sans+JP:wght@300;400;700&display=swap');
     :root {
-      --pink-deep: #8a5a3a; --pink-light: #ecd6c9;
-      --pink-pale: #faf3ec; --gold: #c8973a; --gold-deep: #8a6420; --cream: #fffaf5;
-      --dark: #35291f; --gray: #6e6259;
+      --pink-deep: #824b5c; --pink-light: #ead4db;
+      --pink-pale: #fbf3f2; --gold: #c8973a; --gold-deep: #8a6420; --cream: #fffaf4;
+      --dark: #392d32; --gray: #69585e;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     html { background:var(--cream); color-scheme:light; }
     body { font-family:'Noto Sans JP',sans-serif; background:var(--cream); color:var(--dark); overflow-x:hidden; }
 
     /* ── HERO ── */
-    .hero-v2 { background:#15100a; padding:0; }
+    .hero-v2 { background:var(--cream); }
     .hero-v2-img { display:block; width:100%; height:auto; }
-    .hero-v2-bar { background:linear-gradient(135deg,#1c2438 0%,#12182a 100%); padding:40px; }
-    .hero-v2-bar-inner {
-      max-width:1100px; margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;
-    }
-    .hero-date-box {
-      background:rgba(255,255,255,0.08); border:2px solid rgba(200,151,58,0.4);
-      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
-      border-radius:16px; padding:18px 26px; display:inline-block;
-    }
-    .hero-date-box .label {
-      font-size:0.72rem; color:var(--gold); font-weight:700;
-      letter-spacing:0.2em; margin-bottom:4px;
-    }
-    .hero-date-box .date {
-      font-family:'Noto Serif JP',serif; font-size:1.7rem; font-weight:900; color:#fff;
-    }
-    .hero-date-box .date span { color:var(--gold); font-size:2rem; }
-    .hero-date-box .time-row {
-      margin-top:6px; font-size:1rem; font-weight:700; color:rgba(255,255,255,0.9);
-      letter-spacing:0.1em;
-    }
-    .hero-date-box .place-row {
-      margin-top:8px; font-size:0.82rem; color:rgba(255,255,255,0.78);
-      line-height:1.6; letter-spacing:0.04em;
-    }
+    .hero-v2-bar { background:linear-gradient(120deg,#f9e9e5,#fff7ec); padding:24px clamp(20px,5vw,56px); border-bottom:1px solid var(--pink-light); }
+    .hero-v2-bar-inner { max-width:1100px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
+    .hero-v2 h1 { font-family:'Noto Serif JP',serif; font-size:clamp(1.65rem,4vw,2.6rem); font-weight:900; line-height:1.35; }
+    .session-date { color:var(--pink-deep); font-size:clamp(1.1rem,2.5vw,1.4rem); font-weight:700; margin-top:8px; }
+    .session-venue { color:var(--gray); margin-top:6px; font-size:0.9rem; line-height:1.7; }
     .row-icon { display:inline-block; width:1em; height:1em; vertical-align:-0.15em; margin-right:2px; }
     .btn-primary {
-      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#5c3a24 100%);
+      display:inline-block; background:linear-gradient(135deg,var(--pink-deep) 0%,#713e51 100%);
       color:#fff; font-size:1.05rem; font-weight:700; letter-spacing:0.1em;
       padding:16px 44px; border-radius:100px; text-decoration:none;
       box-shadow:0 8px 30px rgba(138,90,58,0.55); transition:transform 0.2s,box-shadow 0.2s;
@@ -91,7 +70,7 @@
     .story-signature { font-size:0.95rem; font-weight:700; color:var(--gold-deep); letter-spacing:0.05em; white-space:nowrap; }
 
     /* ── UZU CONCEPT (② UZUに込めた想い) ── */
-    .uzu-concept { position:relative; background:linear-gradient(160deg,#1c2438 0%,#232d42 50%,#12182a 100%); overflow:hidden; padding:120px 40px; }
+    .uzu-concept { position:relative; background:linear-gradient(160deg,#fbf0eb,#f5e8ed); overflow:hidden; padding:120px 40px; }
     .uzu-spiral {
       position:absolute; top:50%; left:50%; width:1000px; height:1000px; max-width:180vw; max-height:180vw;
       transform:translate(-50%,-50%);
@@ -100,30 +79,30 @@
     }
     @keyframes spin { from{transform:translate(-50%,-50%) rotate(0deg);} to{transform:translate(-50%,-50%) rotate(360deg);} }
     .uzu-concept .container { position:relative; z-index:1; }
-    .uzu-concept .section-label { color:var(--gold); }
-    .uzu-concept .section-title { color:#fff; text-align:center; }
-    .uzu-concept .section-title .accent-gold { color:var(--gold); }
+    .uzu-concept .section-label { color:var(--gold-deep); }
+    .uzu-concept .section-title { color:var(--dark); text-align:center; }
+    .uzu-concept .section-title .accent-gold { color:var(--gold-deep); }
     .uzu-concept > .container > .section-label { text-align:center; }
-    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#ecd6c9); margin-left:auto; margin-right:auto; }
+    .uzu-concept .section-divider { background:linear-gradient(90deg,var(--gold),#ead4db); margin-left:auto; margin-right:auto; }
     .uzu-name-mark { text-align:center; margin:8px 0 56px; }
     .uzu-name-mark .word {
       font-family:'Noto Serif JP',serif; font-size:clamp(3.4rem,11vw,6.5rem); font-weight:900;
-      letter-spacing:0.12em; background:linear-gradient(135deg,#fff 20%,var(--gold) 100%);
+      letter-spacing:0.12em; background:linear-gradient(135deg,var(--pink-deep),var(--gold-deep));
       -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1;
     }
-    .uzu-name-mark .reading { display:block; font-size:0.9rem; color:rgba(255,255,255,0.55); letter-spacing:0.35em; margin-top:14px; }
+    .uzu-name-mark .reading { display:block; font-size:0.9rem; color:var(--gray); letter-spacing:0.35em; margin-top:14px; }
     .uzu-concept-text { max-width:720px; margin:0 auto; }
-    .uzu-concept-text p { font-size:1.02rem; line-height:2.1; color:rgba(255,255,255,0.82); margin-bottom:22px; text-align:center; }
+    .uzu-concept-text p { font-size:1.02rem; line-height:2.1; color:var(--gray); margin-bottom:22px; text-align:center; }
     .uzu-myth-card {
       background:rgba(255,255,255,0.06); border:1px solid rgba(200,151,58,0.4);
       border-radius:22px; padding:36px; margin:40px auto; max-width:640px; text-align:center;
       backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
     }
-    .uzu-myth-card .myth-name { font-family:'Noto Serif JP',serif; font-size:1.5rem; font-weight:900; color:var(--gold); }
-    .uzu-myth-card .myth-reading { display:block; font-size:0.8rem; color:rgba(255,255,255,0.5); letter-spacing:0.15em; margin:6px 0 18px; }
-    .uzu-myth-card p { color:rgba(255,255,255,0.82); font-size:0.95rem; line-height:1.9; margin:0; text-align:center; }
+    .uzu-myth-card .myth-name { font-family:'Noto Serif JP',serif; font-size:1.5rem; font-weight:900; color:var(--gold-deep); }
+    .uzu-myth-card .myth-reading { display:block; font-size:0.8rem; color:var(--gray); letter-spacing:0.15em; margin:6px 0 18px; }
+    .uzu-myth-card p { color:var(--gray); font-size:0.95rem; line-height:1.9; margin:0; text-align:center; }
     .uzu-pull-quote {
-      font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:700; color:#fff;
+      font-family:'Noto Serif JP',serif; font-size:1.3rem; font-weight:700; color:var(--dark);
       line-height:1.95; text-align:center; margin-top:44px;
     }
 
@@ -137,7 +116,7 @@
     .audience-card:hover { transform:translateY(-6px); box-shadow:0 14px 40px rgba(138,90,58,0.18); }
     .audience-card .icon-circle {
       width:64px; height:64px; border-radius:50%; margin:0 auto 20px;
-      background:linear-gradient(135deg,var(--pink-light),#faf3ec);
+      background:linear-gradient(135deg,var(--pink-light),#fbf3f2);
       display:flex; align-items:center; justify-content:center;
       box-shadow:0 4px 16px rgba(138,90,58,0.18);
       color:var(--gold-deep);
@@ -146,7 +125,7 @@
     .audience-card p { font-family:'Noto Serif JP',serif; font-size:1.05rem; font-weight:700; color:var(--dark); line-height:1.7; }
 
     /* ── EXPERIENCE (④ UZUの学校だからこそ得られる体験) ── */
-    .experience { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); }
+    .experience { background:linear-gradient(160deg,#faeeea 0%,#fffaf2 60%,#f4e6e8 100%); }
     .experience-grid { display:grid; grid-template-columns:1fr 1fr; gap:26px; }
     .experience-card {
       background:#fff; border-radius:18px; padding:30px 32px; display:flex; gap:20px; align-items:flex-start;
@@ -163,14 +142,14 @@
     .experience-card p { font-size:0.88rem; line-height:1.8; color:var(--gray); }
 
     /* ── ABOUT ── */
-    .about { background:#faf3ec; }
+    .about { background:#fbf3f2; }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
     .about-text p { font-size:1.05rem; line-height:2; color:var(--gray); margin-bottom:20px; }
 
-    .principal-card { background:linear-gradient(145deg,#faf3ec,#f5ecdf); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(138,90,58,0.12); }
+    .principal-card { background:linear-gradient(145deg,#fbf3f2,#f4e6e8); border-radius:24px; padding:36px; text-align:center; box-shadow:0 8px 40px rgba(138,90,58,0.12); }
     .principal-avatar {
       width:140px; height:140px; border-radius:50%; margin:0 auto 16px;
-      overflow:hidden; border:4px solid #ecd6c9;
+      overflow:hidden; border:4px solid #ead4db;
       box-shadow:0 6px 24px rgba(138,90,58,0.25);
     }
     .principal-avatar img {
@@ -183,7 +162,7 @@
     /* ── PROGRAM ── */
     .program { background:#fff; }
     .program-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:8px; }
-    .program-card { background:linear-gradient(160deg,#faf0e3 0%,#fffaf2 60%,#f5ecdf 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
+    .program-card { background:linear-gradient(160deg,#faeeea 0%,#fffaf2 60%,#f4e6e8 100%); border-radius:20px; padding:32px 24px; box-shadow:0 4px 24px rgba(138,90,58,0.1); transition:transform 0.2s,box-shadow 0.2s; text-align:center; }
     .program-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(138,90,58,0.18); }
     .program-card .icon { margin-bottom:16px; display:flex; justify-content:center; color:var(--gold-deep); }
     .program-card .icon svg { width:2.6rem; height:2.6rem; }
@@ -192,9 +171,9 @@
     .program-card .tag { display:inline-block; background:var(--pink-light); color:var(--gold-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.1em; padding:4px 12px; border-radius:100px; margin-bottom:14px; }
 
     /* ── SCHEDULE ── */
-    .schedule { background:#faf3ec; }
+    .schedule { background:#fbf3f2; }
     .schedule-table { width:100%; border-collapse:collapse; margin-top:12px; background:#fff; border-radius:12px; overflow:hidden; }
-    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
+    .schedule-table th { background:linear-gradient(135deg,var(--pink-deep),#713e51); color:#fff; padding:14px 20px; text-align:left; font-size:0.85rem; letter-spacing:0.1em; }
     .schedule-table th:first-child { border-radius:12px 0 0 0; }
     .schedule-table th:last-child { border-radius:0 12px 0 0; }
     .schedule-table td { padding:16px 20px; border-bottom:1px solid var(--pink-light); font-size:0.95rem; vertical-align:top; }
@@ -209,28 +188,19 @@
     .future-list { list-style:none; }
     .future-list li { display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--pink-light); }
     .future-list li:last-child { border-bottom:none; }
-    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#5c3a24); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
+    .future-list .num { flex-shrink:0; width:40px; height:40px; background:linear-gradient(135deg,var(--pink-deep),#713e51); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; }
     .future-list .content h4 { font-weight:700; font-size:1rem; color:var(--dark); margin-bottom:4px; }
     .future-list .content p { font-size:0.85rem; line-height:1.7; color:var(--gray); }
 
     /* ── CTA ── */
-    .cta { background:linear-gradient(135deg,var(--pink-deep) 0%,#4a3020 50%,#1c2438 100%); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
+    .cta { background:linear-gradient(135deg,#f8e8e6,#f2e3ed); text-align:center; padding:100px 40px; position:relative; overflow:hidden; }
     .cta::before { content:''; position:absolute; inset:0; background-image:radial-gradient(circle at 20% 50%,rgba(255,255,255,0.05) 0%,transparent 50%),radial-gradient(circle at 80% 30%,rgba(255,255,255,0.05) 0%,transparent 50%); }
     .cta > * { position:relative; z-index:1; }
-    .cta .label { color:rgba(255,255,255,0.7); margin-bottom:16px; }
-    .cta h2 { font-family:'Noto Serif JP',serif; font-size:clamp(1.8rem,4vw,3rem); color:#fff; font-weight:900; line-height:1.5; margin-bottom:16px; }
-    .cta .sub { color:rgba(255,255,255,0.8); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
+    .cta .label { color:var(--pink-deep); margin-bottom:16px; }
+    .cta h2 { font-family:'Noto Serif JP',serif; font-size:clamp(1.8rem,4vw,3rem); color:var(--dark); font-weight:900; line-height:1.5; margin-bottom:16px; }
+    .cta .sub { color:var(--gray); font-size:1rem; line-height:1.8; max-width:560px; margin:0 auto 40px; }
     .btn-white { display:inline-block; background:#fff; color:var(--gold-deep); font-size:1.1rem; font-weight:700; letter-spacing:0.1em; padding:18px 56px; border-radius:100px; text-decoration:none; box-shadow:0 8px 30px rgba(0,0,0,0.2); transition:transform 0.2s,box-shadow 0.2s; }
     .btn-white:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
-    .cta-note { margin-top:20px; font-size:0.8rem; color:rgba(255,255,255,0.6); }
-    .cta-select-box {
-      background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.30);
-      backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
-      border-radius:14px; padding:18px 28px; max-width:580px;
-      margin:0 auto 36px; font-size:0.88rem; color:rgba(255,255,255,0.88);
-      line-height:1.9; text-align:left;
-    }
-    .cta-select-box strong { color:#ecd6c9; }
 
     /* ── FOOTER ── */
     footer { background:var(--dark); color:rgba(255,255,255,0.6); text-align:center; padding:32px 24px; font-size:0.82rem; }
@@ -242,9 +212,6 @@
       section { padding:60px 24px; }
       .hero-v2-bar { padding:28px 20px; }
       .hero-v2-bar-inner { flex-direction:column; align-items:center; gap:20px; }
-      .hero-date-box { width:100%; padding:16px 18px; }
-      .hero-date-box .date { font-size:1.35rem; }
-      .hero-date-box .date span { font-size:1.55rem; }
       .story-header { flex-direction:column; gap:8px; }
       .story-signature { white-space:normal; }
       .about-grid, .future-grid { grid-template-columns:1fr; }
@@ -267,19 +234,18 @@
 <body>
 
 <!-- HERO -->
-<section class="hero-v2">
-  <img class="hero-v2-img" src="images/hero_v2.jpg" alt="UZUの学校 ｜ 校長 安倍昭恵 ｜ 未来を、ともに描く学びの場">
+<section class="hero-v2" aria-labelledby="second-session-title">
   <div class="hero-v2-bar">
     <div class="hero-v2-bar-inner">
-      <div class="hero-date-box">
-        <div class="label">FIRST SESSION</div>
-        <div class="date">2026年<span>8月23日</span>（日）</div>
-        <div class="time-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7V12L15.5 14.5"/></svg> 開場 14:00 〜 終了 17:30</div>
-        <div class="place-row"><svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.9 15.9 3 12 3C8.1 3 5 5.9 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> 東京都三田エリア<br>（当選者の方には後日詳しい場所をご案内いたします）</div>
+      <div>
+        <h1 id="second-session-title">UZUの学校 第2回開催</h1>
+        <p class="session-date">2027年1月30日（土）</p>
+        <p class="session-venue">ゲスト 林真理子様 ／ 会場 東京・三田 弘法寺</p>
       </div>
-      <a href="apply.html" class="btn-primary">参加申し込みはこちら <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
+      <a href="session-2/" class="btn-primary">第2回の詳細を見る →</a>
     </div>
   </div>
+  <img class="hero-v2-img" src="images/hero_v2.jpg" alt="UZUの学校 ｜ 校長 安倍昭恵 ｜ 未来を、ともに描く学びの場" width="1448" height="1086">
 </section>
 
 <!-- ① STORY ORIGIN -->
@@ -463,51 +429,51 @@
 </section>
 
 <!-- SPEAKER -->
-<section class="relative overflow-hidden bg-[#0D0D1F] py-20 px-6 md:py-28 md:px-16">
-  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-cyan-400/20 blur-[120px]"></div>
-  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-400/15 blur-[130px]"></div>
+<section class="relative overflow-hidden bg-[#f8edf1] py-20 px-6 md:py-28 md:px-16">
+  <div class="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-rose-200/30 blur-[120px]"></div>
+  <div class="pointer-events-none absolute -bottom-32 -right-24 h-96 w-96 rounded-full bg-amber-100/40 blur-[130px]"></div>
 
   <div class="relative mx-auto max-w-6xl">
     <div class="mb-16 text-center md:mb-20">
       <div class="mb-8 flex justify-center">
         <div class="relative">
-          <div class="absolute -inset-1.5 rounded-full bg-gradient-to-br from-cyan-300 via-amber-200 to-cyan-300 opacity-60 blur-md"></div>
-          <img src="images/speaker_ogawa.jpg" alt="小川 和也" class="relative h-36 w-36 rounded-full object-cover ring-4 ring-[#0D0D1F] md:h-44 md:w-44">
+          <div class="absolute -inset-1.5 rounded-full bg-gradient-to-br from-rose-200 via-amber-100 to-rose-200 opacity-60 blur-md"></div>
+          <img src="images/speaker_ogawa.jpg" alt="小川 和也" class="relative h-36 w-36 rounded-full object-cover ring-4 ring-[#f8edf1] md:h-44 md:w-44">
         </div>
       </div>
-      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-cyan-300/80 md:text-sm">SPECIAL GUEST SPEAKER</p>
-      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-white md:text-5xl">小川 和也</h2>
-      <p class="mb-4 text-sm font-medium leading-loose text-white/70 [word-break:keep-all] break-words md:text-base">
+      <p class="mb-4 text-xs font-bold tracking-[0.35em] text-[#824b5c] md:text-sm">第1回 ゲストスピーカー</p>
+      <h2 class="mb-6 font-serif text-3xl font-black tracking-wide text-[#392d32] md:text-5xl">小川 和也</h2>
+      <p class="mb-4 text-sm font-medium leading-loose text-[#69585e] [word-break:keep-all] break-words md:text-base">
         グランドデザイン代表取締役社長 ／ フューチャリスト ／ 北海道大学 客員教授
       </p>
-      <p class="mx-auto max-w-3xl bg-gradient-to-r from-cyan-300 via-cyan-100 to-amber-200 bg-clip-text text-base font-bold leading-loose text-transparent [word-break:keep-all] break-words md:text-lg">
+      <p class="mx-auto max-w-3xl text-base font-bold leading-loose text-[#824b5c] [word-break:keep-all] break-words md:text-lg">
         ー テクノロジーが拓く未踏の未来図を、温かな感性と圧倒的な高揚感で描き出すフューチャリスト
       </p>
     </div>
 
     <div class="grid grid-cols-1 items-stretch gap-6 md:grid-cols-3 md:gap-8">
-      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">01 ／ PIONEER</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">AIと実業の開拓者</h3>
-        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+      <div class="group relative rounded-2xl border border-[#ead4db] bg-white p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#c79eae] hover:shadow-[0_0_45px_rgba(130,75,92,0.15)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-[#824b5c]">01 ／ PIONEER</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-[#392d32] [word-break:keep-all] break-words md:text-xl">AIと実業の開拓者</h3>
+        <p class="text-sm leading-loose text-[#69585e] [word-break:keep-all] break-words">
           アントレプレナーとしてテクノロジーで社会課題解決のグランドデザインを描き、フューチャリストとしてテクノロジーを基点に学際的なアプローチで未来のあり方を提言。AI企業の創業経営者である一方、北海道大学 客員教授として人工知能研究。長年に渡り、実業と研究の二刀流。<br><br>2017年、「国際エコー賞」を受賞。人間とテクノロジーの未来を説いた著書『デジタルは人間を奪うのか』（講談社現代新書）は教科書を始めとした多くの教材や入試問題に採用され続け、テクノロジー教育を担う。近著『人類滅亡２つのシナリオ』（朝日新書）では、AIとゲノム編集の２つの科学技術による人類史のエンドロールを回避する策を論じている。
         </p>
       </div>
 
-      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-amber-300 via-orange-400 to-amber-200 p-[2px] shadow-[0_0_60px_rgba(251,191,36,0.35)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(251,191,36,0.55)] md:-translate-y-4">
-        <div class="h-full rounded-2xl bg-[#13132b] p-8">
-          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-amber-300/90">02 ／ VISION NAVIGATOR</span>
-          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">メディアを通じて未来への高揚感を届ける「ビジョン・ナビゲーター」</h3>
-          <p class="text-sm leading-loose text-white/70 [word-break:keep-all] break-words">
+      <div class="relative z-10 rounded-2xl bg-gradient-to-br from-[#ead4db] via-[#e8c8c4] to-[#f4e6e8] p-[2px] shadow-[0_0_60px_rgba(130,75,92,0.16)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_90px_rgba(130,75,92,0.24)] md:-translate-y-4">
+        <div class="h-full rounded-2xl bg-[#fff9f7] p-8">
+          <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-[#824b5c]">02 ／ VISION NAVIGATOR</span>
+          <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-[#392d32] [word-break:keep-all] break-words md:text-xl">メディアを通じて未来への高揚感を届ける「ビジョン・ナビゲーター」</h3>
+          <p class="text-sm leading-loose text-[#69585e] [word-break:keep-all] break-words">
             沢井製薬のCM（ミライラボ篇）に出演し、AIがもたらす「未来 of オーダーメイド薬」のビジョンを提示。<span class="whitespace-nowrap">また、J-WAVE</span>のラジオ番組『FUTURISM』のナビゲーターを務め、難解になりがちな最新テクノロジーの面白さを誰にでも届く言葉でナビゲート。
           </p>
         </div>
       </div>
 
-      <div class="group relative rounded-2xl border border-cyan-400/20 bg-white/[0.04] p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-cyan-300/60 hover:shadow-[0_0_45px_rgba(34,211,238,0.35)]">
-        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-cyan-300/70">03 ／ CITY DESIGNER</span>
-        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-white [word-break:keep-all] break-words md:text-xl">未来都市のグランドデザイン</h3>
-        <p class="text-sm leading-loose text-white/65 [word-break:keep-all] break-words">
+      <div class="group relative rounded-2xl border border-[#ead4db] bg-white p-8 backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#c79eae] hover:shadow-[0_0_45px_rgba(130,75,92,0.15)]">
+        <span class="mb-5 inline-block text-[11px] font-bold tracking-[0.25em] text-[#824b5c]">03 ／ CITY DESIGNER</span>
+        <h3 class="mb-4 font-serif text-lg font-bold leading-snug text-[#392d32] [word-break:keep-all] break-words md:text-xl">未来都市のグランドデザイン</h3>
+        <p class="text-sm leading-loose text-[#69585e] [word-break:keep-all] break-words">
           専門は、人工知能を用いた社会システムデザイン、Virtual beings。人工知能関連特許多数。大阪市AIガバナンスアドバイザーや、遺伝子に基づいた個別化医療でがん治療に貢献することをミッションとした一般社団法人日本臨床プレシジョンメディシン研究会アンバサダーなどの活動を通じて、専門のAIの観点から未来の都市や医療のデザインを手掛ける。
         </p>
       </div>
@@ -519,7 +485,7 @@
 <section class="program">
   <div class="container">
     <p class="section-label">PROGRAM</p>
-    <h2 class="section-title">当日のプログラム</h2>
+    <h2 class="section-title">第1回のプログラム</h2>
     <div class="section-divider"></div>
     <div class="program-cards">
       <div class="program-card">
@@ -548,7 +514,7 @@
 <section class="schedule">
   <div class="container">
     <p class="section-label">TIMETABLE</p>
-    <h2 class="section-title">2026年8月23日（日）<span class="accent">タイムテーブル</span></h2>
+    <h2 class="section-title">第1回 2026年8月23日（日）<span class="accent">タイムテーブル</span></h2>
     <div class="section-divider"></div>
     <table class="schedule-table">
       <thead><tr><th style="width:140px">時 間</th><th>内 容</th></tr></thead>
@@ -593,13 +559,8 @@
 <section class="cta" id="cta">
   <p class="section-label label">JOIN US</p>
   <h2>さあ、あなたも<br>UZUの学校で輝こう</h2>
-  <p class="sub">第1回 UZUの学校は2026年8月23日（日）に開催されます<br>申し込み締め切りは、<strong style="color:#ecd6c9;">8月15日（土）</strong>です。<br>お座席に限りがあるため、お早めのお申し込みをお願い申し上げます。</p>
-  <div class="cta-select-box">
-    <strong>【お申し込みにあたってのお願い】</strong><br>
-    定員に限りがございますため、お申し込みいただいた皆さまの熱意や想いを丁寧に拝見した上で、参加者様を選考させていただいております。ご記入いただいた内容をもとに慎重にご案内申し上げますので、あらかじめご了承いただけますと幸いです。
-  </div>
-  <a href="apply.html" class="btn-white">今すぐ参加申し込み <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
-  <p class="cta-note">参加費の詳細は、お申し込みフォームにてご確認ください。<br>開催場所の詳細につきましては、当選者の方へ別途ご案内いたします。</p>
+  <p class="sub">第2回 UZUの学校は2027年1月30日（土）に開催します。</p>
+  <a href="session-2/" class="btn-white">第2回の開催概要・参加案内 →</a>
 </section>
 
 <!-- FOOTER -->
