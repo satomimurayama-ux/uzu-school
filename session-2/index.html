@@ -40,6 +40,11 @@
     .hero-announcement .hero-event {
       color:var(--gold-deep); font-size:clamp(1.75rem,5vw,2.5rem);
       font-weight:700; letter-spacing:0.08em; margin-bottom:8px;
+      display:flex; flex-wrap:wrap; justify-content:center; align-items:baseline;
+      column-gap:0.6em;
+    }
+    .hero-event time {
+      font-size:0.6em; letter-spacing:0.02em; white-space:nowrap;
     }
     .hero-announcement h1 {
       font-weight:900; font-size:clamp(1.5rem,5vw,3.5rem); line-height:1.35;
@@ -378,7 +383,10 @@
 <!-- HERO -->
 <section class="hero-v2">
   <div class="hero-announcement">
-    <p class="hero-event">UZUの学校 第2回</p>
+    <p class="hero-event">
+      <span>UZUの学校 第2回</span>
+      <time datetime="2027-01-30">2027年1月30日（土）</time>
+    </p>
     <h1><span>ゲストスピーカーに</span> <span>林真理子さんの登壇が決定しました！</span></h1>
     <p class="hero-application">
       <span>先着順でご案内</span>
