@@ -300,7 +300,14 @@
     .cta-line h3 { font-size:clamp(1.35rem,3vw,1.75rem); text-wrap:balance; font-weight:700; margin-bottom:16px; }
     .cta-line img { display:block; width:224px; max-width:100%; height:auto; margin:0 auto 12px; }
     .cta-line p { margin:0 auto 12px; max-width:900px; text-wrap:pretty; }
-    .cta #application-form-note { font-size:clamp(1.15rem,2vw,1.4rem); max-width:860px; text-wrap:pretty; }
+    .cta #application-form-note { font-size:clamp(1.15rem,2vw,1.4rem); text-wrap:pretty; }
+    .cta-line .cta-line-notice { max-width:none; }
+    @media (min-width:960px) {
+      .cta-line .cta-line-notice,
+      .cta #application-form-note {
+        font-size:min(1.4rem,calc((100vw - 160px) / 48));
+      }
+    }
     .cta-line a { text-decoration:underline; text-underline-offset:0.2em; font-weight:700; }
 
     /* ── FOOTER ── */
@@ -756,7 +763,7 @@
   </section>
   <section class="cta-line" aria-labelledby="line-registration-heading">
     <h3 id="line-registration-heading">まずはUZUの学校公式LINEにご登録ください</h3>
-    <p>次回からのお申し込み開始や各種イベント開催に関するお知らせは、公式LINEでお届けします。</p>
+    <p class="cta-line-notice">次回からのお申し込み開始や各種イベント開催に関するお知らせは、公式LINEでお届けします。</p>
     <img src="images/uzu-official-line-qr.png" alt="UZUの学校公式LINEの友だち追加用QRコード" width="808" height="780" loading="lazy">
     <p>LINE ID：<strong>@690xlmjf</strong></p>
     <a href="https://lin.ee/6Z85ZC6">LINEで友だち追加する</a>
