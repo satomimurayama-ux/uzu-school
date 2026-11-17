@@ -300,7 +300,10 @@
     .cta-line h3 { font-size:clamp(1.35rem,3vw,1.75rem); text-wrap:balance; font-weight:700; margin-bottom:16px; }
     .cta-line img { display:block; width:224px; max-width:100%; height:auto; margin:0 auto 12px; }
     .cta-line p { margin:0 auto 12px; max-width:900px; text-wrap:pretty; }
-    .cta #application-form-note { font-size:clamp(1.15rem,2vw,1.4rem); text-wrap:pretty; }
+    .cta #application-form-note { font-size:clamp(1.15rem,2vw,1.4rem); max-width:none; text-wrap:pretty; }
+    .application-line-notice {
+      font-size:clamp(0.875rem,calc((100vw - 80px) / 36),1em);
+    }
     .cta-line .cta-line-notice { max-width:none; }
     @media (min-width:960px) {
       .cta-line .cta-line-notice,
@@ -769,7 +772,7 @@
     <a href="https://lin.ee/6Z85ZC6">LINEで友だち追加する</a>
   </section>
   <p class="sub" id="application-form-note">
-    公式LINEにご登録いただくだけでは、第2回のお申し込みは完了しません。<br>
+    <span class="application-line-notice">公式LINEにご登録いただくだけでは、第2回のお申し込みは完了しません。</span><br>
     <strong>第2回への参加をご希望の方は、必ず専用のお申し込みフォームに必要事項を入力し、送信してください。</strong>
   </p>
   <a href="https://docs.google.com/forms/d/e/1FAIpQLSfI9YvLeXZKr7wT_Zzb7ypQ6Ca5UdH81zapWVotUpYJtNOCSg/viewform" class="btn-primary" aria-describedby="application-form-note">お申し込みフォーム <svg class="row-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12H19M13 6L19 12L13 18"/></svg></a>
