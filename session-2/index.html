@@ -301,11 +301,11 @@
     .cta-line h3 { font-size:clamp(1.35rem,3vw,1.75rem); text-wrap:balance; font-weight:700; margin-bottom:16px; }
     .cta-line img { display:block; width:224px; max-width:100%; height:auto; margin:0 auto 12px; }
     .cta-line p { margin:0 auto 12px; max-width:900px; text-wrap:pretty; }
-    .cta-line .cta-line-notice { max-width:none; }
-    @media (min-width:960px) {
-      .cta-line .cta-line-notice {
-        font-size:min(1.4rem,calc((100vw - 160px) / 48));
-      }
+    .cta-line .cta-line-notice {
+      max-width:48rem; margin-bottom:24px; padding:clamp(16px,3vw,28px);
+      border:2px solid #a4456d; border-radius:14px; background:#ffedf4; color:#591b39;
+      font-size:clamp(1.25rem,2.5vw,1.7rem); font-weight:800; line-height:1.65;
+      text-wrap:balance;
     }
     .cta-line a { text-decoration:underline; text-underline-offset:0.2em; font-weight:700; }
 
